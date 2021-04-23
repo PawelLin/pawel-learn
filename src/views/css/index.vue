@@ -28,6 +28,7 @@ export default defineComponent({
 <style lang="less" scoped>
 .container {
     display: flex;
-    padding: 20px;
+    padding: 0 20px 20px;
+    flex-wrap: wrap;
 }
 </style>

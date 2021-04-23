@@ -63,6 +63,7 @@ export default defineComponent({
 
 <style lang="less" scoped>
 .view-code {
+    margin: 20px 20px 0 0;
     width: 16.6666%;
     min-width: 200px;
     border: 1px solid #eaeaea;
@@ -95,8 +96,12 @@ export default defineComponent({
             resize: none;
         }
     }
-    & + .view-code {
-        margin-left: 20px;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .view-code {
+        margin-right: 0;
+        width: 100%;
+        min-width: 100%;
     }
 }
 </style>
