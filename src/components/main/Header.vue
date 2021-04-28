@@ -30,15 +30,20 @@ export default defineComponent({
 
 <style lang="less" scoped>
 .header {
+    position: sticky;
+    top: 0;
     padding: 0 20px;
     display: flex;
     align-items: center;
     height: 64px;
     border-bottom: 1px solid #eaeaea;
+    background-color: #fff;
+    z-index: 2;
     > .icon {
-        width: 40px;
+        width: 40px;   
         height: 40px;
         background: url(@/assets/svg/shumabaobei/brave.svg);
+        // background: url(@/assets/svg/shumabaobei/brave.svg), url(@/assets/svg/shumabaobei/brave.png);
         background-size: 100%;
     }
     > a {

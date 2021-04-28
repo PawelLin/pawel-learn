@@ -49,6 +49,7 @@ export default defineComponent({
                 copyTextarea.id = 'copyTextarea'
                 copyTextarea.style.width = '0'
                 copyTextarea.style.height = '0'
+                // copyTextarea.style.border = 'none'
                 document.body.append(copyTextarea)
             }
         })
@@ -88,7 +89,7 @@ export default defineComponent({
         > .code {
             width: 60%;
             padding: 10px 10px 5px 5px;
-            height: 80px;
+            height: 100px;
             border: none;
             border-left: 1px solid #eaeaea;
             border-bottom-right-radius: 8px;
@@ -97,7 +98,7 @@ export default defineComponent({
         }
     }
 }
-@media screen and (min-width: 320px) and (max-width: 480px) {
+@media screen and (max-width:600px) {
     .view-code {
         margin-right: 0;
         width: 100%;
