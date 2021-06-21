@@ -9,7 +9,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, inject, ref } from 'vue'
+import { defineComponent, ref, Ref } from 'vue'
 
 export default defineComponent({
     props: {
@@ -18,19 +18,16 @@ export default defineComponent({
             default: ''
         }
     },
-    setup(props, context) {
-        let html = context.slots.default()[0].children
+    setup(props, { slots }) {
+        let html = slots.default()[0].children
         if (typeof html !== 'string') {
-            console.log(html[0])
             html = html[0].children
         }
         html = `<pre class="pre"><code>${html}</code></pre>`
-        const codeRef = ref(null)
+        const codeRef: Ref = ref(null)
         const handleCopy = () => {
             alert(codeRef.value.innerText)
         }
-        onMounted(() => {
-        })
         return {
             handleCopy,
             codeRef,
@@ -61,10 +58,10 @@ export default defineComponent({
             padding: 0;
         }
     }
-    /deep/ .hljs {
+    :deep(.hljs) {
         padding: 0;
     }
-    /deep/ pre {
+    :deep(pre) {
         position: relative;
         top: -20px;
     }

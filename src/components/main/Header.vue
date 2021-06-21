@@ -20,7 +20,9 @@ export default defineComponent({
                 { path: '/component', text: '组件', key: 'Component' },
                 { path: '/icon', text: '图标', key: 'Icon' },
                 { path: '/source', text: '资源', key: 'Source' },
-                { path: '/regular', text: '正则', key: 'Regular' }
+                { path: '/regular', text: '正则', key: 'Regular' },
+                { path: '/timi', text: 'Timi', key: 'Timi' },
+                // { path: '/echarts', text: 'echarts', key: 'Echarts' }
             ]
         }
     }
@@ -36,15 +38,20 @@ export default defineComponent({
     display: flex;
     align-items: center;
     height: 64px;
+    white-space: nowrap;
     border-bottom: 1px solid #eaeaea;
     background-color: #fff;
     z-index: 2;
+    overflow-x: auto;
     > .icon {
+        position: sticky;
+        left: 0;
         width: 40px;   
         height: 40px;
-        background: url(@/assets/svg/shumabaobei/brave.svg);
+        background: url(@/assets/svg/shumabaobei/brave.svg) no-repeat center #ffffff;
         // background: url(@/assets/svg/shumabaobei/brave.svg), url(@/assets/svg/shumabaobei/brave.png);
         background-size: 100%;
+        min-width: 30px;
     }
     > a {
         margin-left: 20px;

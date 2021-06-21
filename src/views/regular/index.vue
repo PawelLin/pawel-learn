@@ -121,9 +121,9 @@ export default defineComponent({
             { title: '连续相同数字', id: 'regular-same-number' },
         ]
         let active = ref('regular-phone')
-        const handleClick = id => {
+        const handleClick = (id:string) => {
             active.value = id
-            document.documentElement.scrollTop = document.getElementById(id).offsetTop - 84
+            document.documentElement.scrollTop = (document.getElementById(id) as HTMLElement).offsetTop - 84
         }
         onMounted(() => {
             hljs.highlightAll()
