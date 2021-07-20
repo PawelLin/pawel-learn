@@ -12,7 +12,7 @@
                 <div v-for="({ skins, title, heros }, index2) in months" :key="`${year}${index2}`">
                     <div class="skin">
                         <template v-for="({ src, alt }, index3) in skins" >
-                            <div v-for="(img, index4) in src" class="image" :style="{ backgroundImage: `url(${img})` }" :title="alt[index4]" :key="`${year}${index2}${index3}${index4}`"></div>
+                            <div v-for="(img, index4) in src" class="image" :style="{ backgroundImage: `url(${getImageUrl(img)})` }" :title="alt[index4]" :key="`${year}${index2}${index3}${index4}`"></div>
                         </template>
                     </div>
                     <div class="timeline">
@@ -20,7 +20,7 @@
                     </div>
                     <div class="hero">
                         <template v-for="({ src, alt }, index3) in heros" >
-                            <div v-for="(img, index4) in src" class="image" :style="{ backgroundImage: `url(${img})` }" :title="alt[index4]" :key="`${year}${index2}${index3}${index4}`"></div>
+                            <div v-for="(img, index4) in src" class="image" :style="{ backgroundImage: `url(${getImageUrl(img)})` }" :title="alt[index4]" :key="`${year}${index2}${index3}${index4}`"></div>
                         </template>
                     </div>
                 </div>
@@ -94,10 +94,17 @@ export default defineComponent({
         const handleTransform = (value:number):void => {
             translateX.value += value * 100
         }
+        const modules = import.meta.globEager('../../assets/skin/**/*.*')
+        console.log(modules)
+        const  getImageUrl = dir => {
+            const path = `../../assets/${dir}`
+            return modules[path].default
+        }
         return {
             list,
             translateX,
-            handleTransform
+            handleTransform,
+            getImageUrl
         }
     },
 })
