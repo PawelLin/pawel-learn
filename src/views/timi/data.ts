@@ -3,6 +3,14 @@ interface Data {
 }
 
 export const skins: Data = {
+    '2021-6-24': {
+        alt: '墨子-神迹守卫',
+        src: '//game.gtimg.cn/images/yxzj/img201606/heroimg/108/108-smallskin-5.jpg'
+    },
+    '2021-6-23': {
+        alt: ['云缨-赤焰之缨', '妲己-女仆咖啡'],
+        src: ['//game.gtimg.cn/images/yxzj/img201606/heroimg/538/538-smallskin-2.jpg', '//game.gtimg.cn/images/yxzj/img201606/heroimg/109/109-smallskin-2.jpg']
+    },
     '2021-6-6': {
         alt: '曜-李逍遥',
         src: '//game.gtimg.cn/images/yxzj/img201606/heroimg/522/522-smallskin-4.jpg'
@@ -430,6 +438,10 @@ export const skins: Data = {
 }
 
 export const heros: Data = {
+    '2021-6-23': {
+        alt: '云缨',
+        src: '//game.gtimg.cn/images/yxzj/img201606/heroimg/538/538.jpg'
+    },
     '2021-4-8': {
         alt: '艾琳',
         src: '//game.gtimg.cn/images/yxzj/img201606/heroimg/155/155.jpg'
@@ -782,4 +794,55 @@ export const heros: Data = {
         alt: ['亚瑟', '项羽', '后羿', '小乔', '鲁班七号'],
         src: ['//game.gtimg.cn/images/yxzj/img201606/heroimg/166/166.jpg', '//game.gtimg.cn/images/yxzj/img201606/heroimg/135/135.jpg', '//game.gtimg.cn/images/yxzj/img201606/heroimg/169/169.jpg', '//game.gtimg.cn/images/yxzj/img201606/heroimg/106/106.jpg', '//game.gtimg.cn/images/yxzj/img201606/heroimg/112/112.jpg']
     }
+}
+
+export const Kings = {
+    '2021-05-31': {
+        alt: 'S23',
+        src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
+    },
+    '2021-03-7': {
+        alt: 'S22',
+        src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
+    },
+    '2020-10-18': {
+        alt: 'S21',
+        src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
+    },
+    '2020-7-18': {
+        alt: 'S20',
+        src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
+    },
+    '2020-7-7': {
+        alt: 'S19',
+        src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
+    },
+    '2020-5-10': {
+        alt: 'S19',
+        src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
+    },
+    '2020-2-3': {
+        alt: 'S18',
+        src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
+    },
+    '2019-11-30': {
+        alt: 'S17',
+        src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
+    },
+    '2019-7-26': {
+        alt: 'S16',
+        src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
+    },
+    '2019-5-23': {
+        alt: 'S15',
+        src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
+    },
+    '2019-3-23': {
+        alt: 'S14',
+        src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
+    },
+    '2018-11-22': {
+        alt: 'S13',
+        src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
+    },
 }

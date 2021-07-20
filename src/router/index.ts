@@ -22,6 +22,11 @@ const routes = [
         component: () => import('@/views/timi/index.vue')
     },
     {
+        path: '/timi-skin',
+        name: 'TimiSkin',
+        component: () => import('@/views/timi/skin/index.vue')
+    },
+    {
         path: '/echarts',
         name: 'Echarts',
         component: () => import('@/views/echarts/index.vue')

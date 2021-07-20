@@ -22,6 +22,7 @@ export default defineComponent({
                 { path: '/source', text: '资源', key: 'Source' },
                 { path: '/regular', text: '正则', key: 'Regular' },
                 { path: '/timi', text: 'Timi', key: 'Timi' },
+                { path: '/timi-skin', text: 'TimiSkin', key: 'TimiSkin' }
                 // { path: '/echarts', text: 'echarts', key: 'Echarts' }
             ]
         }
