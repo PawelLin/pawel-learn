@@ -1,11 +1,11 @@
 <template>
     <div class="contain">
-        <div class="item" :style="{ backgroundImage: `url(/src/assets/${types[data.type]})` }">{{data.type.indexOf('0') === 0 ? data.title : ''}}</div>
+        <div class="item" :style="{ backgroundImage: `url(${getImageUrl(types[data.type])})` }">{{data.type.indexOf('0') === 0 ? data.title : ''}}</div>
         <div v-if="data.children && data.children.length">
             <timi-skin-contain v-for="item in data.children" :data="item" :key="item.title + item.type" />
         </div>
         <div v-else>
-            <img v-for="item in data.data" src="@/assets/logo.png" :title="item.name" :key="item.name + item.type" />
+            <img v-for="item in data.data" :src="getImageUrl(item.icon)" :title="item.name" :key="item.name + item.type" />
         </div>
     </div>
 </template>
@@ -29,8 +29,12 @@ export default defineComponent({
         }
     },
     setup () {
+        const  getImageUrl = dir => {
+            return new URL(`../../../assets/${dir}`, import.meta.url).href
+        }
         return {
-            types
+            types,
+            getImageUrl
         }
     }
 })
