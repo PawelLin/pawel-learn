@@ -1,5 +1,7 @@
 export const types = {
     0: 'skin/type/0.png',
+    '01': 'skin/type/0.png',
+    '02': 'skin/type/0.png',
     1: 'skin/type/1.png',
     2: 'skin/type/2.png',
     3: 'skin/type/3.png',

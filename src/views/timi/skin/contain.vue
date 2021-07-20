@@ -29,8 +29,10 @@ export default defineComponent({
         }
     },
     setup () {
+        const modules = import.meta.globEager('../../../assets/skin/**/*.*')
         const  getImageUrl = dir => {
-            return new URL(`../../../assets/${dir}`, import.meta.url).href
+            const path = `../../../assets/${dir}`
+            return modules[path].default
         }
         return {
             types,
