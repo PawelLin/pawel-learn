@@ -4,7 +4,7 @@ interface Data {
 
 export const skins: Data = {
     '2021-7-19': {
-        alt: '鲁班大师-乒乓大师',
+        alt: '鲁班大师-乓乓大师',
         src: 'skin/525/525-smallskin-3.jpg'
     },
     '2021-6-26': {

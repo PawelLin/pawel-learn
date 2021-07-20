@@ -1,4 +1,7 @@
-export const types = {
+interface Types {
+    [propName: string]: string
+}
+export const types: Types = {
     0: 'skin/type/0.png',
     '01': 'skin/type/0.png',
     '02': 'skin/type/0.png',

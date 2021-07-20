@@ -159,7 +159,16 @@ export default defineComponent({
                 ]
             }
         ]
-        const data = {}
+        interface Data {
+            name: string,
+            icon: string,
+            url: string,
+            type: string
+        }
+        interface Datas {
+            [propName: string]: Data[]
+        }
+        const data: Datas = {}
         datas.forEach(list => {
             list.forEach((item, index) => {
                 const _index = index === 0 ? '01' : item.type === '0' ? '02' : item.type
@@ -167,7 +176,13 @@ export default defineComponent({
                 data[_index].push(item)
             })
         })
-        const setData = list => {
+        interface Item {
+            title: string,
+            type: string,
+            children?: Item[],
+            data?: Data[]
+        }
+        const setData = (list: Item[]) => {
             list.forEach(item => {
                 if (item.children && item.children.length) {
                     setData(item.children)

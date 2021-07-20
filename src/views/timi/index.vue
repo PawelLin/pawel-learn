@@ -88,15 +88,13 @@ export default defineComponent({
             list[index].herosLength = herosLength
         })
         list.sort((a, b) => a.year - b.year)
-        console.log(list)
         
         let translateX = ref(0)
         const handleTransform = (value:number):void => {
             translateX.value += value * 100
         }
         const modules = import.meta.globEager('../../assets/skin/**/*.*')
-        console.log(modules)
-        const  getImageUrl = dir => {
+        const  getImageUrl = (dir:string):string => {
             const path = `../../assets/${dir}`
             return modules[path].default
         }
