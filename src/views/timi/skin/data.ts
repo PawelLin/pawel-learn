@@ -261,6 +261,12 @@ export const datas = [
             icon: 'skin/523/523-smallskin-3.jpg',
             url: 'skin/523/523-bigskin-3.jpg',
             type: '12'
+        },
+        {
+            name: '西施-游龙清影',
+            icon: 'skin/523/523-smallskin-4.jpg',
+            url: 'skin/523/523-bigskin-4.jpg',
+            type: '51'
         }
     ],
     [
@@ -1759,6 +1765,12 @@ export const datas = [
             icon: 'skin/152/152-smallskin-5.jpg',
             url: 'skin/152/152-bigskin-5.jpg',
             type: '1'
+        },
+        {
+            name: '王昭君-乞巧织情',
+            icon: 'skin/152/152-smallskin-6.jpg',
+            url: 'skin/152/152-bigskin-6.jpg',
+            type: '15'
         }
     ],
     [

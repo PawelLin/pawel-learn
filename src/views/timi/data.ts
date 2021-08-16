@@ -3,6 +3,18 @@ interface Data {
 }
 
 export const skins: Data = {
+    '2021-8-16': {
+        alt: '老夫子-航海奇遇记',
+        src: 'skin/139/139-smallskin-6.jpg'
+    },
+    '2021-8-9': {
+        alt: '艾琳-女武神',
+        src: 'skin/155/155-smallskin-2.jpg'
+    },
+    '2021-7-21': {
+        alt: '钟馗-驱傩正仪',
+        src: 'skin/175/175-smallskin-4.jpg'
+    },
     '2021-7-19': {
         alt: '鲁班大师-乓乓大师',
         src: 'skin/525/525-smallskin-3.jpg'
