@@ -4,8 +4,8 @@ interface Data {
 
 export const skins: Data = {
     '2021-8-16': {
-        alt: '老夫子-航海奇遇记',
-        src: 'skin/139/139-smallskin-6.jpg'
+        alt: ['老夫子-航海奇遇记', '李元芳-逐浪之夏', '夏侯惇-乘风破浪'],
+        src: ['skin/139/139-smallskin-6.jpg', 'skin/173/173-smallskin-4.jpg', 'skin/126/126-smallskin-3.jpg']
     },
     '2021-8-9': {
         alt: '艾琳-女武神',
@@ -458,6 +458,10 @@ export const skins: Data = {
 }
 
 export const heros: Data = {
+    '2021-8-16': {
+        alt: '武则天',
+        src: 'skin/136/136-smallskin-1.jpg'
+    },
     '2021-6-23': {
         alt: '云缨',
         src: 'skin/538/538-smallskin-1.jpg'
@@ -817,11 +821,15 @@ export const heros: Data = {
 }
 
 export const Kings = {
-    '2021-05-31': {
+    '2021-8-13': {
+        alt: 'S24',
+        src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
+    },
+    '2021-5-31': {
         alt: 'S23',
         src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
     },
-    '2021-03-7': {
+    '2021-3-7': {
         alt: 'S22',
         src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
     },
@@ -838,31 +846,39 @@ export const Kings = {
         src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
     },
     '2020-5-10': {
-        alt: 'S19',
-        src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
-    },
-    '2020-2-3': {
         alt: 'S18',
         src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
     },
-    '2019-11-30': {
+    '2020-2-3': {
         alt: 'S17',
         src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
     },
-    '2019-7-26': {
+    '2019-11-30': {
         alt: 'S16',
         src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
     },
-    '2019-5-23': {
+    '2019-7-26': {
         alt: 'S15',
         src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
     },
-    '2019-3-23': {
+    '2019-5-23': {
         alt: 'S14',
         src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
     },
-    '2018-11-22': {
+    '2019-3-23': {
         alt: 'S13',
+        src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
+    },
+    '2018-11-22': {
+        alt: 'S10',
+        src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
+    },
+    '2018-xx-xx': {
+        alt: 'S8',
+        src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
+    },
+    '2017-xx-xx': {
+        alt: 'S7',
         src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
     },
 }
