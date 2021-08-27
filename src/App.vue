@@ -3,19 +3,19 @@
     <keep-alive>
         <router-view />
     </keep-alive>
-    <background-music class="background-music" />
+    <!-- <background-music class="background-music" /> -->
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 import MyHeader from '@/components/main/Header.vue'
-import BackgroundMusic from '@/components/main/BackgroundMusic.vue'
+// import BackgroundMusic from '@/components/main/BackgroundMusic.vue'
 
 export default defineComponent({
     name: 'App',
     components: {
         MyHeader,
-        BackgroundMusic
+        // BackgroundMusic
     }
 })
 </script>
