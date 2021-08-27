@@ -2,9 +2,19 @@ import { createRouter, createWebHistory} from 'vue-router'
 
 const routes = [
     {
+        path: '/',
+        name: 'Home',
+        component: () => import('@/views/home/index.vue')
+    },
+    {
         path: '/css',
         name: 'Css',
         component: () => import('@/views/css/index.vue')
+    },
+    {
+        path: '/svg',
+        name: 'Svg',
+        component: () => import('@/views/svg/index.vue')
     },
     {
         path: '/component',

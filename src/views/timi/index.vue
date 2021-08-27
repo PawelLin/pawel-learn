@@ -9,14 +9,14 @@
                     <span>[{{herosLength}}]</span>
                     <a v-if="index1 < list.length - 1" @click="handleTransform(-1)" href="javascript:;">{{year + 1}}</a>
                 </p>
-                <div v-for="({ skins, title, heros }, index2) in months" :key="`${year}${index2}`">
+                <div v-for="({ skins, title, heros, isKing }, index2) in months" :key="`${year}${index2}`">
                     <div class="skin">
                         <template v-for="({ src, alt }, index3) in skins" >
                             <div v-for="(img, index4) in src" class="image" :style="{ backgroundImage: `url(${getImageUrl(img)})` }" :title="alt[index4]" :key="`${year}${index2}${index3}${index4}`"></div>
                         </template>
                     </div>
                     <div class="timeline">
-                        <div class="month">{{title}}</div>
+                        <div class="month" :class="isKing && 'king'">{{title}}</div>
                     </div>
                     <div class="hero">
                         <template v-for="({ src, alt }, index3) in heros" >
@@ -31,7 +31,7 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
-import { skins, heros } from './data'
+import { skins, heros, kings } from './data'
 
 export default defineComponent({
     setup() {
@@ -49,6 +49,7 @@ export default defineComponent({
         interface Index {
             [propName: string]: number
         }
+        const kingMonths = Object.keys(kings).map(date => date.replace(/(\d+)-(\d+)-(.*)/, '$1-$2'))
         const list: Item[] = []
         const yearIndex: Index = {}
         const NAME = ['寅', '卯', '辰', '巳', '午', '未', '申', '酉', '戌', '亥', '子', '丑']
@@ -58,7 +59,7 @@ export default defineComponent({
             if (yearIndex[year] === undefined) {
                 yearIndex[year] = list.length
                 // list.push({ year, months: Array.from(Array(12)).map((item, index) => ({ skins: [], title: index + 1, heros: [] })) })
-                list.push({ year, months: Array.from(Array(12)).map((item, index) => ({ skins: [], title: NAME[index], heros: [] })) })
+                list.push({ year, months: Array.from(Array(12)).map((item, index) => ({ skins: [], title: NAME[index], isKing: kingMonths.includes(`${year}-${index + 1}`), heros: [] })) })
             }
             let { src, alt } = skins[key]
             list[yearIndex[year]].months[month].skins.push({ src: ([] as string[]).concat(src), alt: ([] as string[]).concat(alt), day })
@@ -165,6 +166,7 @@ export default defineComponent({
                 > .timeline {
                     margin: 0 10px;
                     > .month {
+                        position: relative;
                         margin-top: 5px;
                         width: @imgWidth;
                         height: @imgWidth;
@@ -173,6 +175,20 @@ export default defineComponent({
                         text-align: center;
                         border: 1px solid #eaeaea;
                         border-radius: 50%;
+                        &.king {
+                            border: 0;
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                top: -7px;
+                                right: -5px;
+                                bottom: -7px;
+                                left: -5px;
+                                background-image: url(@/assets/rank/rank16.png);
+                                background-size: cover;
+                                z-index: 1;
+                            }
+                        }
                     }
                 }
                 & + div {

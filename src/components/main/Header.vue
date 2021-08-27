@@ -1,7 +1,7 @@
 <template>
     <header class="header">
-        <div class="icon"></div>
-        <router-link v-for="{ path, text, key } in links" :to="path" :class="routeName === key && 'active'" :key="key">{{text}}</router-link>
+        <router-link to="/" class="icon"></router-link>
+        <router-link v-for="{ path, text, key } in links" :to="path" :class="routeName === key && 'active'" class="menu" :key="key">{{text}}</router-link>
     </header>
 </template>
 
@@ -46,6 +46,7 @@ export default defineComponent({
     overflow-x: auto;
     > .icon {
         position: sticky;
+        display: block;
         left: 0;
         width: 40px;   
         height: 40px;
@@ -54,7 +55,7 @@ export default defineComponent({
         background-size: 100%;
         min-width: 30px;
     }
-    > a {
+    > .menu {
         margin-left: 20px;
         color: #666;
         &:hover, &.active {

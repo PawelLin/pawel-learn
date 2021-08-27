@@ -3,6 +3,10 @@ interface Data {
 }
 
 export const skins: Data = {
+    '2021-8-18': {
+        alt: '刘备-纽约教父',
+        src: 'skin/170/170-smallskin-3.jpg'
+    },
     '2021-8-16': {
         alt: ['老夫子-航海奇遇记', '李元芳-逐浪之夏', '夏侯惇-乘风破浪'],
         src: ['skin/139/139-smallskin-6.jpg', 'skin/173/173-smallskin-4.jpg', 'skin/126/126-smallskin-3.jpg']
@@ -820,7 +824,7 @@ export const heros: Data = {
     }
 }
 
-export const Kings = {
+export const kings = {
     '2021-8-13': {
         alt: 'S24',
         src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
@@ -842,42 +846,46 @@ export const Kings = {
         src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
     },
     '2020-7-7': {
-        alt: 'S19',
+        alt: 'S19', // 荣耀王者
         src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
     },
     '2020-5-10': {
-        alt: 'S18',
+        alt: 'S19',
         src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
     },
     '2020-2-3': {
-        alt: 'S17',
+        alt: 'S18',
         src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
     },
     '2019-11-30': {
-        alt: 'S16',
+        alt: 'S17',
         src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
     },
     '2019-7-26': {
-        alt: 'S15',
+        alt: 'S16',
         src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
     },
     '2019-5-23': {
-        alt: 'S14',
+        alt: 'S15',
         src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
     },
     '2019-3-23': {
-        alt: 'S13',
+        alt: 'S14',
         src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
     },
     '2018-11-22': {
+        alt: 'S13',
+        src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
+    },
+    '2018-3-xx': {
         alt: 'S10',
         src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
     },
-    '2018-xx-xx': {
+    '2017-9-xx': {
         alt: 'S8',
         src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
     },
-    '2017-xx-xx': {
+    '2017-6-xx': {
         alt: 'S7',
         src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
     },

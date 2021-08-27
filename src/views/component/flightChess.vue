@@ -168,7 +168,7 @@ export default defineComponent({
 .fight-chess {
     display: grid;
     width: 100%;
-    height: 100vw;
+    height: 100%;
     grid-template-columns: repeat(30, 1fr);
     grid-template-rows: repeat(30, 1fr);
     grid-gap: 2px 2px;
