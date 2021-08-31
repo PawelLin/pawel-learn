@@ -82,7 +82,8 @@ export const types: Types = {
     82: 'skin/type/82.png',
     83: 'skin/type/83.png',
     84: 'skin/type/84.png',
-    85: 'skin/type/85.png'
+    85: 'skin/type/85.png',
+    86: 'skin/type/86.png',
 }
 export const datas = [
     [
@@ -1245,6 +1246,12 @@ export const datas = [
             icon: 'skin/178/178-smallskin-4.jpg',
             url: 'skin/178/178-bigskin-4.jpg',
             type: '1'
+        },
+        {
+            name: '杨戬-天秀·启明',
+            icon: 'skin/178/178-smallskin-5.jpg',
+            url: 'skin/178/178-bigskin-5.jpg',
+            type: '12'
         }
     ],
     [
@@ -3075,6 +3082,12 @@ export const datas = [
             icon: 'skin/107/107-smallskin-8.jpg',
             url: 'skin/107/107-bigskin-8.jpg',
             type: '72'
+        },
+        {
+            name: '赵云-淬星耀世',
+            icon: 'skin/107/107-smallskin-9.jpg',
+            url: 'skin/107/107-bigskin-9.jpg',
+            type: '86'
         }
     ],
     [
