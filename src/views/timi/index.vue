@@ -7,9 +7,9 @@
                     <span>[{{skinsLength}}]</span>
                     {{year}}
                     <span>[{{herosLength}}]</span>
-                    <a v-if="index1 < list.length - 1" @click="handleTransform(-1)" href="javascript:;">{{year + 1}}</a>
+                    <a v-if="index1 < list.length - 1" @click="handleTransform(-1, year + 1)" href="javascript:;">{{year + 1}}</a>
                 </p>
-                <div v-for="({ skins, title, heros, isKing }, index2) in months" :key="`${year}${index2}`">
+                <div v-for="({ skins, title, heros, isKing }, index2) in months" :key="`${year}${index2}`" v-show="showYears.includes(year)">
                     <div class="skin">
                         <template v-for="({ src, alt }, index3) in skins" >
                             <div v-for="(img, index4) in src" class="image" :style="{ backgroundImage: `url(${getImageUrl(img)})` }" :title="alt[index4]" :key="`${year}${index2}${index3}${index4}`"></div>
@@ -91,19 +91,25 @@ export default defineComponent({
         list.sort((a, b) => a.year - b.year)
         
         let translateX = ref(0)
-        const handleTransform = (value:number):void => {
+        const handleTransform = (value:number, year: number):void => {
+            if (!showYears.includes(year)) {
+                showYears.push(year)
+            }
             translateX.value += value * 100
         }
         const modules = import.meta.globEager('../../assets/skin/**/*.*')
-        const  getImageUrl = (dir:string):string => {
+        const getImageUrl = (dir:string):string => {
             const path = `../../assets/${dir}`
             return modules[path].default
         }
+        const allYear = list.map(item => item.year)
+        const showYears = document.body.clientWidth > 600 ? allYear : [allYear[0]]
         return {
             list,
             translateX,
             handleTransform,
-            getImageUrl
+            getImageUrl,
+            showYears
         }
     },
 })
