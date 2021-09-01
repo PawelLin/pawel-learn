@@ -24,6 +24,7 @@ import legend from './component/legend.vue'
 import limit from './component/limit.vue'
 import season from './component/season.vue'
 import anniversary from './component/anniversary.vue'
+import newYear from './component/newYear.vue'
 import festival from './component/festival.vue'
 import warOrder from './component/warOrder.vue'
 import linkage from './component/linkage.vue'
@@ -31,6 +32,8 @@ import match from './component/match.vue'
 import vip from './component/vip.vue'
 import activity from './component/activity.vue'
 import growUp from './component/growUp.vue'
+import six from './component/six.vue'
+import lovers from './component/lovers.vue'
 // import pc from './pc.vue'
 
 import { defineComponent, ref } from 'vue'
@@ -45,6 +48,7 @@ export default defineComponent({
         limit,
         season,
         anniversary,
+        newYear,
         festival,
         warOrder,
         linkage,
@@ -52,6 +56,8 @@ export default defineComponent({
         vip,
         activity,
         growUp,
+        six,
+        lovers,
         // pc
     },
     setup() {
@@ -65,6 +71,7 @@ export default defineComponent({
             { type: 'limit', name: '限定', key: [] },
             { type: 'season', name: '赛季', key: [] },
             { type: 'anniversary', name: '周年', key: [] },
+            { type: 'newYear', name: '新年', key: [] },
             { type: 'festival', name: '节日', key: [] },
             // { type: 'newYear', name: '新年限定', key: [] },
             // { type: 'spring', name: '新春专属', key: [] },
@@ -73,9 +80,11 @@ export default defineComponent({
             { type: 'warOrder', name: '战令', key: [] },
             { type: 'linkage', name: '联动', key: [] },
             { type: 'match', name: '赛事', key: [] },
-            { type: 'vip', name: 'VIP', key: [] },
+            { type: 'vip', name: '贵族', key: [] },
             { type: 'activity', name: '活动', key: [] },
             { type: 'growUp', name: '成长', key: [] },
+            { type: 'six', name: '六元', key: [] },
+            { type: 'lovers', name: '恋人', key: [] },
         ]
         return {
             types,
@@ -92,6 +101,7 @@ export default defineComponent({
     .menu {
         padding-top: 5px;
         height: 100%;
+        overflow: auto;
         text-align: center;
         > li {
             padding: 10px;
@@ -105,7 +115,7 @@ export default defineComponent({
         }
     }
     .contain {
-        padding: 10px 0;
+        padding: 8px 0;
         flex: 1;
         height: 100%;
         overflow: auto;

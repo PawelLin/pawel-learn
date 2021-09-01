@@ -20,7 +20,7 @@ export default defineComponent({
     setup(props) {
         let number = 0
         Object.keys(tabs).forEach(key => {
-            if (key !== 'self') {
+            if (!['self', 'six', 'lovers'].includes(key)) {
                 tabs[key].forEach(item => {
                     number += item.data.length
                 })
@@ -61,11 +61,11 @@ export default defineComponent({
     font-size: 0;
     .icon {
         margin: 5px 5px 0 0;
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
     }
     .type {
-        max-height: 50px;
+        max-height: 30px;
     }
     img {
         vertical-align: middle;
