@@ -5,7 +5,8 @@
     "dev": "vite",
     "build": "vite build",
     "build:pro": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "font": "font-spider ./font/index.html"
   },
   "dependencies": {
     "echarts": "^5.1.2",
