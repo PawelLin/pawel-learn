@@ -1,6 +1,6 @@
 <template>
     <div class="tabs" v-for="(items, indexs) in list" :key="`items${indexs}`">
-        <img v-for="(item, index) in items.data" class="icon" :src="getImageUrl(item.icon)" :title="item.name" :key="`items${indexs}${index}`">
+        <img v-for="(item, index) in items.data" class="icon" :src="getImageUrl(item.icon)" @click="handleShow(item)" :title="item.name" :key="`items${indexs}${index}`">
         <img v-if="items.type" class="type" :src="getImageUrl(items.type)">
     </div>
 </template>
@@ -17,7 +17,8 @@ export default defineComponent({
             type: String
         }
     },
-    setup(props) {
+    emits: ['modal-show'],
+    setup(props, { emit }) {
         let number = 0
         Object.keys(tabs).forEach(key => {
             if (!['self', 'six', 'lovers'].includes(key)) {
@@ -48,9 +49,13 @@ export default defineComponent({
             const path = `../../../../assets/${dir}`
             return modules[path].default
         }
+        const handleShow = item => {
+            emit('modal-show', item)
+        }
         return {
             list,
-            getImageUrl
+            getImageUrl,
+            handleShow
         }
     },
 })
@@ -63,6 +68,8 @@ export default defineComponent({
         margin: 5px 5px 0 0;
         width: 40px;
         height: 40px;
+        background-image:url('@/assets/picture-icon.png');
+        background-size: contain;
     }
     .type {
         max-height: 30px;

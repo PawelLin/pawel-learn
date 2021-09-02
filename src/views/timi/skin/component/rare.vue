@@ -1,5 +1,5 @@
 <template>
-    <type type="legend" />
+    <type type="rare" />
 </template>
 
 <script lang="ts">

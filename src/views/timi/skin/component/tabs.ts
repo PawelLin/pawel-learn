@@ -80,7 +80,7 @@ export const epic = [
     }
 ]
 
-export const legend = [
+export const rare = [
     {
         type: '',
         data: [

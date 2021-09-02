@@ -7,9 +7,20 @@
         </ul>
         <div class="contain">
             <keep-alive>
-                <component :is="type" />
+                <component :is="type" @modal-show="openModal" />
             </keep-alive>
         </div>
+        <teleport to="body">
+            <div v-show="modalOpen" class="modal" @click="closeModal">
+                <div v-show="isCover" ref="modalImageCover" @click.stop="changeCover(false)" class="modal-image-cover">
+                    <img v-show="modal.image" :src="modal.image">
+                </div>
+                <div v-show="!isCover" @click.stop="changeCover(true)" class="modal-image-content">
+                    <img v-show="modal.image" :src="modal.image">
+                </div>
+                <div class="modal-title">{{modal.title}}</div>
+            </div>
+        </teleport>
     </div>
     <!-- <pc /> -->
 </template>
@@ -20,7 +31,7 @@ import self from './component/self.vue'
 import my from './component/my.vue'
 import brave from './component/brave.vue'
 import epic from './component/epic.vue'
-import legend from './component/legend.vue'
+import rare from './component/rare.vue'
 import limit from './component/limit.vue'
 import season from './component/season.vue'
 import anniversary from './component/anniversary.vue'
@@ -36,7 +47,7 @@ import six from './component/six.vue'
 import lovers from './component/lovers.vue'
 // import pc from './pc.vue'
 
-import { defineComponent, ref } from 'vue'
+import { defineComponent, reactive, ref, nextTick } from 'vue'
 
 export default defineComponent({
     components: {
@@ -44,7 +55,7 @@ export default defineComponent({
         my,
         brave,
         epic,
-        legend,
+        rare,
         limit,
         season,
         anniversary,
@@ -62,12 +73,13 @@ export default defineComponent({
     },
     setup() {
         const type = ref('season')
+        const modalOpen = ref(false)
         const types = [
             { type: 'self', name: '原皮', key: [] },
             { type: 'my', name: '伴生', key: [] },
             { type: 'brave', name: '勇者', key: [] },
             { type: 'epic', name: '史诗', key: [] },
-            { type: 'legend', name: '传说', key: [] },
+            { type: 'rare', name: '传说', key: [] },
             { type: 'limit', name: '限定', key: [] },
             { type: 'season', name: '赛季', key: [] },
             { type: 'anniversary', name: '周年', key: [] },
@@ -86,9 +98,38 @@ export default defineComponent({
             { type: 'six', name: '六元', key: [] },
             { type: 'lovers', name: '恋人', key: [] },
         ]
+        const modal = reactive({
+            image: '',
+            title: ''
+        })
+        const isCover = ref(false)
+        const modalImageCover = ref(null)
+        const closeModal = () => {
+            modalOpen.value = false
+        }
+        const openModal = item => {
+            modal.title = item.name
+            modal.image = `//game.gtimg.cn/images/yxzj/img201606/${item.url.replace('skin', 'skin/hero-info')}`
+            modalOpen.value = true
+        }
+        const changeCover = show => {
+            isCover.value = show
+            if (show) {
+                nextTick(() => {
+                    modalImageCover.value.scrollLeft = document.body.offsetWidth + modalImageCover.value.offsetWidth / 2
+                })
+            }
+        }
         return {
             types,
-            type
+            type,
+            modalImageCover,
+            modal,
+            modalOpen,
+            openModal,
+            closeModal,
+            isCover,
+            changeCover
         }
     },
 })
@@ -119,6 +160,38 @@ export default defineComponent({
         flex: 1;
         height: 100%;
         overflow: auto;
+    }
+}
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    &-image-cover {
+        height: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        img {
+            height: 100%;
+        }
+    }
+    &-image-content {
+        img {
+            width: 100%;
+        }
+    }
+    &-title {
+        position: absolute;
+        padding: 10px 20px;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        color: rgba(255, 255, 255, 0.8);
+        text-align: right;
     }
 }
 </style>

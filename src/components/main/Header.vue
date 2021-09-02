@@ -42,7 +42,6 @@ export default defineComponent({
     white-space: nowrap;
     border-bottom: 1px solid #eaeaea;
     background-color: #fff;
-    z-index: 2;
     overflow-x: auto;
     > .icon {
         position: sticky;
