@@ -11,14 +11,13 @@
             </keep-alive>
         </div>
         <teleport to="body">
-            <div v-show="modalOpen" class="modal" @click="closeModal">
-                <div v-show="isCover" ref="modalImageCover" @click.stop="changeCover(false)" class="modal-image-cover">
-                    <img v-show="modal.image" :src="modal.image">
-                </div>
-                <div v-show="!isCover" @click.stop="changeCover(true)" class="modal-image-content">
-                    <img v-show="modal.image" :src="modal.image">
+            <div v-show="modalOpen && modal.image" class="modal">
+                <div class="modal-filter" :style="{ backgroundImage: `url(${modal.image})` }"></div>
+                <div class="modal-image">
+                    <img :src="modal.image" :alt="modal.title">
                 </div>
                 <div class="modal-title">{{modal.title}}</div>
+                <div class="modal-close" @click="closeModal"></div>
             </div>
         </teleport>
     </div>
@@ -47,7 +46,7 @@ import six from './component/six.vue'
 import lovers from './component/lovers.vue'
 // import pc from './pc.vue'
 
-import { defineComponent, reactive, ref, nextTick } from 'vue'
+import { defineComponent, reactive, ref } from 'vue'
 
 export default defineComponent({
     components: {
@@ -102,23 +101,14 @@ export default defineComponent({
             image: '',
             title: ''
         })
-        const isCover = ref(false)
         const modalImageCover = ref(null)
         const closeModal = () => {
             modalOpen.value = false
         }
         const openModal = item => {
             modal.title = item.name
-            modal.image = `//game.gtimg.cn/images/yxzj/img201606/${item.url.replace('skin', 'skin/hero-info')}`
+            modal.image = `//game.gtimg.cn/images/yxzj/img201606/${item.mobile.replace('skin', 'skin/hero-info')}`
             modalOpen.value = true
-        }
-        const changeCover = show => {
-            isCover.value = show
-            if (show) {
-                nextTick(() => {
-                    modalImageCover.value.scrollLeft = document.body.offsetWidth + modalImageCover.value.offsetWidth / 2
-                })
-            }
         }
         return {
             types,
@@ -127,9 +117,7 @@ export default defineComponent({
             modal,
             modalOpen,
             openModal,
-            closeModal,
-            isCover,
-            changeCover
+            closeModal
         }
     },
 })
@@ -171,27 +159,61 @@ export default defineComponent({
     background-color: rgba(0, 0, 0, 0.8);
     display: flex;
     align-items: center;
-    &-image-cover {
+    &-filter {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: -10px;
         height: 100%;
-        overflow-x: auto;
-        overflow-y: hidden;
-        img {
+        background-size: cover;
+        background-position: center top;
+        filter: blur(10px);
+        &::before {
+            content: '';
+            display: block;
+            width: 100%;
             height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
         }
     }
-    &-image-content {
+    &-image {
+        position: relative;
+        padding: 0 20px;
         img {
             width: 100%;
+            border-radius: 5px;
         }
     }
     &-title {
         position: absolute;
-        padding: 10px 20px;
+        padding: 10px 20px 20px;
         width: 100%;
         left: 0;
         bottom: 0;
         color: rgba(255, 255, 255, 0.8);
         text-align: right;
+    }
+    &-close {
+        position: absolute;
+        top: 20px;
+        right: 14px;
+        width: 30px;
+        height: 30px;
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            top: 8px;
+            right: 13px;
+            width: 2px;
+            height: 13px;
+            background-color: #fff;
+        }
+        &::before {
+            transform: skew(45deg, 0);
+        }
+        &::after {
+            transform: skew(-45deg, 0);
+        }
     }
 }
 </style>
