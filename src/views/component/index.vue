@@ -54,7 +54,7 @@ export default defineComponent({
         height: 200px;
     }
 }
-@media screen and (max-width:600px) {
+@media screen and (orientation: portrait) {
     .component {
         padding: 2vw;
         justify-content: space-between;

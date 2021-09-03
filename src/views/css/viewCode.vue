@@ -98,7 +98,7 @@ export default defineComponent({
         }
     }
 }
-@media screen and (max-width:600px) {
+@media screen and (orientation: portrait) {
     .view-code {
         margin-right: 0;
         width: 100%;

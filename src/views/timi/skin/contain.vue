@@ -64,7 +64,7 @@ export default defineComponent({
     // background-color: #f9c;
     // background-color: #f9c;
 }
-@media screen and (max-width:600px) {
+@media screen and (orientation: portrait) {
     .contain {
         img {
             height: 25.33333px;

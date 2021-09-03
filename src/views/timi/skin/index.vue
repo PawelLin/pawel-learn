@@ -15,9 +15,9 @@
                 <div class="modal-filter" :style="{ backgroundImage: `url(${modal.image})` }"></div>
                 <div class="modal-image">
                     <img :src="modal.image" :alt="modal.title">
+                    <div class="modal-title">{{modal.title}}</div>
+                    <div class="modal-close" @click="closeModal"></div>
                 </div>
-                <div class="modal-title">{{modal.title}}</div>
-                <div class="modal-close" @click="closeModal"></div>
             </div>
         </teleport>
     </div>
@@ -105,9 +105,11 @@ export default defineComponent({
         const closeModal = () => {
             modalOpen.value = false
         }
+        const isPortrait = window.innerWidth < window.innerHeight
         const openModal = item => {
+            const image = isPortrait ? item.mobile : item.url
             modal.title = item.name
-            modal.image = `//game.gtimg.cn/images/yxzj/img201606/${item.mobile.replace('skin', 'skin/hero-info')}`
+            modal.image = `//game.gtimg.cn/images/yxzj/img201606/${image.replace('skin', 'skin/hero-info')}`
             modalOpen.value = true
         }
         return {
@@ -157,8 +159,6 @@ export default defineComponent({
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    align-items: center;
     &-filter {
         position: absolute;
         top: 0;
@@ -178,27 +178,32 @@ export default defineComponent({
     }
     &-image {
         position: relative;
-        padding: 0 20px;
+        margin: 0 20px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         img {
-            width: 100%;
+            max-width: 100%;
+            max-height: 90%;
             border-radius: 5px;
         }
     }
     &-title {
         position: absolute;
-        padding: 10px 20px 20px;
         width: 100%;
         left: 0;
-        bottom: 0;
+        bottom: 20px;
         color: rgba(255, 255, 255, 0.8);
         text-align: right;
     }
     &-close {
         position: absolute;
         top: 20px;
-        right: 14px;
+        right: -7px;
         width: 30px;
         height: 30px;
+        cursor: pointer;
         &::before, &::after {
             content: '';
             position: absolute;
@@ -206,7 +211,7 @@ export default defineComponent({
             right: 13px;
             width: 2px;
             height: 13px;
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.8);
         }
         &::before {
             transform: skew(45deg, 0);
