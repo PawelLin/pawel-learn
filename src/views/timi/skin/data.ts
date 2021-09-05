@@ -92,6 +92,7 @@ export const datas = [
             icon: 'skin/538/538-smallskin-1.jpg',
             url: 'skin/538/538-bigskin-1.jpg',
             mobile: 'skin/538/538-mobileskin-1.jpg',
+            content: '有什么麻烦，尽管找我好啦~<br>总有一天，我也会成为李娘子那样的英雄！',
             type: '0'
         },
         {
@@ -108,6 +109,7 @@ export const datas = [
             icon: 'skin/155/155-smallskin-1.jpg',
             url: 'skin/155/155-bigskin-1.jpg',
             mobile: 'skin/155/155-mobileskin-1.jpg',
+            content: '理想乡，永远在下一个地方~<br>探索和意外总是形影不离。',
             type: '0'
         },
         {
@@ -124,6 +126,7 @@ export const datas = [
             icon: 'skin/537/537-smallskin-1.jpg',
             url: 'skin/537/537-bigskin-1.jpg',
             mobile: 'skin/537/537-mobileskin-1.jpg',
+            content: '迈向光明之路，注定荆棘丛生<br>一个人的强大，并不是真正的强大',
             type: '0'
         },
         {
@@ -140,6 +143,7 @@ export const datas = [
             icon: 'skin/528/528-smallskin-1.jpg',
             url: 'skin/528/528-bigskin-1.jpg',
             mobile: 'skin/528/528-mobileskin-1.jpg',
+            content: '狩猎目标的鲨鱼，会追索血的滋味！<br>痛苦会让恐惧离开身体。',
             type: '0'
         },
         {
@@ -156,6 +160,7 @@ export const datas = [
             icon: 'skin/536/536-smallskin-1.jpg',
             url: 'skin/536/536-bigskin-1.jpg',
             mobile: 'skin/536/536-mobileskin-1.jpg',
+            content: '我们珍视荣誉，但绝非过去的荣誉。\n<br>能够不流血而胜利，是最完美的胜利。',
             type: '0'
         }
     ],
@@ -165,6 +170,7 @@ export const datas = [
             icon: 'skin/533/533-smallskin-1.jpg',
             url: 'skin/533/533-bigskin-1.jpg',
             mobile: 'skin/533/533-mobileskin-1.jpg',
+            content: '哪儿有好吃的，我们就去哪儿~<br>在山里打架，要用我们山民的法则！',
             type: '0'
         },
         {
@@ -181,6 +187,7 @@ export const datas = [
             icon: 'skin/527/527-smallskin-1.jpg',
             url: 'skin/527/527-bigskin-1.jpg',
             mobile: 'skin/527/527-mobileskin-1.jpg',
+            content: '令则行，禁则止，无有所怠！<br>用兵之道，在于用阵。',
             type: '0'
         },
         {
@@ -197,6 +204,7 @@ export const datas = [
             icon: 'skin/531/531-smallskin-1.jpg',
             url: 'skin/531/531-bigskin-1.jpg',
             mobile: 'skin/531/531-mobileskin-1.jpg',
+            content: '阻拦在眼前的，通通打碎就行了。<br>第一个和最后一个敌人，都是自己。',
             type: '0'
         },
         {
@@ -220,6 +228,7 @@ export const datas = [
             icon: 'skin/524/524-smallskin-1.jpg',
             url: 'skin/524/524-bigskin-1.jpg',
             mobile: 'skin/524/524-mobileskin-1.jpg',
+            content: '言语，有时比枪炮更伤人。<br>黑白分明的，不只是我头发！',
             type: '0'
         },
         {
@@ -250,6 +259,7 @@ export const datas = [
             icon: 'skin/525/525-smallskin-1.jpg',
             url: 'skin/525/525-bigskin-1.jpg',
             mobile: 'skin/525/525-mobileskin-1.jpg',
+            content: '机关是数字的哲学。<br>人无法两次重现同一份杰作。',
             type: '0'
         },
         {
@@ -273,6 +283,7 @@ export const datas = [
             icon: 'skin/523/523-smallskin-1.jpg',
             url: 'skin/523/523-bigskin-1.jpg',
             mobile: 'skin/523/523-mobileskin-1.jpg',
+            content: '每一种境遇都是命运的附赠品。<br>有珍宝，不如有眼光。',
             type: '0'
         },
         {
@@ -303,6 +314,7 @@ export const datas = [
             icon: 'skin/518/518-smallskin-1.jpg',
             url: 'skin/518/518-bigskin-1.jpg',
             mobile: 'skin/518/518-mobileskin-1.jpg',
+            content: '只和理想结盟，只与纯洁立誓。<br>不必辨认我，识我的枪吧！',
             type: '0'
         },
         {
@@ -326,6 +338,7 @@ export const datas = [
             icon: 'skin/522/522-smallskin-1.jpg',
             url: 'skin/522/522-bigskin-1.jpg',
             mobile: 'skin/522/522-mobileskin-1.jpg',
+            content: '剑指的方向，就是天才的故乡！<br>星光荡开宇宙，本人闪耀其中。',
             type: '0'
         },
         {
@@ -356,6 +369,7 @@ export const datas = [
             icon: 'skin/506/506-smallskin-1.jpg',
             url: 'skin/506/506-bigskin-1.jpg',
             mobile: 'skin/506/506-mobileskin-1.jpg',
+            content: '世上所有不可爱的人，都归我云中神君管。<br>',
             type: '0'
         },
         {
@@ -379,6 +393,7 @@ export const datas = [
             icon: 'skin/505/505-smallskin-1.jpg',
             url: 'skin/505/505-bigskin-1.jpg',
             mobile: 'skin/505/505-mobileskin-1.jpg',
+            content: '过去生于未来~<br>要把梦藏在树叶里，不然梦会坏。',
             type: '0'
         },
         {
@@ -402,6 +417,7 @@ export const datas = [
             icon: 'skin/529/529-smallskin-1.jpg',
             url: 'skin/529/529-bigskin-1.jpg',
             mobile: 'skin/529/529-mobileskin-1.jpg',
+            content: '开天辟地，万物新生！<br>温室的实质是牢笼。',
             type: '0'
         },
         {
@@ -425,6 +441,7 @@ export const datas = [
             icon: 'skin/511/511-smallskin-1.jpg',
             url: 'skin/511/511-bigskin-1.jpg',
             mobile: 'skin/511/511-mobileskin-1.jpg',
+            content: '天寒地冻，不长点脂肪怎么行？<br>看我……看我……不收拾了你！',
             type: '0'
         },
         {
@@ -448,6 +465,7 @@ export const datas = [
             icon: 'skin/515/515-smallskin-1.jpg',
             url: 'skin/515/515-bigskin-1.jpg',
             mobile: 'skin/515/515-mobileskin-1.jpg',
+            content: '夜晚的太阳，保护属于它的人……<br>以前，我有一座花园……',
             type: '0'
         },
         {
@@ -471,6 +489,7 @@ export const datas = [
             icon: 'skin/513/513-smallskin-1.jpg',
             url: 'skin/513/513-bigskin-1.jpg',
             mobile: 'skin/513/513-mobileskin-1.jpg',
+            content: '上通自然之性，下取万类之象。<br>横如千里阵云，折如百钧弩发。',
             type: '0'
         },
         {
@@ -501,6 +520,7 @@ export const datas = [
             icon: 'skin/507/507-smallskin-1.jpg',
             url: 'skin/507/507-bigskin-1.jpg',
             mobile: 'skin/507/507-mobileskin-1.jpg',
+            content: '背负守护的誓言，必以信成。<br>不会让长安城，将我遗忘。',
             type: '0'
         },
         {
@@ -524,6 +544,7 @@ export const datas = [
             icon: 'skin/312/312-smallskin-1.jpg',
             url: 'skin/312/312-bigskin-1.jpg',
             mobile: 'skin/312/312-mobileskin-1.jpg',
+            content: '长城之子，归于长城。<br>本猫守望的长城，屹立不倒。',
             type: '0'
         },
         {
@@ -554,6 +575,7 @@ export const datas = [
             icon: 'skin/508/508-smallskin-1.jpg',
             url: 'skin/508/508-bigskin-1.jpg',
             mobile: 'skin/508/508-mobileskin-1.jpg',
+            content: '既皈依文明，绝不轻易令其破灭。<br>羌笛何须怨杨柳，春风不度玉门关。',
             type: '0'
         },
         {
@@ -591,6 +613,7 @@ export const datas = [
             icon: 'skin/509/509-smallskin-1.jpg',
             url: 'skin/509/509-bigskin-1.jpg',
             mobile: 'skin/509/509-mobileskin-1.jpg',
+            content: '',
             type: '0'
         },
         {
@@ -621,6 +644,7 @@ export const datas = [
             icon: 'skin/137/137-smallskin-1.jpg',
             url: 'skin/137/137-bigskin-1.jpg',
             mobile: 'skin/137/137-mobileskin-1.jpg',
+            content: '一切都在破碎中。<br>宇宙之中，从无公正。',
             type: '0'
         },
         {
@@ -637,6 +661,7 @@ export const datas = [
             icon: 'skin/510/510-smallskin-1.jpg',
             url: 'skin/510/510-bigskin-1.jpg',
             mobile: 'skin/510/510-mobileskin-1.jpg',
+            content: '自由，是最热烈的远行~<br>梦想着梦想中国家的梦想！',
             type: '0'
         },
         {
@@ -660,6 +685,7 @@ export const datas = [
             icon: 'skin/125/125-smallskin-1.jpg',
             url: 'skin/125/125-bigskin-1.jpg',
             mobile: 'skin/125/125-mobileskin-1.jpg',
+            content: '无欲无求，笑口常开~<br>人生如戏，全靠演技。',
             type: '0'
         },
         {
@@ -683,6 +709,7 @@ export const datas = [
             icon: 'skin/504/504-smallskin-1.jpg',
             url: 'skin/504/504-bigskin-1.jpg',
             mobile: 'skin/504/504-mobileskin-1.jpg',
+            content: '能源，永不枯竭。<br>神的礼物，附带有昂贵的价格。',
             type: '0'
         },
         {
@@ -713,6 +740,7 @@ export const datas = [
             icon: 'skin/503/503-smallskin-1.jpg',
             url: 'skin/503/503-bigskin-1.jpg',
             mobile: 'skin/503/503-mobileskin-1.jpg',
+            content: '勇气是唯一的信仰。<br>为何而战的意志，胜于钢铁之躯。',
             type: '0'
         },
         {
@@ -743,6 +771,7 @@ export const datas = [
             icon: 'skin/197/197-smallskin-1.jpg',
             url: 'skin/197/197-bigskin-1.jpg',
             mobile: 'skin/197/197-mobileskin-1.jpg',
+            content: '纵横十九道内的，是无穷宇宙。<br>若世有神明，亦会胜他半子。',
             type: '0'
         },
         {
@@ -766,6 +795,7 @@ export const datas = [
             icon: 'skin/502/502-smallskin-1.jpg',
             url: 'skin/502/502-bigskin-1.jpg',
             mobile: 'skin/502/502-mobileskin-1.jpg',
+            content: '等俺这拳头砸下去，有人可能会变废柴哦。<br>会牵挂的叫亲人，会回去的是故乡。',
             type: '0'
         },
         {
@@ -803,6 +833,7 @@ export const datas = [
             icon: 'skin/176/176-smallskin-1.jpg',
             url: 'skin/176/176-bigskin-1.jpg',
             mobile: 'skin/176/176-mobileskin-1.jpg',
+            content: '聆听渴望的，深信珍视的，沉醉梦寐以求的<br>春江花月照人生无穷，弦音流转听山河入梦。',
             type: '0'
         },
         {
@@ -826,6 +857,7 @@ export const datas = [
             icon: 'skin/199/199-smallskin-1.jpg',
             url: 'skin/199/199-bigskin-1.jpg',
             mobile: 'skin/199/199-mobileskin-1.jpg',
+            content: '花绽放于长安的春日，温暖又幸福~<br>飘零的孤鸟，也有权利寻求幸福呀。',
             type: '0'
         },
         {
@@ -863,6 +895,7 @@ export const datas = [
             icon: 'skin/501/501-smallskin-1.jpg',
             url: 'skin/501/501-bigskin-1.jpg',
             mobile: 'skin/501/501-mobileskin-1.jpg',
+            content: '福兮祸所伏，祸兮福所倚。<br>人生乏味，我欲令之光怪陆离。',
             type: '0'
         },
         {
@@ -893,6 +926,7 @@ export const datas = [
             icon: 'skin/179/179-smallskin-1.jpg',
             url: 'skin/179/179-bigskin-1.jpg',
             mobile: 'skin/179/179-mobileskin-1.jpg',
+            content: '遥远，蔚蓝的星球……终结即起源！<br>服从你应该服从的对象。',
             type: '0'
         },
         {
@@ -916,6 +950,7 @@ export const datas = [
             icon: 'skin/198/198-smallskin-1.jpg',
             url: 'skin/198/198-bigskin-1.jpg',
             mobile: 'skin/198/198-mobileskin-1.jpg',
+            content: '',
             type: '0'
         },
         {
@@ -939,6 +974,7 @@ export const datas = [
             icon: 'skin/194/194-smallskin-1.jpg',
             url: 'skin/194/194-bigskin-1.jpg',
             mobile: 'skin/194/194-mobileskin-1.jpg',
+            content: '可战不可屈！<br>历史书写于平凡人。',
             type: '0'
         },
         {
@@ -969,6 +1005,7 @@ export const datas = [
             icon: 'skin/195/195-smallskin-1.jpg',
             url: 'skin/195/195-bigskin-1.jpg',
             mobile: 'skin/195/195-mobileskin-1.jpg',
+            content: '讲道理，有哥哥罩的小疯子简直不讲道理！<br>我有哥哥，你没有，这就是任性的理由。',
             type: '0'
         },
         {
@@ -1006,6 +1043,7 @@ export const datas = [
             icon: 'skin/196/196-smallskin-1.jpg',
             url: 'skin/196/196-bigskin-1.jpg',
             mobile: 'skin/196/196-mobileskin-1.jpg',
+            content: '无论何时，何地，都会遵守约定。<br>给我一个目标，还你一片寂静。',
             type: '0'
         },
         {
@@ -1036,6 +1074,7 @@ export const datas = [
             icon: 'skin/193/193-smallskin-1.jpg',
             url: 'skin/193/193-bigskin-1.jpg',
             mobile: 'skin/193/193-mobileskin-1.jpg',
+            content: '长城，让你忘记自己孤身一人。<br>磨砺的不止锋芒，还有灵魂。',
             type: '0'
         },
         {
@@ -1073,6 +1112,7 @@ export const datas = [
             icon: 'skin/189/189-smallskin-1.jpg',
             url: 'skin/189/189-bigskin-1.jpg',
             mobile: 'skin/189/189-mobileskin-1.jpg',
+            content: '理解世界，而非享受它。<br>名为世外高人，实乃异类！',
             type: '0'
         },
         {
@@ -1103,6 +1143,7 @@ export const datas = [
             icon: 'skin/182/182-smallskin-1.jpg',
             url: 'skin/182/182-bigskin-1.jpg',
             mobile: 'skin/182/182-mobileskin-1.jpg',
+            content: '一分为二的生命，独一无二的魂灵。<br>最好的剑，永远是下一把。',
             type: '0'
         },
         {
@@ -1133,6 +1174,7 @@ export const datas = [
             icon: 'skin/187/187-smallskin-1.jpg',
             url: 'skin/187/187-bigskin-1.jpg',
             mobile: 'skin/187/187-mobileskin-1.jpg',
+            content: '万物皆可知！<br>俯视低等种族的彷徨，循螺旋而上！',
             type: '0'
         },
         {
@@ -1156,6 +1198,7 @@ export const datas = [
             icon: 'skin/191/191-smallskin-1.jpg',
             url: 'skin/191/191-bigskin-1.jpg',
             mobile: 'skin/191/191-mobileskin-1.jpg',
+            content: '完美是最无情的禁锢。<br>点亮的心，不会轻易熄灭。',
             type: '0'
         },
         {
@@ -1200,6 +1243,7 @@ export const datas = [
             icon: 'skin/192/192-smallskin-1.jpg',
             url: 'skin/192/192-bigskin-1.jpg',
             mobile: 'skin/192/192-mobileskin-1.jpg',
+            content: '彪悍的人生不需要解释。<br>强者恒强！',
             type: '0'
         },
         {
@@ -1223,6 +1267,7 @@ export const datas = [
             icon: 'skin/190/190-smallskin-1.jpg',
             url: 'skin/190/190-bigskin-1.jpg',
             mobile: 'skin/190/190-mobileskin-1.jpg',
+            content: '鞠躬尽瘁，好让你死而后已！<br>运筹帷幄之中，决胜千里之外！',
             type: '0'
         },
         {
@@ -1267,6 +1312,7 @@ export const datas = [
             icon: 'skin/180/180-smallskin-1.jpg',
             url: 'skin/180/180-bigskin-1.jpg',
             mobile: 'skin/180/180-mobileskin-1.jpg',
+            content: '我可是突破常理的存在！<br>谁是敌人，由我决定。',
             type: '0'
         },
         {
@@ -1297,6 +1343,7 @@ export const datas = [
             icon: 'skin/186/186-smallskin-1.jpg',
             url: 'skin/186/186-bigskin-1.jpg',
             mobile: 'skin/186/186-mobileskin-1.jpg',
+            content: '道生一，一生二，二生……太二组合！<br>你走过最长的路，都是我们的套路！',
             type: '0'
         },
         {
@@ -1327,6 +1374,7 @@ export const datas = [
             icon: 'skin/184/184-smallskin-1.jpg',
             url: 'skin/184/184-bigskin-1.jpg',
             mobile: 'skin/184/184-mobileskin-1.jpg',
+            content: '心有多大，舞台就有多刺激~~<br>不要欺负我，会把你弄哭的哟~~',
             type: '0'
         },
         {
@@ -1364,6 +1412,7 @@ export const datas = [
             icon: 'skin/183/183-smallskin-1.jpg',
             url: 'skin/183/183-bigskin-1.jpg',
             mobile: 'skin/183/183-mobileskin-1.jpg',
+            content: '祈祷无用，战争有理。<br>正视你的邪恶！',
             type: '0'
         },
         {
@@ -1401,6 +1450,7 @@ export const datas = [
             icon: 'skin/178/178-smallskin-1.jpg',
             url: 'skin/178/178-bigskin-1.jpg',
             mobile: 'skin/178/178-mobileskin-1.jpg',
+            content: '执行人间的意志！<br>尽情驰骋的，纵使天地也太狭小！',
             type: '0'
         },
         {
@@ -1438,6 +1488,7 @@ export const datas = [
             icon: 'skin/177/177-smallskin-1.jpg',
             url: 'skin/177/177-bigskin-1.jpg',
             mobile: 'skin/177/177-mobileskin-1.jpg',
+            content: '雄鹰不为暴风折翼，狼群不因长夜畏惧。',
             type: '0'
         },
         {
@@ -1454,6 +1505,7 @@ export const datas = [
             icon: 'skin/175/175-smallskin-1.jpg',
             url: 'skin/175/175-bigskin-1.jpg',
             mobile: 'skin/175/175-mobileskin-1.jpg',
+            content: '维持秩序！<br>吾之内涵，有容乃大。',
             type: '0'
         },
         {
@@ -1484,6 +1536,7 @@ export const datas = [
             icon: 'skin/174/174-smallskin-1.jpg',
             url: 'skin/174/174-bigskin-1.jpg',
             mobile: 'skin/174/174-mobileskin-1.jpg',
+            content: '明媚如风，轻盈似箭。<br>啊，已经放弃了做个淑女~',
             type: '0'
         },
         {
@@ -1528,6 +1581,7 @@ export const datas = [
             icon: 'skin/173/173-smallskin-1.jpg',
             url: 'skin/173/173-bigskin-1.jpg',
             mobile: 'skin/173/173-mobileskin-1.jpg',
+            content: '暗夜才是密探的主场。<br>给予破坏者正确的绝望。',
             type: '0'
         },
         {
@@ -1572,6 +1626,7 @@ export const datas = [
             icon: 'skin/171/171-smallskin-1.jpg',
             url: 'skin/171/171-bigskin-1.jpg',
             mobile: 'skin/171/171-mobileskin-1.jpg',
+            content: '心有猛虎。<br>有些罪不会消失，有些事非做不可。',
             type: '0'
         },
         {
@@ -1602,6 +1657,7 @@ export const datas = [
             icon: 'skin/170/170-smallskin-1.jpg',
             url: 'skin/170/170-bigskin-1.jpg',
             mobile: 'skin/170/170-mobileskin-1.jpg',
+            content: '深刻而不深沉，平淡而不平庸。<br>出来混，最重要的是讲义气！',
             type: '0'
         },
         {
@@ -1639,6 +1695,7 @@ export const datas = [
             icon: 'skin/169/169-smallskin-1.jpg',
             url: 'skin/169/169-bigskin-1.jpg',
             mobile: 'skin/169/169-mobileskin-1.jpg',
+            content: '发光的，一个就够了。<br>最光明，最黑暗。',
             type: '0'
         },
         {
@@ -1683,6 +1740,7 @@ export const datas = [
             icon: 'skin/168/168-smallskin-1.jpg',
             url: 'skin/168/168-bigskin-1.jpg',
             mobile: 'skin/168/168-mobileskin-1.jpg',
+            content: '牛气冲天，纯爷们！<br>突进的野兽之道！',
             type: '0'
         },
         {
@@ -1720,6 +1778,7 @@ export const datas = [
             icon: 'skin/167/167-smallskin-1.jpg',
             url: 'skin/167/167-bigskin-1.jpg',
             mobile: 'skin/167/167-mobileskin-1.jpg',
+            content: '取经之路就在脚下！<br>道行太浅，老实回家做宅男！',
             type: '0'
         },
         {
@@ -1778,6 +1837,7 @@ export const datas = [
             icon: 'skin/166/166-smallskin-1.jpg',
             url: 'skin/166/166-bigskin-1.jpg',
             mobile: 'skin/166/166-mobileskin-1.jpg',
+            content: '因剑而生！<br>为了王者的形象，连睡觉也穿着铠甲！',
             type: '0'
         },
         {
@@ -1815,6 +1875,7 @@ export const datas = [
             icon: 'skin/163/163-smallskin-1.jpg',
             url: 'skin/163/163-bigskin-1.jpg',
             mobile: 'skin/163/163-mobileskin-1.jpg',
+            content: '',
             type: '64'
         },
         {
@@ -1831,6 +1892,7 @@ export const datas = [
             icon: 'skin/162/162-smallskin-1.jpg',
             url: 'skin/162/162-bigskin-1.jpg',
             mobile: 'skin/162/162-mobileskin-1.jpg',
+            content: '',
             type: '64'
         },
         {
@@ -1847,6 +1909,7 @@ export const datas = [
             icon: 'skin/157/157-smallskin-1.jpg',
             url: 'skin/157/157-bigskin-1.jpg',
             mobile: 'skin/157/157-mobileskin-1.jpg',
+            content: '',
             type: '64'
         },
         {
@@ -1863,6 +1926,7 @@ export const datas = [
             icon: 'skin/156/156-smallskin-1.jpg',
             url: 'skin/156/156-bigskin-1.jpg',
             mobile: 'skin/156/156-mobileskin-1.jpg',
+            content: '我思故我在。<br>嘘，好奇心会害死猫！',
             type: '0'
         },
         {
@@ -1907,6 +1971,7 @@ export const datas = [
             icon: 'skin/154/154-smallskin-1.jpg',
             url: 'skin/154/154-bigskin-1.jpg',
             mobile: 'skin/154/154-mobileskin-1.jpg',
+            content: '谁说女子不如男。<br>不动如山，迅烈如火！',
             type: '0'
         },
         {
@@ -1965,6 +2030,7 @@ export const datas = [
             icon: 'skin/153/153-smallskin-1.jpg',
             url: 'skin/153/153-bigskin-1.jpg',
             mobile: 'skin/153/153-mobileskin-1.jpg',
+            content: '刀锋所划之地，便是疆土。<br>一个人，没有同类。',
             type: '0'
         },
         {
@@ -2002,6 +2068,7 @@ export const datas = [
             icon: 'skin/152/152-smallskin-1.jpg',
             url: 'skin/152/152-bigskin-1.jpg',
             mobile: 'skin/152/152-mobileskin-1.jpg',
+            content: '白梅落下之日，归去故里之时。<br>身躯已然冰封，灵魂仍旧火热。',
             type: '0'
         },
         {
@@ -2046,6 +2113,7 @@ export const datas = [
             icon: 'skin/150/150-smallskin-1.jpg',
             url: 'skin/150/150-bigskin-1.jpg',
             mobile: 'skin/150/150-mobileskin-1.jpg',
+            content: '到达胜利之前，无法回头。<br>必将百倍奉还！',
             type: '0'
         },
         {
@@ -2090,6 +2158,7 @@ export const datas = [
             icon: 'skin/149/149-smallskin-1.jpg',
             url: 'skin/149/149-bigskin-1.jpg',
             mobile: 'skin/149/149-mobileskin-1.jpg',
+            content: '不客观的说，我是个好人！<br>没有永恒的朋友，只有永恒的利益！',
             type: '0'
         },
         {
@@ -2120,6 +2189,7 @@ export const datas = [
             icon: 'skin/148/148-smallskin-1.jpg',
             url: 'skin/148/148-bigskin-1.jpg',
             mobile: 'skin/148/148-mobileskin-1.jpg',
+            content: '愿者上钩！这是多么痛彻的领悟。<br>强者生，弱者死！',
             type: '0'
         },
         {
@@ -2143,6 +2213,7 @@ export const datas = [
             icon: 'skin/146/146-smallskin-1.jpg',
             url: 'skin/146/146-bigskin-1.jpg',
             mobile: 'skin/146/146-mobileskin-1.jpg',
+            content: '替月行道。<br>月光映照着我的生命，以及你的死期。',
             type: '0'
         },
         {
@@ -2187,6 +2258,7 @@ export const datas = [
             icon: 'skin/144/144-smallskin-1.jpg',
             url: 'skin/144/144-bigskin-1.jpg',
             mobile: 'skin/144/144-mobileskin-1.jpg',
+            content: '一个字：干！<br>两个字：揍他！',
             type: '0'
         },
         {
@@ -2238,6 +2310,7 @@ export const datas = [
             icon: 'skin/142/142-smallskin-1.jpg',
             url: 'skin/142/142-bigskin-1.jpg',
             mobile: 'skin/142/142-mobileskin-1.jpg',
+            content: '知识就是力量。<br>神秘会屈从于更高的神秘！',
             type: '0'
         },
         {
@@ -2275,6 +2348,7 @@ export const datas = [
             icon: 'skin/141/141-smallskin-1.jpg',
             url: 'skin/141/141-bigskin-1.jpg',
             mobile: 'skin/141/141-mobileskin-1.jpg',
+            content: '不要爱上妾身哟！<br>无尽的舞蹈，何日方休？',
             type: '0'
         },
         {
@@ -2319,6 +2393,7 @@ export const datas = [
             icon: 'skin/140/140-smallskin-1.jpg',
             url: 'skin/140/140-bigskin-1.jpg',
             mobile: 'skin/140/140-mobileskin-1.jpg',
+            content: '生命与信念，都交托阁下！<br>屈辱比失败更难忍受。',
             type: '0'
         },
         {
@@ -2356,6 +2431,7 @@ export const datas = [
             icon: 'skin/139/139-smallskin-1.jpg',
             url: 'skin/139/139-bigskin-1.jpg',
             mobile: 'skin/139/139-mobileskin-1.jpg',
+            content: '教学生，顺便拯救世界。<br>好好教导你什么是尊师重道！',
             type: '0'
         },
         {
@@ -2400,6 +2476,7 @@ export const datas = [
             icon: 'skin/136/136-smallskin-1.jpg',
             url: 'skin/136/136-bigskin-1.jpg',
             mobile: 'skin/136/136-mobileskin-1.jpg',
+            content: '奉我为主！<br>叫我女王陛下！',
             type: '0'
         },
         {
@@ -2430,6 +2507,7 @@ export const datas = [
             icon: 'skin/135/135-smallskin-1.jpg',
             url: 'skin/135/135-bigskin-1.jpg',
             mobile: 'skin/135/135-mobileskin-1.jpg',
+            content: '我命由我！<br>天不容我，我必逆天！',
             type: '0'
         },
         {
@@ -2481,6 +2559,7 @@ export const datas = [
             icon: 'skin/134/134-smallskin-1.jpg',
             url: 'skin/134/134-bigskin-1.jpg',
             mobile: 'skin/134/134-mobileskin-1.jpg',
+            content: '肩挑凡世，拳握初心。<br>健美的身材？来自持久不懈的锻炼！',
             type: '0'
         },
         {
@@ -2518,6 +2597,7 @@ export const datas = [
             icon: 'skin/133/133-smallskin-1.jpg',
             url: 'skin/133/133-bigskin-1.jpg',
             mobile: 'skin/133/133-mobileskin-1.jpg',
+            content: '真相只有一个！<br>代表法律制裁你！',
             type: '0'
         },
         {
@@ -2569,6 +2649,7 @@ export const datas = [
             icon: 'skin/132/132-smallskin-1.jpg',
             url: 'skin/132/132-bigskin-1.jpg',
             mobile: 'skin/132/132-mobileskin-1.jpg',
+            content: '世界那么大，我想来看看~<br>行动和欲望决定未来。',
             type: '0'
         },
         {
@@ -2599,6 +2680,7 @@ export const datas = [
             icon: 'skin/131/131-smallskin-1.jpg',
             url: 'skin/131/131-bigskin-1.jpg',
             mobile: 'skin/131/131-mobileskin-1.jpg',
+            content: '今朝有酒今朝醉！<br>大河之剑天上来！',
             type: '0'
         },
         {
@@ -2643,6 +2725,7 @@ export const datas = [
             icon: 'skin/130/130-smallskin-1.jpg',
             url: 'skin/130/130-bigskin-1.jpg',
             mobile: 'skin/130/130-mobileskin-1.jpg',
+            content: '',
             type: '0'
         },
         {
@@ -2687,6 +2770,7 @@ export const datas = [
             icon: 'skin/129/129-smallskin-1.jpg',
             url: 'skin/129/129-bigskin-1.jpg',
             mobile: 'skin/129/129-mobileskin-1.jpg',
+            content: '你能感觉到痛楚吗？<br>战斗，让我忘记疯狂。',
             type: '0'
         },
         {
@@ -2724,6 +2808,7 @@ export const datas = [
             icon: 'skin/128/128-smallskin-1.jpg',
             url: 'skin/128/128-bigskin-1.jpg',
             mobile: 'skin/128/128-mobileskin-1.jpg',
+            content: '仁义，多么奢侈！<br>忠诚，美妙的谎言！',
             type: '0'
         },
         {
@@ -2768,6 +2853,7 @@ export const datas = [
             icon: 'skin/127/127-smallskin-1.jpg',
             url: 'skin/127/127-bigskin-1.jpg',
             mobile: 'skin/127/127-mobileskin-1.jpg',
+            content: '随波逐流的痛苦，你们不懂。<br>若轻云之蔽月，若流风之回雪。',
             type: '0'
         },
         {
@@ -2805,6 +2891,7 @@ export const datas = [
             icon: 'skin/126/126-smallskin-1.jpg',
             url: 'skin/126/126-bigskin-1.jpg',
             mobile: 'skin/126/126-mobileskin-1.jpg',
+            content: '随心所欲，这是俺的人生信条。<br>没错！俺就是呼唤胜利的男神！',
             type: '0'
         },
         {
@@ -2842,6 +2929,7 @@ export const datas = [
             icon: 'skin/124/124-smallskin-1.jpg',
             url: 'skin/124/124-bigskin-1.jpg',
             mobile: 'skin/124/124-mobileskin-1.jpg',
+            content: '没有欲望，何来胜利？<br>用头脑，而不是武力！',
             type: '0'
         },
         {
@@ -2879,6 +2967,7 @@ export const datas = [
             icon: 'skin/123/123-smallskin-1.jpg',
             url: 'skin/123/123-bigskin-1.jpg',
             mobile: 'skin/123/123-mobileskin-1.jpg',
+            content: '前方深渊，身后地狱！<br>战争，为我而生！',
             type: '0'
         },
         {
@@ -2930,6 +3019,7 @@ export const datas = [
             icon: 'skin/121/121-smallskin-1.jpg',
             url: 'skin/121/121-bigskin-1.jpg',
             mobile: 'skin/121/121-mobileskin-1.jpg',
+            content: '拥有了青春，也就拥抱了永恒！<br>流淌的痛苦，多么甜蜜！',
             type: '0'
         },
         {
@@ -2967,6 +3057,7 @@ export const datas = [
             icon: 'skin/120/120-smallskin-1.jpg',
             url: 'skin/120/120-bigskin-1.jpg',
             mobile: 'skin/120/120-mobileskin-1.jpg',
+            content: '我是伤口，又是刀锋。<br>昨日今日，此心如一。',
             type: '0'
         },
         {
@@ -2997,6 +3088,7 @@ export const datas = [
             icon: 'skin/119/119-smallskin-1.jpg',
             url: 'skin/119/119-bigskin-1.jpg',
             mobile: 'skin/119/119-mobileskin-1.jpg',
+            content: '别放弃治疗！<br>善良的唯有永不开口之人。',
             type: '0'
         },
         {
@@ -3027,6 +3119,7 @@ export const datas = [
             icon: 'skin/118/118-smallskin-1.jpg',
             url: 'skin/118/118-bigskin-1.jpg',
             mobile: 'skin/118/118-mobileskin-1.jpg',
+            content: '时间和波浪，变化无常！<br>人家这么可爱，当然是男孩子！',
             type: '0'
         },
         {
@@ -3071,6 +3164,7 @@ export const datas = [
             icon: 'skin/117/117-smallskin-1.jpg',
             url: 'skin/117/117-bigskin-1.jpg',
             mobile: 'skin/117/117-mobileskin-1.jpg',
+            content: '金钱和混战我都爱！<br>女人心，海底针！',
             type: '0'
         },
         {
@@ -3101,6 +3195,7 @@ export const datas = [
             icon: 'skin/116/116-smallskin-1.jpg',
             url: 'skin/116/116-bigskin-1.jpg',
             mobile: 'skin/116/116-mobileskin-1.jpg',
+            content: '我，是你惹不起的！<br>不知道你的名字，但清楚你的死期。',
             type: '0'
         },
         {
@@ -3145,6 +3240,7 @@ export const datas = [
             icon: 'skin/115/115-smallskin-1.jpg',
             url: 'skin/115/115-bigskin-1.jpg',
             mobile: 'skin/115/115-mobileskin-1.jpg',
+            content: '来，听离哥替对面奏响离歌。<br>原谅我一生，放浪不羁爱自由~',
             type: '0'
         },
         {
@@ -3175,6 +3271,7 @@ export const datas = [
             icon: 'skin/114/114-smallskin-1.jpg',
             url: 'skin/114/114-bigskin-1.jpg',
             mobile: 'skin/114/114-mobileskin-1.jpg',
+            content: '少爷我从不坑爹！<br>身高，那是禁句！',
             type: '0'
         },
         {
@@ -3212,6 +3309,7 @@ export const datas = [
             icon: 'skin/113/113-smallskin-1.jpg',
             url: 'skin/113/113-bigskin-1.jpg',
             mobile: 'skin/113/113-mobileskin-1.jpg',
+            content: '美妙的长眠，值得高歌一曲。<br>天地与我并生，万物与我为一。',
             type: '0'
         },
         {
@@ -3256,6 +3354,7 @@ export const datas = [
             icon: 'skin/112/112-smallskin-1.jpg',
             url: 'skin/112/112-bigskin-1.jpg',
             mobile: 'skin/112/112-mobileskin-1.jpg',
+            content: '检测了对面的智商，看来无法发挥全部实力了。<br>不得不承认，有时候肌肉比头脑管用。',
             type: '0'
         },
         {
@@ -3314,6 +3413,7 @@ export const datas = [
             icon: 'skin/111/111-smallskin-1.jpg',
             url: 'skin/111/111-bigskin-1.jpg',
             mobile: 'skin/111/111-mobileskin-1.jpg',
+            content: '淑女什么的……哼，才不屑呢！<br>来发子弹吗？满足你！',
             type: '0'
         },
         {
@@ -3372,6 +3472,7 @@ export const datas = [
             icon: 'skin/110/110-smallskin-1.jpg',
             url: 'skin/110/110-bigskin-1.jpg',
             mobile: 'skin/110/110-mobileskin-1.jpg',
+            content: '向所有人显现的东西，才叫公正。<br>黑色，光明的预演。',
             type: '0'
         },
         {
@@ -3409,6 +3510,7 @@ export const datas = [
             icon: 'skin/109/109-smallskin-1.jpg',
             url: 'skin/109/109-bigskin-1.jpg',
             mobile: 'skin/109/109-mobileskin-1.jpg',
+            content: '没有心，就不会受伤。<br>为什么会痛苦？一直微笑就好了。',
             type: '0'
         },
         {
@@ -3460,6 +3562,7 @@ export const datas = [
             icon: 'skin/108/108-smallskin-1.jpg',
             url: 'skin/108/108-bigskin-1.jpg',
             mobile: 'skin/108/108-mobileskin-1.jpg',
+            content: '生存，就是最精彩的战斗。<br>会让你印象深刻的！',
             type: '0'
         },
         {
@@ -3497,6 +3600,7 @@ export const datas = [
             icon: 'skin/107/107-smallskin-1.jpg',
             url: 'skin/107/107-bigskin-1.jpg',
             mobile: 'skin/107/107-mobileskin-1.jpg',
+            content: '枪如惊雷，照一身肝胆!<br>心怀不惧，方能翱翔于天际。',
             type: '0'
         },
         {
@@ -3562,6 +3666,7 @@ export const datas = [
             icon: 'skin/106/106-smallskin-1.jpg',
             url: 'skin/106/106-bigskin-1.jpg',
             mobile: 'skin/106/106-mobileskin-1.jpg',
+            content: '花会枯萎，爱永不凋零！<br>小乔，要努力变强！',
             type: '0'
         },
         {
@@ -3620,6 +3725,7 @@ export const datas = [
             icon: 'skin/105/105-smallskin-1.jpg',
             url: 'skin/105/105-bigskin-1.jpg',
             mobile: 'skin/105/105-mobileskin-1.jpg',
+            content: '心不老，身不灭。<br>一次不行，那就再来十次。',
             type: '0'
         },
         {

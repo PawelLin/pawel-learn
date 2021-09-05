@@ -43,6 +43,7 @@ export default defineComponent({
     border-bottom: 1px solid #eaeaea;
     background-color: #fff;
     overflow-x: auto;
+    z-index: 1;
     > .icon {
         position: sticky;
         display: block;

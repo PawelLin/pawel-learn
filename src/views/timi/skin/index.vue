@@ -14,7 +14,8 @@
             <div v-show="modalOpen && modal.image" class="modal">
                 <div class="modal-filter" :style="{ backgroundImage: `url(${modal.image})` }"></div>
                 <div class="modal-image">
-                    <img :src="modal.image" :alt="modal.title">
+                    <img :src="modal.image" :alt="modal.title" @load="imageLoaded">
+                    <div v-show="modal.content" class="modal-content" v-html="modal.content"></div>
                     <div class="modal-title">{{modal.title}}</div>
                     <div class="modal-close" @click="closeModal"></div>
                 </div>
@@ -99,7 +100,8 @@ export default defineComponent({
         ]
         const modal = reactive({
             image: '',
-            title: ''
+            title: '',
+            content: ''
         })
         const modalImageCover = ref(null)
         const closeModal = () => {
@@ -107,9 +109,16 @@ export default defineComponent({
         }
         const isPortrait = window.innerWidth < window.innerHeight
         const openModal = item => {
+            if (modal.title === item.name) {
+                modalOpen.value = true
+                return
+            }
             const image = isPortrait ? item.mobile : item.url
             modal.title = item.name
+            modal.content = item.content
             modal.image = `//game.gtimg.cn/images/yxzj/img201606/${image.replace('skin', 'skin/hero-info')}`
+        }
+        const imageLoaded = e => {
             modalOpen.value = true
         }
         return {
@@ -119,7 +128,8 @@ export default defineComponent({
             modal,
             modalOpen,
             openModal,
-            closeModal
+            closeModal,
+            imageLoaded
         }
     },
 })
@@ -159,6 +169,7 @@ export default defineComponent({
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
     &-filter {
         position: absolute;
         top: 0;
@@ -183,11 +194,18 @@ export default defineComponent({
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
         img {
             max-width: 100%;
             max-height: 90%;
             border-radius: 5px;
         }
+    }
+    &-content {
+        margin-top: 10px;
+        width: 100%;
+        text-align: left;
+        color: rgba(255, 255, 255, 0.8);
     }
     &-title {
         position: absolute;
