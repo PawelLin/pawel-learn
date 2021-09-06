@@ -35,7 +35,7 @@ export default defineComponent({
 .header {
     position: sticky;
     top: 0;
-    padding: 0 20px;
+    // padding: 0 20px;
     display: flex;
     align-items: center;
     height: 64px;
@@ -44,19 +44,23 @@ export default defineComponent({
     background-color: #fff;
     overflow-x: auto;
     z-index: 1;
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
     > .icon {
         position: sticky;
-        display: block;
         left: 0;
         width: 40px;   
         height: 40px;
         background: url(@/assets/svg/shumabaobei/brave.svg) no-repeat center #ffffff;
         // background: url(@/assets/svg/shumabaobei/brave.svg), url(@/assets/svg/shumabaobei/brave.png);
-        background-size: 100%;
-        min-width: 30px;
+        background-size: 30px;
+        min-width: 70px;
     }
     > .menu {
-        margin-left: 20px;
+        padding-right: 20px;
         color: #666;
         &:hover, &.active {
             color: #000;

@@ -173,9 +173,9 @@ export default defineComponent({
     &-filter {
         position: absolute;
         top: 0;
-        left: 0;
         right: -10px;
-        height: 100%;
+        bottom: -10px;
+        left: 0;
         background-size: cover;
         background-position: center top;
         filter: blur(10px);

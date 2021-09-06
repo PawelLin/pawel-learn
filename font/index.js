@@ -19,10 +19,15 @@ function getFont (filePath) {
                         const isDir = stats.isDirectory()
                         if (isFile) {
                             if (!/\.(png|jpe?g|gif|svg|ttf|mp3|mp4)(\?.*)?$/.test(dir)) {
-                                const content = fs.readFileSync(dir, 'utf-8').replace(/[^\u4e00-\u9fa5]/g, '')
-                                content.split('').forEach(key => {
-                                    font[key] = ''
+                                fs.readFileSync(dir, 'utf-8').split('\n').forEach(content => {
+                                    if (!content.match(/(^\s*?(\/\/|<!--))|\/\*/) && content.match(/[\u4e00-\u9fa5]/)) {
+                                        content.replace(/[^\u4e00-\u9fa5]/g, '').split('').forEach(key => {
+                                            font[key] = ''
+                                        })
+                                    }
                                 })
+                                // const content = fs.readFileSync(dir, 'utf-8')
+                                // content.split('')
                                 console.log(Object.keys(font).join(''))
                             }
                         } else if (isDir) {
