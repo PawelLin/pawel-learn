@@ -32,9 +32,14 @@ const routes = [
         component: () => import('@/views/timi/index.vue')
     },
     {
-        path: '/timi-skin',
+        path: '/timi/skin',
         name: 'TimiSkin',
         component: () => import('@/views/timi/skin/index.vue')
+    },
+    {
+        path: '/timi/all',
+        name: 'TimiAll',
+        component: () => import('@/views/timi/all/index.vue')
     },
     {
         path: '/echarts',
