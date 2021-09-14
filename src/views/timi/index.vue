@@ -222,12 +222,20 @@ export default defineComponent({
         > .contain {
             transition: 0.3s transform ease-in-out;
             > div {
+                padding: 44px 0 10px;
                 min-width: 100%;
                 max-width: 100%;
                 max-height: calc(100vh - 64px);
                 overflow-y: auto;
-                > p > a {
-                    display: block;
+                > p {
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                    background-color: #fff;
+                    z-index: 1;
+                    > a {
+                        display: block;
+                    }
                 }
             }
         }

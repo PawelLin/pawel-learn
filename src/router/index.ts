@@ -37,9 +37,9 @@ const routes = [
         component: () => import('@/views/timi/skin/index.vue')
     },
     {
-        path: '/timi/all',
-        name: 'TimiAll',
-        component: () => import('@/views/timi/all/index.vue')
+        path: '/timi/history',
+        name: 'TimiHistory',
+        component: () => import('@/views/timi/history/index.vue')
     },
     {
         path: '/echarts',
