@@ -155,8 +155,6 @@ export default defineComponent({
                         height: @imgWidth;
                         background-size: cover;
                         background-position: center;
-                        background-image:url('@/assets/picture-icon.png');
-                        background-size: contain;
                     }
                 }
                 .skin {

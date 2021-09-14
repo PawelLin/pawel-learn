@@ -49,7 +49,7 @@ export default defineComponent({
                 copyTextarea.id = 'copyTextarea'
                 copyTextarea.style.width = '0'
                 copyTextarea.style.height = '0'
-                // copyTextarea.style.border = 'none'
+                copyTextarea.style.marginLeft = '-1px';
                 document.body.append(copyTextarea)
             }
         })

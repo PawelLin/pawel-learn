@@ -23,10 +23,6 @@ export default defineComponent({
             default: 10
         }
     },
-    data () {
-        return {
-        }
-    },
     beforeCreate () {
         this.minuteAnimate = 0
         this.dandelionAnimate = 0
@@ -39,6 +35,7 @@ export default defineComponent({
             this.ctx.mozBackingStorePixelRatio ||
             this.ctx.msBackingStorePixelRatio ||
             this.ctx.oBackingStorePixelRatio || 1)
+        this.size = Math.max(2, this.size)
         const width = this.$refs.canvasDiv.offsetWidth || document.body.offsetWidth
         canvas.style.width = width + 'px'
         canvas.style.height = width + 'px'
@@ -71,8 +68,7 @@ export default defineComponent({
                 ctx.save()
                 ctx.translate(centerX, centerY)
                 ctx.strokeStyle = this.color
-                // ctx.lineWidth = 2
-                ctx.lineWidth = 1 * this.size
+                ctx.lineWidth = 2
                 ctx.rotate(i / 180 * Math.PI)
                 ctx.beginPath()
                 ctx.moveTo(0, -radius)
@@ -101,8 +97,7 @@ export default defineComponent({
                 ctx.save()
                 ctx.translate(centerX, centerY)
                 ctx.strokeStyle = this.color
-                // ctx.lineWidth = 1
-                ctx.lineWidth = 0.5 * this.size
+                ctx.lineWidth = 1
                 ctx.rotate(i / 180 * Math.PI)
                 ctx.beginPath()
                 ctx.moveTo(0, -radius + this.minuteHeight / 2)
@@ -126,8 +121,7 @@ export default defineComponent({
             const { x, y } = points[index - 1]
             ctx.save()
             ctx.strokeStyle = this.color
-            // ctx.lineWidth = 1
-            ctx.lineWidth = 0.5 * this.size
+            ctx.lineWidth = 1
             const initAngle = index * 30
             const angle = 360 / (index || 12)
             const extraAngle = (index % 2) ? 0 : angle / 2
@@ -194,8 +188,7 @@ export default defineComponent({
             ctx.strokeStyle = this.color
             ctx.translate(centerX, centerY)
             ctx.rotate(-Math.PI + rotate)
-            // ctx.lineWidth = 6
-            ctx.lineWidth = 2 * this.size
+            ctx.lineWidth = 6
             this.drawShadow()
             ctx.beginPath()
             ctx.moveTo(0, -this.minuteHandHeight * 0.16)
@@ -212,8 +205,7 @@ export default defineComponent({
             ctx.strokeStyle = this.color
             ctx.translate(centerX, centerY)
             ctx.rotate(-Math.PI + rotate)
-            // ctx.lineWidth = 7
-            ctx.lineWidth = 2.5 * this.size
+            ctx.lineWidth = 7
             this.drawShadow()
             ctx.beginPath()
             ctx.moveTo(0, -this.hourHandHeight * 0.16)
@@ -234,8 +226,7 @@ export default defineComponent({
             for (let i = 0; i < 360; i += 6) {
                 if (i && i % 5 !== 0) {
                     ctx.save()
-                    // ctx.lineWidth = 2
-                    ctx.lineWidth = 1 * this.size
+                    ctx.lineWidth = 2
                     ctx.rotate(i / 180 * Math.PI)
                     ctx.beginPath()
                     ctx.moveTo(0, -radius)
@@ -244,8 +235,7 @@ export default defineComponent({
                     ctx.restore()
                 } else {
                     ctx.save()
-                    // ctx.lineWidth = 1
-                    ctx.lineWidth = 0.5 * this.size
+                    ctx.lineWidth = 1
                     ctx.rotate(i / 180 * Math.PI)
                     ctx.beginPath()
                     ctx.moveTo(0, -radius + this.minuteHeight / 2)
@@ -263,8 +253,7 @@ export default defineComponent({
             const points = this.getPoints(this.centerX, this.centerY, this.height / 2 - radius, 12)
             ctx.save()
             ctx.strokeStyle = this.color
-            // ctx.lineWidth = 1
-            ctx.lineWidth = 0.5 * this.size
+            ctx.lineWidth = 1
             // this.drawShadow()
             points.forEach(({ x, y }, index) => {
                 index += 1
@@ -305,9 +294,9 @@ export default defineComponent({
         },
         drawShadow () {
             const ctx = this.ctx
-            ctx.shadowBlur = 4 * this.size
-            ctx.shadowOffsetX = 3 * this.size
-            ctx.shadowOffsetY = 3 * this.size
+            ctx.shadowBlur = 8
+            ctx.shadowOffsetX = 6
+            ctx.shadowOffsetY = 6
             ctx.shadowColor = 'rgba(0, 0, 0, 0.6)'
         },
         drawCircle () {
@@ -315,8 +304,7 @@ export default defineComponent({
             const centerX = this.centerX
             const centerY = this.centerY
             const radius = this.height / 2
-            // ctx.lineWidth = 1
-            ctx.lineWidth = 0.5 * this.size
+            ctx.lineWidth = 1
             ctx.beginPath()
             ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI)
             ctx.stroke()
@@ -359,7 +347,7 @@ export default defineComponent({
             }
         }
     },
-    beforeUnmount () {
+    beforeDestroy () {
         clearInterval(this.setInterval)
     }
 })

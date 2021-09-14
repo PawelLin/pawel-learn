@@ -134,7 +134,7 @@ export default defineComponent({
             font-weight: bold;
         }
         .list {
-            padding: 8px 0;
+            padding: 13px 0 8px;
             height: 100%;
             overflow: auto;
         }

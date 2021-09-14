@@ -93,7 +93,7 @@ export default defineComponent({
         z-index: -1;
     }
     &::before {
-        clip-path: inset(0 0 var(--hight) 0 round 5px);
+        clip-path: inset(0 0 calc(var(--hight) - 0.3px) 0 round 5px);
         /*round 可以设置圆角*/
     }
     &::after {
