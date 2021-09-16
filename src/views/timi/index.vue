@@ -12,7 +12,8 @@
                 <div v-for="({ skins, title, heros, isKing }, index2) in months" :key="`${year}${index2}`" v-show="showYears.includes(year)">
                     <div class="skin">
                         <template v-for="({ src, alt }, index3) in skins" >
-                            <div v-for="(img, index4) in src" class="image" :style="{ backgroundImage: `url(${getImageUrl(img)})` }" :title="alt[index4]" :key="`${year}${index2}${index3}${index4}`"></div>
+                            <!-- <div v-for="(img, index4) in src" class="image" :style="{ backgroundImage: `url(${getImageUrl(img)})` }" :title="alt[index4]" :key="`${year}${index2}${index3}${index4}`"></div> -->
+                            <img v-for="(img, index4) in src" class="image" :src="getImageUrl(img)" :title="alt[index4]" :key="`${year}${index2}${index3}${index4}`">
                         </template>
                     </div>
                     <div class="timeline">
@@ -20,7 +21,8 @@
                     </div>
                     <div class="hero">
                         <template v-for="({ src, alt }, index3) in heros" >
-                            <div v-for="(img, index4) in src" class="image" :style="{ backgroundImage: `url(${getImageUrl(img)})` }" :title="alt[index4]" :key="`${year}${index2}${index3}${index4}`"></div>
+                            <!-- <div v-for="(img, index4) in src" class="image" :style="{ backgroundImage: `url(${getImageUrl(img)})` }" :title="alt[index4]" :key="`${year}${index2}${index3}${index4}`"></div> -->
+                            <img v-for="(img, index4) in src" class="image" :src="getImageUrl(img)" :title="alt[index4]" :key="`${year}${index2}${index3}${index4}`">
                         </template>
                     </div>
                 </div>
@@ -146,11 +148,10 @@ export default defineComponent({
                     flex: 1;
                     > .image {
                         margin-top: 5px;
-                        display: inline-block;
                         width: @imgWidth;
                         height: @imgWidth;
-                        background-size: cover;
-                        background-position: center;
+                        background-image:url('@/assets/picture-icon.png');
+                        background-size: contain;
                     }
                 }
                 .skin {
