@@ -10,6 +10,7 @@
 import { datas, types } from '../data'
 import * as tabs from './tabs'
 import { defineComponent } from 'vue'
+import { getImageUrl } from '@/libs/utils'
 
 export default defineComponent({
     props: {
@@ -44,11 +45,6 @@ export default defineComponent({
         //     const path = `../../../../assets/${dir}`
         //     return new URL(path, import.meta.url).href
         // }
-        const modules = import.meta.globEager('../../../../assets/skin/**/*.*')
-        const getImageUrl = (dir:string):string => {
-            const path = `../../../../assets/${dir}`
-            return modules[path].default
-        }
         const handleShow = item => {
             emit('modal-show', item)
         }

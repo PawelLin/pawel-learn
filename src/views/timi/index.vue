@@ -32,6 +32,7 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
 import { skins, heros, kings } from './data'
+import { getImageUrl } from '@/libs/utils'
 
 export default defineComponent({
     setup() {
@@ -96,11 +97,6 @@ export default defineComponent({
                 showYears.push(year)
             }
             translateX.value += value * 100
-        }
-        const modules = import.meta.globEager('../../assets/skin/**/*.*')
-        const getImageUrl = (dir:string):string => {
-            const path = `../../assets/${dir}`
-            return modules[path].default
         }
         const allYear = list.map(item => item.year)
         const showYears = document.body.clientWidth > 600 ? allYear : [allYear[0]]

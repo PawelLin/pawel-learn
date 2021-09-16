@@ -28,6 +28,7 @@
 import { defineComponent, ref } from 'vue'
 import { datas } from '../skin/data'
 import { history } from './history'
+import { getImageUrl } from '@/libs/utils'
 
 export default defineComponent({
     setup() {
@@ -82,11 +83,6 @@ export default defineComponent({
             }
         })
         const type = ref(2)
-        const modules = import.meta.globEager('../../../assets/skin/**/*.*')
-        const getImageUrl = (dir:string):string => {
-            const path = `../../../assets/${dir}`
-            return modules[path].default
-        }
         return {
             getImageUrl,
             seasons,

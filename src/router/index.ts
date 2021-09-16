@@ -45,6 +45,11 @@ const routes = [
         path: '/echarts',
         name: 'Echarts',
         component: () => import('@/views/echarts/index.vue')
+    },
+    {
+        path: '/source',
+        name: 'Source',
+        component: () => import('@/views/source/index.vue')
     }
 ]
 
