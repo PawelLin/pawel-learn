@@ -3104,6 +3104,13 @@ export const datas = [
             mobile: 'skin/129/129-mobileskin-5.jpg',
             date: '2020-1-24',
             type: '67'
+        },
+        {
+            name: '典韦-铁甲之心',
+            icon: 'skin/129/129-smallskin-6.jpg',
+            url: 'skin/129/129-bigskin-6.jpg',
+            mobile: 'skin/129/129-mobileskin-6.jpg',
+            type: '1'
         }
     ],
     [

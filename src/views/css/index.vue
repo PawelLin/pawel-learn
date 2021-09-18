@@ -34,6 +34,7 @@
             <div class="border border7">clip-path</div>
             <div class="border border8">clip-path</div>
             <div class="border border9">filter</div>
+            <div class="border border10">折角边框</div>
         </div>
     </div>
 </template>
@@ -367,5 +368,39 @@ export default defineComponent({
     clip-path: inset(0px round 4px);
     animation: huerotate 6s infinite linear;
     filter: hue-rotate(360deg);
+}
+.border10 {
+    --width: 4px;
+    --border-width: 1px;
+    --border-color: #03A9F3;
+    --background-color: #fff;
+    position: relative;
+    &::before {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(135deg, transparent var(--width), var(--border-color) 0) top left,
+                    linear-gradient(-135deg, transparent var(--width), var(--border-color) 0) top right,
+                    linear-gradient(-45deg, transparent var(--width), var(--border-color) 0) bottom right,
+                    linear-gradient(45deg, transparent var(--width), var(--border-color) 0) bottom left;
+    }
+    &::after {
+        top: var(--border-width);
+        right: var(--border-width);
+        bottom: var(--border-width);
+        left: var(--border-width);
+        background: linear-gradient(135deg, transparent var(--width), var(--background-color) 0) top left,
+                    linear-gradient(-135deg, transparent var(--width), var(--background-color) 0) top right,
+                    linear-gradient(-45deg, transparent var(--width), var(--background-color) 0) bottom right,
+                    linear-gradient(45deg, transparent var(--width), var(--background-color) 0) bottom left;
+    }
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        background-size: 51% 51%;
+        background-repeat: no-repeat;
+        z-index: -1;
+    }
 }
 </style>

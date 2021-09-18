@@ -1689,5 +1689,11 @@ export const history = [
         name: '赵云-淬星耀世',
         date: '2021-8-24',
         content: '2021年世界冠军杯纪念皮肤'
+    },
+    {
+        name: '典韦-铁甲之心',
+        start: '2021-9-17',
+        end: '2021-9-23',
+        content: '典韦6元皮肤'
     }
 ]

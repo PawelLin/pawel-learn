@@ -1,31 +1,33 @@
 <template>
     <div class="timi-all">
         <ul class="menu">
-            <li v-for="(item, index) in seasons" :key="item.title" @click="type = index">
-                <span :class="index === type && 'active'">{{item.title}}</span>
+            <li v-for="(item, index) in seasons" :key="item.title" @click="handleSetScroll(index, item.title)">
+                <span :class="item.title === type && 'active'">{{item.title}}</span>
             </li>
         </ul>
         <div class="contain">
-            <!-- <div class="title">
-                {{seasons[type].list[0].year}}
-            </div> -->
-            <div class="list">
-                <div v-for="item in seasons[type].list" class="item" :key="item.date">
-                    <div class="date">
-                        {{item.month}}月
-                        <p class="day">{{item.day}}</p>
+            <div class="title">
+                {{year}}
+            </div>
+            <div ref="listRef" class="list" @scroll="handleScroll">
+                <template v-for="season in seasons">
+                    <div v-for="item in season.list" class="item" :key="item.date">
+                        <div class="date">
+                            {{item.month}}月
+                            <p class="day">{{item.day}}</p>
+                        </div>
+                        <div class="image">
+                            <img :ref="(el) => setImageRef(el, image, item.year, season.title)" v-for="image in item.image" src="@/assets/picture-icon.png" :title="image.name" :key="image.name">
+                        </div>
                     </div>
-                    <div class="image">
-                        <img v-for="image in item.image" :src="getImageUrl(image.icon)" alt="" :key="image.name">
-                    </div>
-                </div>
+                </template>
             </div>
         </div>
     </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
+import { defineComponent, onMounted, ref } from 'vue'
 import { datas } from '../skin/data'
 import { history } from './history'
 import { getImageUrl } from '@/libs/utils'
@@ -82,11 +84,55 @@ export default defineComponent({
                 })
             }
         })
-        const type = ref(2)
+        const type = ref('S1')
+        const year = ref('')
+        const listRef = ref(null)
+        let imageRefs = []
+        const scrollTabs = []
+        const setImageRef = (el, item, year, title) => {
+            if (el) {
+                el.imageData = { ...item, year, title }
+                imageRefs.push(el)
+            }
+        }
+        const handleScroll = e => {
+            const scrollTop = listRef.value.scrollTop
+            const heightTop = listRef.value.offsetHeight + scrollTop
+            imageRefs.forEach((image, index) => {
+                const top = image.offsetTop
+                const data = image.imageData
+                if (heightTop >= top && !data.isLoaded) {
+                    image.src = getImageUrl(data.icon)
+                    data.isLoaded = true
+                }
+                if (Math.abs((scrollTop + imageRefs[0].offsetTop) - top) <= 20) {
+                    year.value = data.year
+                    type.value = data.title
+                }
+                if (!e) {
+                    const preImage = imageRefs[index - 1]
+                    if (!preImage || (preImage.imageData.title !== data.title)) {
+                        scrollTabs.push(top - imageRefs[0].offsetTop)
+                    }
+                }
+            })
+        }
+        const handleSetScroll = (index, title) => {
+            type.value = title
+            listRef.value.scrollTop = scrollTabs[index]
+        }
+        onMounted(() => {
+            handleScroll()
+        })
         return {
             getImageUrl,
             seasons,
-            type
+            type,
+            year,
+            listRef,
+            handleScroll,
+            handleSetScroll,
+            setImageRef
         }
     },
 })
@@ -125,12 +171,14 @@ export default defineComponent({
         font-size: 14px;
         .title {
             position: absolute;
-            top: 6px;
-            margin-bottom: 5px;
+            // top: 6px;
+            padding-top: 8px;
+            width: 100%;
             font-weight: bold;
+            background-color: rgba(255, 255, 255, 0.8);
         }
         .list {
-            padding: 13px 0 8px;
+            padding: 23px 0 8px;
             height: 100%;
             overflow: auto;
         }
@@ -153,12 +201,21 @@ export default defineComponent({
                     margin: 0 5px 5px 0;
                     width: 40px;
                     height: 40px;
-                    background-image:url('@/assets/picture-icon.png');
-                    background-size: contain;
+                    // background-image:url('@/assets/picture-icon.png');
+                    // background-size: contain;
                 }
             }
             & + .item {
                 margin-top: 5px;
+            }
+        }
+    }
+}
+@media screen and (orientation: portrait) {
+    .timi-all {
+        > .contain {
+            .list {
+                padding-bottom: 100%;
             }
         }
     }
