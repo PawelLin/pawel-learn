@@ -1,8 +1,8 @@
 <template>
     <div class="timi-all">
-        <ul class="menu">
-            <li v-for="(item, index) in seasons" :key="item.title" @click="handleSetScroll(index, item.title)">
-                <span :class="item.title === type && 'active'">{{item.title}}</span>
+        <ul ref="menuRef" class="menu">
+            <li :ref="setTabRef" v-for="(item, index) in seasons" :key="item.title" @click="handleSetScroll(index, item.title)">
+                <span :class="item.title === type ? 'active' : null">{{item.title}}</span>
             </li>
         </ul>
         <div class="contain">
@@ -10,7 +10,7 @@
                 {{year}}
             </div>
             <div ref="listRef" class="list" @scroll="handleScroll">
-                <template v-for="season in seasons">
+                <div v-for="season in seasons" class="season" :key="season.title">
                     <div v-for="item in season.list" class="item" :key="item.date">
                         <div class="date">
                             {{item.month}}月
@@ -20,7 +20,7 @@
                             <img :ref="(el) => setImageRef(el, image, item.year, season.title)" v-for="image in item.image" src="@/assets/picture-icon.png" :title="image.name" :key="image.name">
                         </div>
                     </div>
-                </template>
+                </div>
             </div>
         </div>
     </div>
@@ -87,13 +87,18 @@ export default defineComponent({
         const type = ref('S1')
         const year = ref('')
         const listRef = ref(null)
-        let imageRefs = []
+        const imageRefs = []
         const scrollTabs = []
         const setImageRef = (el, item, year, title) => {
             if (el) {
                 el.imageData = { ...item, year, title }
                 imageRefs.push(el)
             }
+        }
+        const menuRef = ref(null)
+        const tabRefs = []
+        const setTabRef = el => {
+            el && tabRefs.push(el)
         }
         const handleScroll = e => {
             const scrollTop = listRef.value.scrollTop
@@ -105,9 +110,20 @@ export default defineComponent({
                     image.src = getImageUrl(data.icon)
                     data.isLoaded = true
                 }
-                if (Math.abs((scrollTop + imageRefs[0].offsetTop) - top) <= 20) {
+                if (Math.abs((scrollTop + imageRefs[0].offsetTop) - top) <= 10) {
                     year.value = data.year
                     type.value = data.title
+                    const index = Number(data.title.replace('S', '')) - 1
+                    const scrollTop = menuRef.value.scrollTop
+                    const offsetHeight = menuRef.value.offsetHeight
+                    const offsetTop = tabRefs[index].offsetTop
+                    const heightTop = offsetHeight + scrollTop - tabRefs[0].offsetTop
+                    if (heightTop < offsetTop) {
+                        menuRef.value.scrollTop = offsetTop - offsetHeight + tabRefs[index].offsetHeight
+                    }
+                    if (offsetTop < scrollTop) {
+                        menuRef.value.scrollTop = offsetTop
+                    }
                 }
                 if (!e) {
                     const preImage = imageRefs[index - 1]
@@ -130,9 +146,11 @@ export default defineComponent({
             type,
             year,
             listRef,
+            menuRef,
             handleScroll,
             handleSetScroll,
-            setImageRef
+            setImageRef,
+            setTabRef
         }
     },
 })
@@ -143,6 +161,7 @@ export default defineComponent({
     display: flex;
     height: calc(100vh - 64px);
     .menu {
+        position: relative;
         padding-top: 5px;
         height: 100%;
         overflow: auto;
@@ -182,6 +201,11 @@ export default defineComponent({
             height: 100%;
             overflow: auto;
         }
+        .season {
+            &:last-child {
+                min-height: 100%;
+            }
+        }
         .item {
             display: flex;
             .date {
@@ -207,15 +231,6 @@ export default defineComponent({
             }
             & + .item {
                 margin-top: 5px;
-            }
-        }
-    }
-}
-@media screen and (orientation: portrait) {
-    .timi-all {
-        > .contain {
-            .list {
-                padding-bottom: 100%;
             }
         }
     }

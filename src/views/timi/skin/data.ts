@@ -627,6 +627,13 @@ export const datas = [
             mobile: 'skin/312/312-mobileskin-4.jpg',
             date: '2020-1-9',
             type: '40'
+        },
+        {
+            name: '沈梦溪-月团寄思',
+            icon: 'skin/312/312-smallskin-5.jpg',
+            url: 'skin/312/312-bigskin-5.jpg',
+            mobile: 'skin/312/312-mobileskin-5.jpg',
+            type: '12'
         }
     ],
     [
