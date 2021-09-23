@@ -31,7 +31,7 @@ export default defineComponent({
         console.log(number)
         const list = JSON.parse(JSON.stringify(tabs[props.type]))
         const data = Array.prototype.concat.apply([], datas)
-        console.log(data.length - 106)
+        console.log(data.length - 107)
         list.forEach(items => {
             items.data.forEach((name, index) => {
                 items.data[index] = data.filter(item => item.name === name)[0]
