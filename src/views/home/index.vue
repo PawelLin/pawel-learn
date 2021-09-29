@@ -9,16 +9,16 @@
         <table class="table" cellspacing="0" cellpadding="0" border="0">
             <tr>
                 <th v-for="(item, index) in (form.count + 1)">英雄{{index + 1}}</th>
-                <th @click="setSelected('pick')" :class="form.selected === 'pick' ? 'selected' : null">
+                <th @click="setSelected('pick')" :class="form.selected === 'pick' ? 'selected' : null" class="pick">
                     {{!form.count ? '被pick次数' : '场次'}}
                     <i class="arrow" :class="!form.pick ? 'up' : null"></i>
                 </th>
-                <th @click="setSelected('rate')" :class="form.selected === 'rate' ? 'selected' : null">
+                <th @click="setSelected('rate')" :class="form.selected === 'rate' ? 'selected' : null" class="rate">
                     胜率
                     <i class="arrow" :class="!form.rate ? 'up' : null"></i>
                 </th>
                 <template v-if="!form.count">
-                    <th @click="setSelected('ban')" :class="form.selected === 'ban' ? 'selected' : null">
+                    <th @click="setSelected('ban')" :class="form.selected === 'ban' ? 'selected' : null" class="ban">
                         被ban次数
                         <i class="arrow" :class="!form.ban ? 'up' : null"></i>
                     </th>
@@ -177,6 +177,12 @@ export default defineComponent({
         overflow: hidden;
         font-size: 14px;
         max-width: 60px;
+        &.pick {
+            min-width: 35px;
+        }
+        &.rate {
+            min-width: 53px;
+        }
         &.selected {
             .arrow {
                 display: inline;
