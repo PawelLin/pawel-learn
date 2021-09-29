@@ -1,6 +1,9 @@
 <template>
     <div class="tabs" v-for="(items, indexs) in list" :key="`items${indexs}`">
-        <img v-for="(item, index) in items.data" class="icon" :src="getImageUrl(item.icon)" @click="handleShow(item)" :title="item.name" :key="`items${indexs}${index}`">
+        <span v-if="items.title" class="title">{{items.title}}</span>
+        <div>
+            <img v-for="(item, index) in items.data" class="icon" :src="getImageUrl(item.icon)" @click="handleShow(item)" :title="item.name" :key="`items${indexs}${index}`">
+        </div>
         <img v-if="items.type" class="type" :src="getImageUrl(items.type)">
     </div>
 </template>
@@ -60,6 +63,15 @@ export default defineComponent({
 <style lang="less" scoped>
 .tabs {
     font-size: 0;
+    display: flex;
+    .title {
+        padding: 18px 10px 0 0;
+        min-width: 50px;
+        font-size: 14px;
+        color: #666;
+        text-align: right;
+        vertical-align: middle;
+    }
     .icon {
         margin: 5px 5px 0 0;
         width: 40px;

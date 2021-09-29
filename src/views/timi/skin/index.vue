@@ -22,7 +22,7 @@
             </div>
         </teleport>
     </div>
-    <!-- <pc /> -->
+    <pc />
 </template>
 
 <script lang="ts">
@@ -45,6 +45,7 @@ import activity from './component/activity.vue'
 import growUp from './component/growUp.vue'
 import six from './component/six.vue'
 import lovers from './component/lovers.vue'
+import series from './component/series.vue'
 // import pc from './pc.vue'
 
 import { defineComponent, reactive, ref } from 'vue'
@@ -69,6 +70,7 @@ export default defineComponent({
         growUp,
         six,
         lovers,
+        series,
         // pc
     },
     setup() {
@@ -97,6 +99,7 @@ export default defineComponent({
             { type: 'growUp', name: '成长', key: [] },
             { type: 'six', name: '六元', key: [] },
             { type: 'lovers', name: '恋人', key: [] },
+            { type: 'series', name: '系列', key: [] },
         ]
         const modal = reactive({
             image: '',

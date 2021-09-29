@@ -44,6 +44,7 @@ export default defineComponent({
                     { title: 'S22', type: '80', data: [] },
                     { title: 'S23', type: '83', data: [] },
                     { title: 'S24', type: '85', data: [] },
+                    { title: 'S25', type: '87', data: [] },
                 ]
             },
             {
@@ -99,6 +100,7 @@ export default defineComponent({
                     { title: 'SNK', type: '64', data: [] },
                     { title: '五虎上将', type: '72', data: [] },
                     { title: '仙剑', type: '84', data: [] },
+                    { title: '敦煌研究院', type: '88', data: [] },
                 ]
             },
             {

@@ -84,7 +84,8 @@ export const types: Types = {
     84: 'skin/type/84.png',
     85: 'skin/type/85.png',
     86: 'skin/type/86.png',
-    87: 'skin/type/87.png'
+    87: 'skin/type/87.png',
+    88: 'skin/type/88.png'
 }
 export const datas = [
     [
@@ -2422,6 +2423,13 @@ export const datas = [
             url: 'skin/141/141-bigskin-6.jpg',
             mobile: 'skin/141/141-mobileskin-6.jpg',
             type: '38'
+        },
+        {
+            name: '貂蝉-遇见胡旋',
+            icon: 'skin/141/141-smallskin-7.jpg',
+            url: 'skin/141/141-bigskin-7.jpg',
+            mobile: 'skin/141/141-mobileskin-7.jpg',
+            type: '88'
         }
     ],
     [
