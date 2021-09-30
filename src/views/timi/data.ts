@@ -3,6 +3,10 @@ interface Data {
 }
 
 export const skins: Data = {
+    '2021-9-29': {
+        alt: '苏烈-千军破阵',
+        src: 'skin/194/194-smallskin-5.jpg'
+    },
     '2021-9-23': {
         alt: '后羿-圣弓游侠',
         src: 'skin/169/169-smallskin-7.jpg'

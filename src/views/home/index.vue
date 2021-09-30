@@ -191,7 +191,7 @@ export default defineComponent({
         .arrow {
             display: none;
             position: absolute;
-            margin: -3px 0 0 2px;
+            margin: -5px 0 0 2px;
             top: 50%;
             width: 6px;
             height: 6px;
@@ -199,7 +199,7 @@ export default defineComponent({
             border-right: 1px solid #666;
             transform: rotate(135deg);
             &.up {
-                margin-top: -1px;
+                margin-top: -2px;
                 transform: rotate(-45deg);
             }
         }
