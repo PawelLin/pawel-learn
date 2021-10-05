@@ -121,7 +121,7 @@ export default defineComponent({
             })
         }
         const getImageUrl = number => {
-            const url = `skin/${number}/${number}.jpg`
+            const url = `skin/${number}/${number}-smallskin-1.jpg`
             return getImageUrlUtils(url)
         }
         const handleScroll = e => {
