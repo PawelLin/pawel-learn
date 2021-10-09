@@ -22,7 +22,7 @@
             </div>
         </teleport>
     </div>
-    <pc />
+    <!-- <pc /> -->
 </template>
 
 <script lang="ts">

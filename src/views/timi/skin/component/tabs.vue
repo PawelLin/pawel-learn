@@ -65,8 +65,9 @@ export default defineComponent({
     font-size: 0;
     display: flex;
     .title {
-        padding: 18px 10px 0 0;
-        min-width: 50px;
+        margin: auto 0;
+        padding-right: 10px;
+        min-width: 52px;
         font-size: 14px;
         color: #666;
         text-align: right;
@@ -80,6 +81,7 @@ export default defineComponent({
         background-size: contain;
     }
     .type {
+        margin: auto 0;
         max-height: 30px;
     }
     img {

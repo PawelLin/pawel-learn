@@ -8,7 +8,10 @@
         </ul>
         <table class="table" cellspacing="0" cellpadding="0" border="0">
             <tr>
-                <th v-for="(item, index) in (form.count + 1)">英雄{{index + 1}}</th>
+                <th @click="showHeroModal(index)" v-for="(item, index) in (form.count + 1)">
+                    {{heros[heroSelected[index]] || `英雄${index + 1}`}}
+                    <i class="arrow" :class="modalHeroIndex === index ? 'show' : null"></i>
+                </th>
                 <th @click="setSelected('pick')" :class="form.selected === 'pick' ? 'selected' : null" class="pick">
                     {{!form.count ? '被pick次数' : '场次'}}
                     <i class="arrow" :class="!form.pick ? 'up' : null"></i>
@@ -24,33 +27,39 @@
                     </th>
                 </template>
             </tr>
-            <template v-for="(items, indexs) in result">
-                <tr v-for="(item, index) in items" v-show="form.count === indexs && index < pages[indexs]">
-                    <td v-for="key in item.key"><img class="image" :src="getImageUrl(key)"></td>
-                    <td>{{item.pick}}</td>
-                    <td>{{item.rate}}</td>
-                    <template v-if="!form.count">
-                        <td>{{item.ban}}</td>
-                    </template>
-                </tr>
-            </template>
+            <tr v-for="(item, index) in result">
+                <td v-for="key in item.key"><img class="image" :src="getImageUrl(key)"></td>
+                <td>{{item.pick}}</td>
+                <td>{{item.rate}}</td>
+                <template v-if="!form.count">
+                    <td>{{item.ban}}</td>
+                </template>
+            </tr>
         </table>
+        <teleport to="body">
+            <div v-show="modal" class="hero-modal" @click.self="modal = false">
+                <ul class="content">
+                    <li v-for="(value, key, index) in allPositions" :key="key">
+                        <p>{{value}}</p>
+                        <div>
+                            <img @click="setHero(item)" v-for="item in allHeros[key]" :src="getImageUrl(item)">
+                            <img v-if="!index" @click="setHero('')" class="clear" src="@/assets/clear.png" alt="">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </teleport>
     </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive } from 'vue'
+import { defineComponent, ref, reactive } from 'vue'
 import { data } from './kpl'
-import { datas as heroData } from '../timi/skin/data'
+import { datas as heroData, positions } from '../timi/skin/data'
 import { getImageUrl as getImageUrlUtils } from '@/libs/utils'
 
 export default defineComponent({
     setup() {
-        const heros = {}
-        heroData.forEach(hero => {
-            const item = hero[0]
-            heros[item.icon.match(/\d+/)[0]] = item.name.split('-')[0]
-        })
         const list = []
         const getConcatData = context => {
             var contexts = context.split('|')
@@ -75,16 +84,14 @@ export default defineComponent({
                 list[i] = list[i] || {}
                 pickData[i].forEach(key => {
                     key = key.split('|').sort((a, b) => Number(a) - Number(b))
-                    const name = key.map(key => heros[key])
-                    list[i][key] = list[i][key] || { pick: 0, win: 0, lose: 0, ban: 0, name, key }
+                    list[i][key] = list[i][key] || { pick: 0, win: 0, lose: 0, ban: 0, key }
                     list[i][key].pick++
                     isWin ? list[i][key].win++ : list[i][key].lose++
                 })
                 if (i === 0) {
                     banData.forEach(key => {
-                        const name = heros[key]
-                        if (name) {
-                            list[i][key] = list[i][key] || { pick: 0, win: 0, lose: 0, ban: 0, name: [name], key: [key] }
+                        if (key && key !== '0') {
+                            list[i][key] = list[i][key] || { pick: 0, win: 0, lose: 0, ban: 0, key: [key] }
                             list[i][key].ban++
                         }
                     })
@@ -92,33 +99,79 @@ export default defineComponent({
             }
         })
 
-        const result = reactive([])
+        const dataList = []
+        const result = ref([])
         list.forEach(item => {
             const items = Object.keys(item).map(key => item[key])
             items.forEach(item => {
                 item.rate = `${(item.win / (item.pick || 1) * 100).toFixed(2)}%`
             })
-            result.push(items)
+            dataList.push(items)
+        })
+        const heros = {}
+        const allHeros = { none: [] }
+        const allPositions = { ...positions, none: '未选' }
+        heroData.forEach(hero => {
+            const item = hero[0]
+            const icon = item.icon.match(/\d+/)[0]
+            heros[icon] = item.name.split('-')[0]
+            if (item.position) {
+                if (list[0][icon]) {
+                    allHeros[item.position] = allHeros[item.position] || []
+                    allHeros[item.position].push(icon)
+                } else {
+                    allHeros.none.push(icon)
+                }
+            }
         })
         const form = reactive({ count: 0, pick: true, rate: false, ban: false, selected: 'pick' })
-        const pages = reactive({ 0: 14, 1: 14, 2: 14, 3: 14, 4: 14 })
+        const heroSelected = ref(['', '', '', '', ''])
+        const page = 15
         const setCount = count => {
-            pages[count] = 14
             form.count = count
             setSelected(form.selected, true)
         }
+        const sortFun = (a, b, selected) => {
+            const isDesc = form[selected]
+            const first = (isDesc ? parseFloat(b[selected]) - parseFloat(a[selected]) : parseFloat(a[selected]) - parseFloat(b[selected])) * 1000
+            let second = 0
+            if (selected === 'pick') {
+                second = parseFloat(b['rate']) - parseFloat(a['rate'])
+            }
+            if (selected === 'rate') {
+                second = parseFloat(b['pick']) - parseFloat(a['pick'])
+            }
+            return first + second
+        }
         const setSelected = (selected, notSetSelect) => {
+            modal.value = false
+            modalHeroIndex.value = ''
             if (!notSetSelect) {
                 form[selected] = selected !== form.selected ? true : !form[selected]
                 form.selected = selected
             }
-            result[form.count].sort((a, b) => {
-                if (form[selected]) {
-                    return parseFloat(b[selected]) - parseFloat(a[selected])
-                } else {
-                    return parseFloat(a[selected]) - parseFloat(b[selected])
-                }
+            const _heroSelected = heroSelected.value.slice(0, form.count + 1)
+            dataList[form.count].sort((a, b) => {
+                return sortFun(a, b, selected)
             })
+            const nextData = dataList[form.count].filter(item => _heroSelected.map(key => !key || item.key.includes(key)).reduce((a, b) => b = a && b)).slice(0, page)
+            nextData.forEach(item => {
+                _heroSelected.forEach((key, index) => {
+                    if (key) {
+                        const _index = item.key.indexOf(key)
+                        if (index !== _index) {
+                            [item.key[index], item.key[_index]] = [item.key[_index], item.key[index]]
+                        }
+                    }
+                })
+            })
+            result.value = nextData
+        }
+        const setHero = icon => {
+            heroSelected.value[modalHeroIndex.value] = icon
+            modal.value = false
+            modalHeroIndex.value = ''
+            setSelected(form.selected, true)
         }
         const getImageUrl = number => {
             const url = `skin/${number}/${number}-smallskin-1.jpg`
@@ -127,18 +180,44 @@ export default defineComponent({
         const handleScroll = e => {
             const { scrollHeight, offsetHeight, scrollTop } = e.target
             if (scrollHeight === (offsetHeight + scrollTop)) {
-                pages[form.count] += 15
+                const length = result.value.length
+                const _heroSelected = heroSelected.value.slice(0, form.count + 1)
+                const nextData = dataList[form.count].filter(item => _heroSelected.map(key => !key || item.key.includes(key)).reduce((a, b) => b = a && b)).slice(length, length + page)
+                nextData.forEach(item => {
+                    _heroSelected.forEach((key, index) => {
+                        if (key) {
+                            const _index = item.key.indexOf(key)
+                            if (index !== _index) {
+                                [item.key[index], item.key[_index]] = [item.key[_index], item.key[index]]
+                            }
+                        }
+                    })
+                })
+                result.value.push(...nextData)
             }
+        }
+        const modal = ref(false)
+        const modalHeroIndex = ref('')
+        const showHeroModal = index => {
+            modalHeroIndex.value = !modal.value ? index : ''
+            modal.value = !modal.value
         }
         setSelected(form.selected, true)
         return {
+            heros,
+            heroSelected,
             result,
             form,
-            pages,
+            allPositions,
+            allHeros,
+            modal,
+            modalHeroIndex,
             getImageUrl,
             setCount,
             setSelected,
+            setHero,
             handleScroll,
+            showHeroModal,
         }
     },
 })
@@ -202,6 +281,9 @@ export default defineComponent({
                 margin-top: -2px;
                 transform: rotate(-45deg);
             }
+            &.show {
+                display: inline;
+            }
         }
     }
     td {
@@ -214,6 +296,40 @@ export default defineComponent({
 }
 .image {
     width: 40px;
+    height: 40px;
     border-radius: 50%;
+}
+.hero-modal {
+    position: fixed;
+    top: 121px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    .content {
+        padding: 5px 20px;
+        color: #666;
+        background-color: #fff;
+        > li {
+            display: flex;
+            font-size: 0;
+            p {
+                padding: 5px 5px 0 0 ;
+                font-size: 14px;
+                white-space: nowrap;
+            }
+            img {
+                margin: 0 2px 2px 0;
+                width: 30px;
+                height: 30px;
+                &.clear {
+                    padding: 4px;
+                }
+            }
+            & + li {
+                margin-top: 5px;
+            }
+        }
+    }
 }
 </style>
