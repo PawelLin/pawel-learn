@@ -8,7 +8,7 @@
         </ul>
         <table class="table" cellspacing="0" cellpadding="0" border="0">
             <tr>
-                <th @click="showHeroModal(index)" v-for="(item, index) in (form.count + 1)">
+                <th @click="showHeroModal(index)" v-for="(item, index) in (form.count + 1)" :key="index">
                     {{heros[heroSelected[index]] || `英雄${index + 1}`}}
                     <i class="arrow" :class="modalHeroIndex === index ? 'show' : null"></i>
                 </th>
@@ -27,8 +27,8 @@
                     </th>
                 </template>
             </tr>
-            <tr v-for="(item, index) in result">
-                <td v-for="key in item.key"><img class="image" :src="getImageUrl(key)"></td>
+            <tr v-for="(item, index) in result" :key="index">
+                <td v-for="(key, inde) in item.key" :key="`${index}${inde}`"><img class="image" :src="getImageUrl(key)"></td>
                 <td>{{item.pick}}</td>
                 <td>{{item.rate}}</td>
                 <template v-if="!form.count">
@@ -42,8 +42,15 @@
                     <li v-for="(value, key, index) in allPositions" :key="key">
                         <p>{{value}}</p>
                         <div>
-                            <img @click="setHero(item)" v-for="item in allHeros[key]" :src="getImageUrl(item)">
-                            <img v-if="!index" @click="setHero('')" class="clear" src="@/assets/clear.png" alt="">
+                            <div v-for="(item, inde) in allHeros[key]"
+                                @click="setHero(item)"
+                                :style="{ backgroundImage: `url(${getImageUrl(item)})` }"
+                                :index="heroSelectedList.indexOf(item) + 1"
+                                class="img pic"
+                                :class="heroSelectedList.includes(item) ? 'selected' : null"
+                                :key="`${index}${inde}`"
+                            ></div>
+                            <img v-if="!index" @click="setHero('')" class="img clear" src="@/assets/clear.png" alt="">
                         </div>
                     </li>
                 </ul>
@@ -53,7 +60,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, reactive } from 'vue'
+import { defineComponent, ref, reactive, computed } from 'vue'
 import { data } from './kpl'
 import { datas as heroData, positions } from '../timi/skin/data'
 import { getImageUrl as getImageUrlUtils } from '@/libs/utils'
@@ -126,6 +133,9 @@ export default defineComponent({
         })
         const form = reactive({ count: 0, pick: true, rate: false, ban: false, selected: 'pick' })
         const heroSelected = ref(['', '', '', '', ''])
+        const heroSelectedList = computed(() => {
+            return Object.values(heroSelected.value)
+        })
         const page = 15
         const setCount = count => {
             form.count = count
@@ -169,8 +179,6 @@ export default defineComponent({
         }
         const setHero = icon => {
             heroSelected.value[modalHeroIndex.value] = icon
-            modal.value = false
-            modalHeroIndex.value = ''
             setSelected(form.selected, true)
         }
         const getImageUrl = number => {
@@ -206,6 +214,7 @@ export default defineComponent({
         return {
             heros,
             heroSelected,
+            heroSelectedList,
             result,
             form,
             allPositions,
@@ -318,10 +327,26 @@ export default defineComponent({
                 font-size: 14px;
                 white-space: nowrap;
             }
-            img {
+            .img {
                 margin: 0 2px 2px 0;
                 width: 30px;
                 height: 30px;
+                &.pic {
+                    position: relative;
+                    display: inline-block;
+                    background-size: contain;
+                }
+                &.selected:after {
+                    content: attr(index);
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    font-size: 14px;
+                    color: #fff;
+                    background-color: rgba(0, 0, 0, 0.5);
+                }
                 &.clear {
                     padding: 4px;
                 }
