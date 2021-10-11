@@ -178,8 +178,16 @@ export default defineComponent({
             result.value = nextData
         }
         const setHero = icon => {
-            heroSelected.value[modalHeroIndex.value] = icon
-            setSelected(form.selected, true)
+            const index = heroSelectedList.value.indexOf(icon)
+            if (index === -1) {
+                heroSelected.value[modalHeroIndex.value] = icon
+                setSelected(form.selected, true)
+            } else {
+                if (index === modalHeroIndex.value) {
+                    heroSelected.value[modalHeroIndex.value] = ''
+                    setSelected(form.selected, true)
+                }
+            }
         }
         const getImageUrl = number => {
             const url = `skin/${number}/${number}-smallskin-1.jpg`
