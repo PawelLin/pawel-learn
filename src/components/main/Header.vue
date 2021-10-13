@@ -24,6 +24,7 @@ export default defineComponent({
                 { path: '/timi', text: 'Timi', key: 'Timi' },
                 { path: '/timi/skin', text: 'TimiSkin', key: 'TimiSkin' },
                 { path: '/timi/history', text: 'TimiHistory', key: 'TimiHistory' },
+                { path: '/timi/kpl', text: 'TimiKpl', key: 'TimiKpl' },
                 // { path: '/echarts', text: 'echarts', key: 'Echarts' }
             ]
         }

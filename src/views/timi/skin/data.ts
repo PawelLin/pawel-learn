@@ -487,6 +487,13 @@ export const datas = [
             url: 'skin/511/511-bigskin-3.jpg',
             mobile: 'skin/511/511-mobileskin-3.jpg',
             type: '40'
+        },
+        {
+            name: '猪八戒-猪悟能',
+            icon: 'skin/511/511-smallskin-4.jpg',
+            url: 'skin/511/511-bigskin-4.jpg',
+            mobile: 'skin/511/511-mobileskin-4.jpg',
+            type: '89'
         }
     ],
     [

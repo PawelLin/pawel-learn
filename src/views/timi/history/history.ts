@@ -1728,4 +1728,10 @@ export const history = [
         end: '2021-12-5',
         content: '86版《西游记》'
     },
+    {
+        name: '猪八戒-猪悟能',
+        start: '2021-10-16',
+        end: '2021-12-5',
+        content: '86版《西游记》'
+    },
 ]
