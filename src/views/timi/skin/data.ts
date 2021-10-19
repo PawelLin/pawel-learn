@@ -87,6 +87,7 @@ export const types: Types = {
     87: 'skin/type/87.png',
     88: 'skin/type/88.png',
     89: 'skin/type/89.png',
+    90: 'skin/type/90.png',
 }
 
 export const positions = {
@@ -3535,6 +3536,13 @@ export const datas = [
             url: 'skin/113/113-bigskin-6.jpg',
             mobile: 'skin/113/113-mobileskin-6.jpg',
             type: '67'
+        },
+        {
+            name: '庄周-高山流水',
+            icon: 'skin/113/113-smallskin-7.jpg',
+            url: 'skin/113/113-bigskin-7.jpg',
+            mobile: 'skin/113/113-mobileskin-7.jpg',
+            type: '90'
         }
     ],
     [
@@ -3747,6 +3755,13 @@ export const datas = [
             url: 'skin/109/109-bigskin-7.jpg',
             mobile: 'skin/109/109-mobileskin-7.jpg',
             type: '5'
+        },
+        {
+            name: '妲己-紫罗兰之誓',
+            icon: 'skin/109/109-smallskin-8.jpg',
+            url: 'skin/109/109-bigskin-8.jpg',
+            mobile: 'skin/109/109-mobileskin-8.jpg',
+            type: '1'
         }
     ],
     [

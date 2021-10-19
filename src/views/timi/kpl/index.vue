@@ -178,11 +178,11 @@ export default defineComponent({
         }
         const setHero = icon => {
             const index = heroSelectedList.value.indexOf(icon)
-            if (index === -1) {
+            if (index === -1 || !icon) {
                 heroSelected.value[modalHeroIndex.value] = icon
                 setSelected(form.selected, true)
             } else {
-                if (index === modalHeroIndex.value) {
+                if (index === Number(modalHeroIndex.value)) {
                     heroSelected.value[modalHeroIndex.value] = ''
                     setSelected(form.selected, true)
                 }
@@ -253,6 +253,8 @@ export default defineComponent({
     text-align: center;
     li {
         flex: 1;
+        cursor: pointer;
+        user-select: none;
         &.active span {
             border: 1px solid #666;
             border-radius: 5px;
@@ -272,6 +274,8 @@ export default defineComponent({
         overflow: hidden;
         font-size: 14px;
         max-width: 60px;
+        cursor: pointer;
+        user-select: none;
         &.pick {
             min-width: 35px;
         }
@@ -338,6 +342,7 @@ export default defineComponent({
                 margin: 0 2px 2px 0;
                 width: 30px;
                 height: 30px;
+                cursor: pointer;
                 &.pic {
                     position: relative;
                     display: inline-block;
