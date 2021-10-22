@@ -705,6 +705,13 @@ export const datas = [
             url: 'skin/137/137-bigskin-2.jpg',
             mobile: 'skin/137/137-mobileskin-2.jpg',
             type: '0'
+        },
+        {
+            name: '司马懿-暗渊魔法',
+            icon: 'skin/137/137-smallskin-3.jpg',
+            url: 'skin/137/137-bigskin-3.jpg',
+            mobile: 'skin/137/137-mobileskin-3.jpg',
+            type: '12'
         }
     ],
     [
