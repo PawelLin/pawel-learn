@@ -92,7 +92,8 @@ export default defineComponent({
             list[index].herosLength = herosLength
         })
         list.sort((a, b) => a.year - b.year)
-        const start = Math.max(0, list.length - 1)
+        const isBigScreen = document.body.clientWidth > 600
+        const start = isBigScreen ? 0 : Math.max(0, list.length - 1)
         let translateX = ref(-100 * start)
         const handleTransform = (value:number, year: number):void => {
             if (!showYears.includes(year)) {
@@ -101,7 +102,7 @@ export default defineComponent({
             translateX.value += value * 100
         }
         const allYear = list.map(item => item.year)
-        const showYears = document.body.clientWidth > 600 ? allYear : [allYear[start]]
+        const showYears = isBigScreen ? allYear : [allYear[start]]
         return {
             list,
             translateX,
