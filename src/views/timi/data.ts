@@ -3,6 +3,10 @@ interface Data {
 }
 
 export const skins: Data = {
+    '2021-10-28': {
+        alt: '庄周-高山流水',
+        src: 'skin/113/113-smallskin-7.jpg'
+    },
     '2021-10-21': {
         alt: '猪八戒-猪悟能',
         src: 'skin/511/511-smallskin-4.jpg'
@@ -853,6 +857,10 @@ export const heros: Data = {
 }
 
 export const kings = {
+    '2021-11-7': {
+        alt: 'S25',
+        src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
+    },
     '2021-8-13': {
         alt: 'S24',
         src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'

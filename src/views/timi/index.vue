@@ -3,7 +3,7 @@
         <section class="contain" :style="{ transform: `translate3d(${translateX}%, 0, 0)` }">
             <div v-for="({ year, months, skinsLength, herosLength }, index1) in list" :key="year">
                 <p>
-                    <a v-if="index1" @click="handleTransform(1)" href="javascript:;">{{year - 1}}</a>
+                    <a v-if="index1" @click="handleTransform(1, year - 1)" href="javascript:;">{{year - 1}}</a>
                     <span>[{{skinsLength}}]</span>
                     {{year}}
                     <span>[{{herosLength}}]</span>
@@ -17,7 +17,7 @@
                         </template>
                     </div>
                     <div class="timeline">
-                        <div class="month" :class="isKing && 'king'">{{title}}</div>
+                        <div class="month" :class="isKing && 'king'" :title="isKing">{{title}}</div>
                     </div>
                     <div class="hero">
                         <template v-for="({ src, alt }, index3) in heros" >
@@ -52,7 +52,7 @@ export default defineComponent({
         interface Index {
             [propName: string]: number
         }
-        const kingMonths = Object.keys(kings).map(date => date.replace(/(\d+)-(\d+)-(.*)/, '$1-$2'))
+        const kingMonths = Object.keys(kings).map(date => ({ date: date.replace(/(\d+)-(\d+)-(.*)/, '$1-$2'), season: kings[date].alt })).reduce((item, { date, season }) => (item[date] = season) && item || item, {})
         const list: Item[] = []
         const yearIndex: Index = {}
         const NAME = ['寅', '卯', '辰', '巳', '午', '未', '申', '酉', '戌', '亥', '子', '丑']
@@ -62,7 +62,7 @@ export default defineComponent({
             if (yearIndex[year] === undefined) {
                 yearIndex[year] = list.length
                 // list.push({ year, months: Array.from(Array(12)).map((item, index) => ({ skins: [], title: index + 1, heros: [] })) })
-                list.push({ year, months: Array.from(Array(12)).map((item, index) => ({ skins: [], title: NAME[index], isKing: kingMonths.includes(`${year}-${index + 1}`), heros: [] })) })
+                list.push({ year, months: Array.from(Array(12)).map((item, index) => ({ skins: [], title: NAME[index], isKing: kingMonths[`${year}-${index + 1}`], heros: [] })) })
             }
             let { src, alt } = skins[key]
             list[yearIndex[year]].months[month].skins.push({ src: ([] as string[]).concat(src), alt: ([] as string[]).concat(alt), day })
@@ -92,8 +92,8 @@ export default defineComponent({
             list[index].herosLength = herosLength
         })
         list.sort((a, b) => a.year - b.year)
-        
-        let translateX = ref(0)
+        const start = Math.max(0, list.length - 1)
+        let translateX = ref(-100 * start)
         const handleTransform = (value:number, year: number):void => {
             if (!showYears.includes(year)) {
                 showYears.push(year)
@@ -101,7 +101,7 @@ export default defineComponent({
             translateX.value += value * 100
         }
         const allYear = list.map(item => item.year)
-        const showYears = document.body.clientWidth > 600 ? allYear : [allYear[0]]
+        const showYears = document.body.clientWidth > 600 ? allYear : [allYear[start]]
         return {
             list,
             translateX,
