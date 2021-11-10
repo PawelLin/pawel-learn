@@ -1264,6 +1264,13 @@ export const datas = [
             url: 'skin/182/182-bigskin-5.jpg',
             mobile: 'skin/182/182-mobileskin-5.jpg',
             type: '40'
+        },
+        {
+            name: '干将莫邪-胡桃夹子',
+            icon: 'skin/182/182-smallskin-6.jpg',
+            url: 'skin/182/182-bigskin-6.jpg',
+            mobile: 'skin/182/182-mobileskin-6.jpg',
+            type: '50'
         }
     ],
     [
@@ -3670,6 +3677,13 @@ export const datas = [
             url: 'skin/111/111-bigskin-8.jpg',
             mobile: 'skin/111/111-mobileskin-8.jpg',
             type: '12'
+        },
+        {
+            name: '孙尚香-异界灵契',
+            icon: 'skin/111/111-smallskin-9.jpg',
+            url: 'skin/111/111-bigskin-9.jpg',
+            mobile: 'skin/111/111-mobileskin-9.jpg',
+            type: '5'
         }
     ],
     [
