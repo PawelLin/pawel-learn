@@ -102,6 +102,24 @@ export const positions = {
 export const datas = [
     [
         {
+            name: '金蝉-渡世行者',
+            icon: 'skin/540/540-smallskin-1.jpg',
+            url: 'skin/540/540-bigskin-1.jpg',
+            mobile: 'skin/540/540-mobileskin-1.jpg',
+            content: '心有所向，无畏求之',
+            type: '0',
+            position: '4'
+        },
+        {
+            name: '金蝉-前尘',
+            icon: 'skin/540/540-smallskin-2.jpg',
+            url: 'skin/540/540-bigskin-2.jpg',
+            mobile: 'skin/540/540-mobileskin-2.jpg',
+            type: '0'
+        }
+    ],
+    [
+        {
             name: '云缨-燎原之心',
             icon: 'skin/538/538-smallskin-1.jpg',
             url: 'skin/538/538-bigskin-1.jpg',

@@ -25,7 +25,7 @@ export default defineComponent({
     setup(props, { emit }) {
         let number = 0
         Object.keys(tabs).forEach(key => {
-            if (!['self', 'six', 'lovers', 'series'].includes(key)) {
+            if (!['six', 'lovers', 'series'].includes(key)) {
                 tabs[key].forEach(item => {
                     number += item.data.length
                 })
@@ -34,7 +34,7 @@ export default defineComponent({
         console.log(number)
         const list = JSON.parse(JSON.stringify(tabs[props.type]))
         const data = Array.prototype.concat.apply([], datas)
-        console.log(data.length - 107) // 弈星2个新老原皮
+        console.log(data.length - 1) // 弈星2个新老原皮
         list.forEach(items => {
             items.data.forEach((name, index) => {
                 items.data[index] = data.filter(item => item.name === name)[0]
