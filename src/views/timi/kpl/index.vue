@@ -83,24 +83,26 @@ export default defineComponent({
             return a
         }
         data.forEach(game => {
-            const pickData = getConcatData(game.pick_heros)
-            const banData = game.ban_heros.split('|')
-            const isWin = game.is_win == '1'
-            for (let i = 0; i < 5; i++) {
-                list[i] = list[i] || {}
-                pickData[i].forEach(key => {
-                    key = key.split('|').sort((a, b) => Number(a) - Number(b))
-                    list[i][key] = list[i][key] || { pick: 0, win: 0, lose: 0, ban: 0, key }
-                    list[i][key].pick++
-                    isWin ? list[i][key].win++ : list[i][key].lose++
-                })
-                if (i === 0) {
-                    banData.forEach(key => {
-                        if (key && key !== '0') {
-                            list[i][key] = list[i][key] || { pick: 0, win: 0, lose: 0, ban: 0, key: [key] }
-                            list[i][key].ban++
-                        }
+            if (game.pick_heros) {
+                const pickData = getConcatData(game.pick_heros)
+                const banData = game.ban_heros.split('|')
+                const isWin = game.is_win == '1'
+                for (let i = 0; i < 5; i++) {
+                    list[i] = list[i] || {}
+                    pickData[i].forEach(key => {
+                        key = key.split('|').sort((a, b) => Number(a) - Number(b))
+                        list[i][key] = list[i][key] || { pick: 0, win: 0, lose: 0, ban: 0, key }
+                        list[i][key].pick++
+                        isWin ? list[i][key].win++ : list[i][key].lose++
                     })
+                    if (i === 0) {
+                        banData.forEach(key => {
+                            if (key && key !== '0') {
+                                list[i][key] = list[i][key] || { pick: 0, win: 0, lose: 0, ban: 0, key: [key] }
+                                list[i][key].ban++
+                            }
+                        })
+                    }
                 }
             }
         })
