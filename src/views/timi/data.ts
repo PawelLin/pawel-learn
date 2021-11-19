@@ -7,6 +7,10 @@ export const skins: Data = {
         alt: ['狂铁-特工战影', '牛魔-制霸全明星'],
         src: ['skin/503/503-smallskin-4.jpg', 'skin/168/168-smallskin-3.jpg']
     },
+    '2021-11-8': {
+        alt: '干将莫邪-真爱魔法',
+        src: 'skin/182/182-smallskin-5.jpg'
+    },
     '2021-10-28': {
         alt: '庄周-高山流水',
         src: 'skin/113/113-smallskin-7.jpg'
