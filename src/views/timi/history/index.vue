@@ -11,17 +11,18 @@ export default defineComponent({
     components: {
         mobile: defineAsyncComponent(() => import('./mobile.vue')),
         pc: defineAsyncComponent(() => import('./pc.vue')),
+        pcTable: defineAsyncComponent(() => import('./table.vue'))
     },
     setup() {
         let is = 'mobile'
         const orientation = window.orientation
         if (orientation !== undefined) {
             if (orientation === 90 || orientation === -90) {
-                is = 'pc'
+                is = 'pcTable'
             }
         } else {
             if (window.innerHeight < window.innerWidth) {
-                is = 'pc'
+                is = 'pcTable'
             }
         }
         return {

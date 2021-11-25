@@ -9,22 +9,24 @@
                     <span>[{{herosLength}}]</span>
                     <a v-if="index1 < list.length - 1" @click="handleTransform(-1, year + 1)" href="javascript:;">{{year + 1}}</a>
                 </p>
-                <div v-for="({ skins, title, heros, isKing }, index2) in months" :key="`${year}${index2}`" v-show="showYears.includes(year)">
-                    <div class="skin">
-                        <template v-for="({ src, alt }, index3) in skins" >
-                            <!-- <div v-for="(img, index4) in src" class="image" :style="{ backgroundImage: `url(${getImageUrl(img)})` }" :title="alt[index4]" :key="`${year}${index2}${index3}${index4}`"></div> -->
-                            <img v-for="(img, index4) in src" class="image" :src="getImageUrl(img)" :title="alt[index4]" :key="`${year}${index2}${index3}${index4}`">
-                        </template>
-                    </div>
-                    <div class="timeline">
-                        <div class="month" :class="isKing && 'king'" :title="isKing">{{title}}</div>
-                    </div>
-                    <div class="hero">
-                        <template v-for="({ src, alt }, index3) in heros" >
-                            <!-- <div v-for="(img, index4) in src" class="image" :style="{ backgroundImage: `url(${getImageUrl(img)})` }" :title="alt[index4]" :key="`${year}${index2}${index3}${index4}`"></div> -->
-                            <img v-for="(img, index4) in src" class="image" :src="getImageUrl(img)" :title="alt[index4]" :key="`${year}${index2}${index3}${index4}`">
-                        </template>
-                    </div>
+                <div v-for="({ skins, title, heros, isKing }, index2) in months" :key="`${year}${index2}`">
+                    <template v-if="showYears.includes(year)">
+                        <div class="skin">
+                            <template v-for="({ src, alt }, index3) in skins">
+                                <!-- <div v-for="(img, index4) in src" class="image" :style="{ backgroundImage: `url(${getImageUrl(img)})` }" :title="alt[index4]" :key="`${year}${index2}${index3}${index4}`"></div> -->
+                                <img v-for="(img, index4) in src" class="image" :src="getImageUrl(img)" :title="alt[index4]" :key="`${year}${index2}${index3}${index4}`">
+                            </template>
+                        </div>
+                        <div class="timeline">
+                            <div class="month" :class="isKing && 'king'" :title="isKing">{{title}}</div>
+                        </div>
+                        <div class="hero">
+                            <template v-for="({ src, alt }, index3) in heros">
+                                <!-- <div v-for="(img, index4) in src" class="image" :style="{ backgroundImage: `url(${getImageUrl(img)})` }" :title="alt[index4]" :key="`${year}${index2}${index3}${index4}`"></div> -->
+                                <img v-for="(img, index4) in src" class="image" :src="getImageUrl(img)" :title="alt[index4]" :key="`${year}${index2}${index3}${index4}`">
+                            </template>
+                        </div>
+                    </template>
                 </div>
             </div>
         </section>
@@ -92,8 +94,8 @@ export default defineComponent({
             list[index].herosLength = herosLength
         })
         list.sort((a, b) => a.year - b.year)
-        const isBigScreen = document.body.clientWidth > 600
-        const start = isBigScreen ? 0 : Math.max(0, list.length - 1)
+        const isLargeScreen = document.body.clientWidth > 600
+        const start = isLargeScreen ? 0 : Math.max(0, list.length - 1)
         let translateX = ref(-100 * start)
         const handleTransform = (value:number, year: number):void => {
             if (!showYears.includes(year)) {
@@ -102,7 +104,7 @@ export default defineComponent({
             translateX.value += value * 100
         }
         const allYear = list.map(item => item.year)
-        const showYears = isBigScreen ? allYear : [allYear[start]]
+        const showYears = isLargeScreen ? allYear : [allYear[start]]
         return {
             list,
             translateX,
