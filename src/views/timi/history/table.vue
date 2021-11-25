@@ -24,7 +24,7 @@
                             <td class="text-center">{{date}}</td>
                             <td class="text-center">
                                 <span class="quality-span" :class="`quality-span-${qualityColorEnums[quality]}`">{{qualityEnums[quality]}}</span>
-                                <span v-if="limit" class="quality-span quality-span-blue">限定</span>
+                                <span v-if="form.limit === '1' && limit" class="quality-span quality-span-blue">限定</span>
                             </td>
                         </template>
                         <td v-if="data.length - 1 === index && colspan" :colspan="colspan">{{colspan}}</td>
@@ -161,12 +161,12 @@ export default defineComponent({
         })
         const years = Object.keys(list)
         const form = reactive({
-            startYear: '',
+            startYear: '2021',
             startMonth: '',
-            endYear: '',
+            endYear: '2021',
             endMonth: '',
             name: '',
-            quality: ['1', '2', '3'],
+            quality: [],
             limit: '0',
             sort: '-1'
         })
@@ -221,7 +221,7 @@ export default defineComponent({
             })
             return result
         }
-        const result = ref(getResult(years))
+        const result = ref(getResult(['2021']))
         const yearChange = (value, key) => {
             if (!value) {
                 form[key] = ''
