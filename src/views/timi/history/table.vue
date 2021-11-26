@@ -28,7 +28,11 @@
                             </td>
                         </template>
                         <td v-if="data.length - 1 === index && colspan" :colspan="colspan">{{colspan}}</td>
-                        <!-- <td v-if="!index" :rowspan="data.length" class="text-center">{{}}</td> -->
+                        <!-- <td v-if="!index" :rowspan="data.length" class="text-center">
+                            <span class="quality-span quality-span-green">12</span>
+                            <span class="quality-span quality-span-purple">14</span>
+                            <span class="quality-span quality-span-red">5</span>
+                        </td> -->
                     </tr>
                 </template>
             </template>
@@ -66,10 +70,6 @@
                         <br v-if="!((index + 1) % 3)">
                     </template>
                 </div>
-                <!-- <select v-model="form.quality">
-                    <option value="">全部</option>
-                    <option v-for="(value, key) in typeEnums" :value="key" :key="key">{{value}}</option>
-                </select> -->
             </div>
             <div>
                 <label for="limit">限定</label>
@@ -80,9 +80,17 @@
             </div>
             <div>
                 <label for="sort">排序</label>
-                <select v-model="form.sort">
-                    <option value="-1">降序</option>
-                    <option value="2">升序</option>
+                <select v-model="form.yearSort">
+                    <option value="1">年升序</option>
+                    <option value="-1">年降序</option>
+                </select>
+                <select v-model="form.monthSort">
+                    <option value="1">月升序</option>
+                    <option value="-1">月降序</option>
+                </select>
+                <select v-model="form.daySort">
+                    <option value="1">日升序</option>
+                    <option value="-1">日降序</option>
                 </select>
             </div>
             <div>
@@ -94,41 +102,23 @@
 </template>
 
 <script>
-import { defineComponent, reactive, ref } from 'vue'
+import { defineComponent, reactive, ref, watch } from 'vue'
 import { history } from './history'
 import { datas, limits } from '../skin/data'
 import { getImageUrl } from '@/libs/utils'
 
 export default defineComponent({
     setup() {
-        const qualityEnums = { '01': '英雄', '02': '伴生', 1: '勇者', 2: '史诗', 3: '传说' }
-        const qualityColorEnums = { '01': 'default', '02': 'default', 1: 'green', 2: 'purple', 3: 'red' }
+        const qualityEnums = { 0: '英雄', 1: '伴生', 2: '勇者', 3: '史诗', 4: '传说' }
+        const qualityColorEnums = { 0: 'default', 1: 'default', 2: 'green', 3: 'purple', 4: 'red' }
         const NUMBER = 4
         const skinData = {}
-        const heroNames = []
-        const skinMyNames = []
         datas.forEach(list => {
             list.forEach(item => {
                 skinData[item.name] = item
             })
-            console.log(list)
-            let index = 0
-            const firstName = list[index++].name
-            heroNames.push(firstName)
-            if (firstName.match(/-旧$/)) {
-                heroNames.push(list[index++].name)
-            }
-            if (list[index]) {
-                skinMyNames.push(list[index].name)
-            }
         })
         const list = {}
-        const getQuality = (type, name, quality) => {
-            if (type === '0') {
-                return heroNames.includes(name) ? '01' : skinMyNames.includes(name) ? '02' : quality
-            }
-            return quality
-        }
         const getLimit = type => {
             return limits.includes(type)
         }
@@ -142,7 +132,6 @@ export default defineComponent({
                 items.name.replace(/\s|\n/g, '').split('|').forEach(key => {
                     let { icon, name, type, quality } = skinData[key] || {}
                     if (name) {
-                        quality = getQuality(type, name, quality)
                         const limit = getLimit(type)
                         const items = list[year]
                         const item = { icon, name, date, limit, quality }
@@ -168,17 +157,21 @@ export default defineComponent({
             name: '',
             quality: [],
             limit: '0',
-            sort: '-1'
+            yearSort: '1',
+            monthSort: '1',
+            daySort: '1'
         })
         const getResult = years => {
             const result = []
             const yearLength = years.length
-            const isDesc = form.sort === '-1'
+            const isYearDesc = form.yearSort === '-1'
+            const isMonthDesc = form.monthSort === '-1'
+            const isDayDesc = form.daySort === '-1'
             const _years = [...years]
-            isDesc && _years.reverse()
+            isYearDesc && _years.reverse()
             _years.forEach((year, yearIndex) => {
                 list[year].forEach((items, month) => {
-                    const monthIndex = isDesc ? list[year].length - 1 - month : month
+                    const monthIndex = isMonthDesc ? list[year].length - 1 - month : month
                     let colspan = 0
                     const data = []
                     const { startMonth, endMonth } = form
@@ -200,13 +193,13 @@ export default defineComponent({
                             (form.quality.length ? form.quality.includes(item.quality) : true) &&
                             (form.limit === '1' ? item.limit : true)
                         })
-                        isDesc && _items.reverse()
+                        isDayDesc && _items.reverse()
                         _items.forEach((item, index) => {
                             const _index = Math.floor(index / NUMBER)
                             data[_index] = data[_index] || []
                             data[_index].push(item)
                             if (_items.length - 1 === index) {
-                                colspan = (NUMBER - data[_index].length) * NUMBER
+                                colspan = (NUMBER - data[_index].length) * 3
                             }
                         })
                     }
@@ -230,7 +223,9 @@ export default defineComponent({
         const handleSearch = () => {
             const years = Object.keys(list).filter(year => (!form.startYear || (form.startYear && year >= form.startYear)) && (!form.endYear || (form.endYear && year <= form.endYear)))
             result.value = getResult(years)
+            console.log(result.value)
         }
+        watch(form, handleSearch)
         return {
             result,
             years,
@@ -293,9 +288,13 @@ export default defineComponent({
     .quality-span {
         padding: 2px;
         display: inline-block;
+        min-width: 22px;
         border: 1px solid;
         border-radius: 3px;
         font-size: 14px;
+        & + .quality-span {
+            margin-left: 5px;
+        }
         &-default {
             color: #515a6e;
             border-color: #e8eaec;
