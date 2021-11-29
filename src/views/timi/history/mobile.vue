@@ -106,7 +106,7 @@ export default defineComponent({
             imageRefs.forEach((image, index) => {
                 const top = image.offsetTop
                 const data = image.imageData
-                if (heightTop >= top && !data.isLoaded) {
+                if (heightTop >= top && top >= scrollTop && !data.isLoaded) {
                     image.src = getImageUrl(data.icon)
                     data.isLoaded = true
                 }

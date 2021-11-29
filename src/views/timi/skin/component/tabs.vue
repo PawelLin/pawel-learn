@@ -33,8 +33,8 @@ export default defineComponent({
         })
         console.log(number)
         const list = JSON.parse(JSON.stringify(tabs[props.type]))
-        const data = Array.prototype.concat.apply([], datas)
-        console.log(data.length - 1) // 弈星2个新老原皮
+        const data = Array.prototype.concat.apply([], datas).filter(item => !item.name.includes('-旧'))
+        console.log(data.length)
         list.forEach(items => {
             items.data.forEach((name, index) => {
                 items.data[index] = data.filter(item => item.name === name)[0]
@@ -44,10 +44,6 @@ export default defineComponent({
                 }
             })
         })
-        // const getImageUrl = (dir:string):string => {
-        //     const path = `../../../../assets/${dir}`
-        //     return new URL(path, import.meta.url).href
-        // }
         const handleShow = item => {
             emit('modal-show', item)
         }

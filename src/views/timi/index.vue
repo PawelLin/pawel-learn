@@ -3,11 +3,11 @@
         <section class="contain" :style="{ transform: `translate3d(${translateX}%, 0, 0)` }">
             <div v-for="({ year, months, skinsLength, herosLength }, index1) in list" :key="year">
                 <p>
-                    <a v-if="index1" @click="handleTransform(1, year - 1)" href="javascript:;">{{year - 1}}</a>
+                    <a v-if="index1" @click="handleTransform(1, year - 1)" href="javascript:;" class="ignore-save">{{year - 1}}</a>
                     <span>[{{skinsLength}}]</span>
                     {{year}}
                     <span>[{{herosLength}}]</span>
-                    <a v-if="index1 < list.length - 1" @click="handleTransform(-1, year + 1)" href="javascript:;">{{year + 1}}</a>
+                    <a v-if="index1 < list.length - 1" @click="handleTransform(-1, year + 1)" href="javascript:;" class="ignore-save">{{year + 1}}</a>
                 </p>
                 <div v-for="({ skins, title, heros, isKing }, index2) in months" :key="`${year}${index2}`">
                     <template v-if="showYears.includes(year)">
@@ -18,7 +18,10 @@
                             </template>
                         </div>
                         <div class="timeline">
-                            <div class="month" :class="isKing && 'king'" :title="isKing">{{title}}</div>
+                            <div class="month" :class="isKing && 'king'" :title="isKing">
+                                {{title}}
+                                <img v-if="isKing" class="king-icon" src="@/assets/rank/rank16.png" alt="">
+                            </div>
                         </div>
                         <div class="hero">
                             <template v-for="({ src, alt }, index3) in heros">
@@ -34,9 +37,10 @@
 </template>
 
 <script lang="ts">
+import html2canvas from 'html2canvas'
 import { defineComponent, ref } from 'vue'
 import { skins, heros, kings } from './data'
-import { getImageUrl } from '@/libs/utils'
+import { getImageUrl, dataURItoBlob } from '@/libs/utils'
 
 export default defineComponent({
     setup() {
@@ -105,12 +109,35 @@ export default defineComponent({
         }
         const allYear = list.map(item => item.year)
         const showYears = isLargeScreen ? allYear : [allYear[start]]
+        const save = () => {
+            const index = Math.abs(translateX.value / 100)
+            const target = document.querySelectorAll('.contain > div')[index]
+            target.style.maxHeight = 'none'
+            html2canvas(target, {
+                ignoreElements: element => {
+                    return element.className === 'ignore-save'
+                }
+            }).then(function(canvas) {
+                const data = canvas.toDataURL('image/png')
+                const fileName = `${list[index].year}.png`
+                const a = document.createElement('a')
+                a.download = fileName
+                a.style.display = 'none'
+                a.href = URL.createObjectURL(dataURItoBlob(data))
+                document.body.appendChild(a)
+                a.click()
+                URL.revokeObjectURL(a.href) // 释放URL 对象
+                document.body.removeChild(a)
+                target.style.maxHeight = ''
+            })
+        }
         return {
             list,
             translateX,
             handleTransform,
             getImageUrl,
-            showYears
+            showYears,
+            save
         }
     },
 })
@@ -161,12 +188,18 @@ export default defineComponent({
                     text-align: right;
                     > .image {
                         margin-left: 5px;
+                        border-top-right-radius: 4px;
+                        border-bottom-left-radius: 4px;
                     }
                 }
                 .hero {
                     text-align: left;
-                    > .image:not(:last-child) {
-                        margin-right: 5px;
+                    > .image {
+                        border-top-left-radius: 4px;
+                        border-bottom-right-radius: 4px;
+                        &:not(:last-child) {
+                            margin-right: 5px;
+                        }
                     }
                 }
                 > .timeline {
@@ -179,19 +212,27 @@ export default defineComponent({
                         line-height: @imgWidth;
                         font-size: 14px;
                         text-align: center;
-                        border: 1px solid #eaeaea;
-                        border-radius: 50%;
+                        // border: 1px solid #eaeaea;
+                        // border-radius: 50%;
+                        &:not(.king)::after {
+                            content: '';
+                            position: absolute;
+                            top: -50%;
+                            right: -50%;
+                            bottom: -50%;
+                            left: -50%;
+                            border: 1px solid #eaeaea;
+                            border-radius: 50%;
+                            transform: scale(0.5);
+                        }
                         &.king {
                             border: 0;
-                            &::after {
-                                content: '';
+                            font-size: 0;
+                            .king-icon {
                                 position: absolute;
+                                width: 40px;
                                 top: -7px;
-                                right: -5px;
-                                bottom: -7px;
                                 left: -5px;
-                                background-image: url(@/assets/rank/rank16.png);
-                                background-size: cover;
                                 z-index: 1;
                             }
                         }
@@ -210,6 +251,7 @@ export default defineComponent({
                         left: 50%;
                         width: 1px;
                         background-color: #eaeaea;
+                        transform: scaleX(0.5);
                     }
                 }
             }

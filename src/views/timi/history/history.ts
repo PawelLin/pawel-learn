@@ -1742,7 +1742,6 @@ export const history = [
     {
         name: '孙尚香-水果甜心',
         date: '2021-10-18',
-        quality: '2',
         content: '孙尚香-水果甜心重做上线，品质升级史诗'
     },
     {

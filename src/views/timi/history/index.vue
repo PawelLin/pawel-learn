@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, defineAsyncComponent  } from 'vue'
+import { defineComponent, defineAsyncComponent, ref, onUnmounted  } from 'vue'
 
 export default defineComponent({
     components: {
@@ -14,17 +14,20 @@ export default defineComponent({
         pcTable: defineAsyncComponent(() => import('./table.vue'))
     },
     setup() {
-        let is = 'mobile'
-        const orientation = window.orientation
-        if (orientation !== undefined) {
-            if (orientation === 90 || orientation === -90) {
-                is = 'pcTable'
-            }
-        } else {
-            if (window.innerHeight < window.innerWidth) {
-                is = 'pcTable'
+        const is = ref('')
+        const windowListen = () => {
+            const orientation = window.orientation
+            if (orientation !== undefined) {
+                is.value = orientation === 90 || orientation === -90 ? 'pcTable' : 'mobile'
+            } else {
+                is.value = window.innerHeight < window.innerWidth ? 'pcTable' : 'mobile'
             }
         }
+        windowListen()
+        window.addEventListener('resize', windowListen)
+        onUnmounted(() => {
+            window.removeEventListener('resize', windowListen)
+        })
         return {
             is
         }

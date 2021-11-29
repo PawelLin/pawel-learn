@@ -3,6 +3,10 @@ interface Data {
 }
 
 export const skins: Data = {
+    '2021-11-27': {
+        alt: '娜可露露-晚萤',
+        src: 'skin/162/162-smallskin-2.jpg'
+    },
     '2021-11-24': {
         alt: '小乔-青蛇',
         src: 'skin/106/106-smallskin-7.jpg'
@@ -511,7 +515,7 @@ export const skins: Data = {
 
 export const heros: Data = {
     '2021-11-20': {
-        alt: '金蝉-渡世行者',
+        alt: '金蝉',
         src: 'skin/540/540-smallskin-1.jpg'
     },
     '2021-8-16': {
