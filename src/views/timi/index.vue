@@ -145,6 +145,8 @@ export default defineComponent({
 
 <style lang="less" scoped>
 @imgWidth: 30px;
+@color: #f3c258;
+@gray: #eaeaea;
 .timi {
     > .contain {
         display: flex;
@@ -182,6 +184,7 @@ export default defineComponent({
                         height: @imgWidth;
                         background-image:url('@/assets/picture-icon.png');
                         background-size: contain;
+                        border: 1px solid @color;
                     }
                 }
                 .skin {
@@ -212,8 +215,6 @@ export default defineComponent({
                         line-height: @imgWidth;
                         font-size: 14px;
                         text-align: center;
-                        // border: 1px solid #eaeaea;
-                        // border-radius: 50%;
                         &:not(.king)::after {
                             content: '';
                             position: absolute;
@@ -221,7 +222,7 @@ export default defineComponent({
                             right: -50%;
                             bottom: -50%;
                             left: -50%;
-                            border: 1px solid #eaeaea;
+                            border: 1px solid @color;
                             border-radius: 50%;
                             transform: scale(0.5);
                         }
@@ -250,7 +251,7 @@ export default defineComponent({
                         bottom: -10px;
                         left: 50%;
                         width: 1px;
-                        background-color: #eaeaea;
+                        background-color: @color;
                         transform: scaleX(0.5);
                     }
                 }

@@ -4,13 +4,11 @@
         <table class="table" cellspacing="0" cellpadding="0" border="0">
             <tr class="head">
                 <th class="date">年月</th>
-                <template v-for="i in NUMBER" :key="i">
+                <template v-for="num in NUMBER" :key="num">
                     <th class="name"></th>
-                    <th class="time">上架时间</th>
+                    <th class="time">上架日期</th>
                     <th class="quality">品质</th>
                 </template>
-                <!-- <th>小计</th> -->
-                <!-- <th>合计</th> -->
             </tr>
             <template v-for="list in result">
                 <template v-for="({ data, colspan, year, month }) in list">
@@ -24,22 +22,17 @@
                             <td class="text-center">{{date}}</td>
                             <td class="text-center">
                                 <span class="quality-span" :class="`quality-span-${qualityColorEnums[quality]}`">{{qualityEnums[quality]}}</span>
-                                <span v-if="form.limit === '1' && limit" class="quality-span quality-span-blue">限定</span>
+                                <!-- <span v-if="form.limit === '1' && limit" class="quality-span quality-span-blue">限定</span> -->
                             </td>
                         </template>
-                        <td v-if="data.length - 1 === index && colspan" :colspan="colspan">{{colspan}}</td>
-                        <!-- <td v-if="!index" :rowspan="data.length" class="text-center">
-                            <span class="quality-span quality-span-green">12</span>
-                            <span class="quality-span quality-span-purple">14</span>
-                            <span class="quality-span quality-span-red">5</span>
-                        </td> -->
+                        <td v-if="data.length - 1 === index && colspan" :colspan="colspan"></td>
                     </tr>
                 </template>
             </template>
         </table>
         <form class="form">
             <div>
-                <label>上架时间</label>
+                <label>上架日期</label>
                 <select v-model="form.startYear" @change="yearChange(form.startYear, 'startMonth')">
                     <option value="">全部</option>
                     <option v-for="year in years" :value="year" :key="year">{{year}}年</option>
@@ -58,6 +51,26 @@
                 </select>
             </div>
             <div>
+                <label>年份</label>
+                <div class="multiple-checkbox">
+                    <template v-for="(year, index) in years" :key="year">
+                        <input v-model="form.years" :value="year" :id="`year-${year}`" type="checkbox">
+                        <label :for="`year-${year}`">{{year}}</label>
+                        <br v-if="!((index + 1) % 4)">
+                    </template>
+                </div>
+            </div>
+            <div>
+                <label>月份</label>
+                <div class="multiple-checkbox">
+                    <template v-for="(month, index) in 12" :key="month">
+                        <input v-model="form.months" :value="month - 1" :id="`month-${month}`" type="checkbox">
+                        <label :for="`month-${month}`">{{month}}</label>
+                        <br v-if="!((index + 1) % 6)">
+                    </template>
+                </div>
+            </div>
+            <div>
                 <label for="name">名称</label>
                 <input v-model="form.name" type="text" maxlength="30" placeholder="请输入">
             </div>
@@ -72,11 +85,13 @@
                 </div>
             </div>
             <div>
-                <label for="limit">限定</label>
-                <select v-model="form.limit">
-                    <option value="1">是</option>
-                    <option value="0">否</option>
-                </select>
+                <label for="limit">只限定</label>
+                <div class="multiple-checkbox">
+                    <input v-model="form.limit" value="1" id="limit-1" type="radio" name="limit">
+                    <label for="limit-1">是</label>
+                    <input v-model="form.limit" value="0" id="limit-0" type="radio" name="limit">
+                    <label for="limit-0">否</label>
+                </div>
             </div>
             <div>
                 <label for="sort">排序</label>
@@ -104,7 +119,7 @@
 <script>
 import { defineComponent, reactive, ref, watch } from 'vue'
 import { history } from './history'
-import { datas, limits } from '../skin/data'
+import { datas } from '../skin/data'
 import { getImageUrl } from '@/libs/utils'
 
 export default defineComponent({
@@ -119,10 +134,8 @@ export default defineComponent({
             })
         })
         const list = {}
-        const getLimit = type => {
-            return limits.includes(type)
-        }
         history.forEach(items => {
+            const limit = !!items.start
             let date = items.date || items.start
             let [year, month, day] = date.split('-').map(item => Number(item))
             date = `${month}月${day}日`
@@ -132,7 +145,6 @@ export default defineComponent({
                 items.name.replace(/\s|\n/g, '').split('|').forEach(key => {
                     let { icon, name, type, quality } = skinData[key] || {}
                     if (name) {
-                        const limit = getLimit(type)
                         const items = list[year]
                         const item = { icon, name, date, limit, quality }
                         if (!items) {
@@ -154,12 +166,14 @@ export default defineComponent({
             startMonth: '',
             endYear: '2021',
             endMonth: '',
+            years: [],
+            months: [],
             name: '',
             quality: [],
             limit: '0',
-            yearSort: '1',
-            monthSort: '1',
-            daySort: '1'
+            yearSort: '-1',
+            monthSort: '-1',
+            daySort: '-1'
         })
         const getResult = years => {
             const result = []
@@ -167,7 +181,7 @@ export default defineComponent({
             const isYearDesc = form.yearSort === '-1'
             const isMonthDesc = form.monthSort === '-1'
             const isDayDesc = form.daySort === '-1'
-            const _years = [...years]
+            const _years = years.filter(year => !form.years.length || form.years.includes(year))
             isYearDesc && _years.reverse()
             _years.forEach((year, yearIndex) => {
                 list[year].forEach((items, month) => {
@@ -187,7 +201,7 @@ export default defineComponent({
                     if (yearLength - 1 === yearIndex && endMonth) {
                         end = endMonth - 1
                     }
-                    if (monthIndex >= start && monthIndex <= end) {
+                    if (monthIndex >= start && monthIndex <= end && (!form.months.length || form.months.includes(month))) {
                         const _items = items.filter(item => {
                             return (item.name ? item.name.includes(form.name) : true) &&
                             (form.quality.length ? form.quality.includes(item.quality) : true) &&

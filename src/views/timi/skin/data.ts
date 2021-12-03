@@ -90,19 +90,6 @@ export const types: Types = {
     90: 'skin/type/90.png',
 }
 
-export const limits = [
-    '5',
-    '13', '14', '56', '57', '58', '59', '60', '61', '62', '63', '54', '39', '46', '48', '52', '66', '70', '74', '78', '80', '83', '85', '87',
-    '18', '23', '36', '53', '77', '90',
-    '2', '20', '25', '43', '67', '81',
-    '11', '44', '45', '68', '69', '82', '21', '24',
-    '40',
-    '28', '29', '32', '64', '84', '88', '89', '17', '33', '72',
-    '19',
-    '50', '73', '65',
-    '1'
-]
-
 export const positions = {
     1: '坦克',
     2: '战士',
@@ -602,6 +589,14 @@ export const datas = [
             url: 'skin/515/515-bigskin-3.jpg',
             mobile: 'skin/515/515-mobileskin-3.jpg',
             type: '68',
+            quality: '3'
+        },
+        {
+            name: '嫦娥-拒霜思',
+            icon: 'skin/515/515-smallskin-4.jpg',
+            url: 'skin/515/515-bigskin-4.jpg',
+            mobile: 'skin/515/515-mobileskin-4.jpg',
+            type: '65',
             quality: '3'
         }
     ],
@@ -3275,7 +3270,7 @@ export const datas = [
             url: 'skin/131/131-bigskin-5.jpg',
             mobile: 'skin/131/131-mobileskin-5.jpg',
             type: '30',
-            quality: '3'
+            quality: '2'
         },
         {
             name: '李白-鸣剑·曳影',
@@ -4163,7 +4158,7 @@ export const datas = [
             url: 'skin/111/111-bigskin-7.jpg',
             mobile: 'skin/111/111-mobileskin-7.jpg',
             type: '27',
-            quality: '3'
+            quality: '2'
         },
         {
             name: '孙尚香-时之恋人',

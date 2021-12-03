@@ -3,6 +3,18 @@ interface Data {
 }
 
 export const skins: Data = {
+    '2021-12-3': {
+        alt: '嫦娥-拒霜思',
+        src: 'skin/515/515-smallskin-4.jpg'
+    },
+    '2021-12-1': {
+        alt: '花木兰-水晶猎龙者',
+        src: 'skin/154/154-smallskin-4.jpg'
+    },
+    '2021-11-30': {
+        alt: '赵云-白执事',
+        src: 'skin/107/107-smallskin-6.jpg'
+    },
     '2021-11-27': {
         alt: '娜可露露-晚萤',
         src: 'skin/162/162-smallskin-2.jpg'

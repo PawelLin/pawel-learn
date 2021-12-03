@@ -1777,5 +1777,11 @@ export const history = [
         name: '金蝉-渡世行者|金蝉-前尘',
         date: '2021-11-16',
         content: '新英雄金蝉上架'
+    },
+    {
+        name: '嫦娥-拒霜思',
+        start: '2021-12-3',
+        end: '2021-12-9',
+        content: '嫦娥6元皮肤'
     }
 ]
