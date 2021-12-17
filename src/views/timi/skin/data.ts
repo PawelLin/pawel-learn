@@ -3227,6 +3227,14 @@ export const datas = [
             mobile: 'skin/132/132-mobileskin-4.jpg',
             type: '40',
             quality: '3'
+        },
+        {
+            name: '马可波罗-潮玩牛仔',
+            icon: 'skin/132/132-smallskin-5.jpg',
+            url: 'skin/132/132-bigskin-5.jpg',
+            mobile: 'skin/132/132-mobileskin-5.jpg',
+            type: '1',
+            quality: '2'
         }
     ],
     [

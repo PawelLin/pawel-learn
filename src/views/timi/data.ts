@@ -3,6 +3,10 @@ interface Data {
 }
 
 export const skins: Data = {
+    '2021-12-9': {
+        alt: '元歌-午夜歌剧院',
+        src: 'skin/125/125-smallskin-2.jpg'
+    },
     '2021-12-3': {
         alt: '嫦娥-拒霜思',
         src: 'skin/515/515-smallskin-4.jpg'
