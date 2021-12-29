@@ -1789,5 +1789,11 @@ export const history = [
         start: '2021-12-17',
         end: '2021-12-23',
         content: '马可波罗6元皮肤'
+    },
+    {
+        name: '镜-匿光追影者',
+        start: '2022-1-1',
+        end: '2022-2-28',
+        content: 'KPL限定皮肤'
     }
 ]

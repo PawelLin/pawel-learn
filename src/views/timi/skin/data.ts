@@ -278,6 +278,14 @@ export const datas = [
             mobile: 'skin/531/531-mobileskin-3.jpg',
             type: '38',
             quality: '4'
+        },
+        {
+            name: '镜-匿光追影者',
+            icon: 'skin/531/531-smallskin-4.jpg',
+            url: 'skin/531/531-bigskin-4.jpg',
+            mobile: 'skin/531/531-mobileskin-4.jpg',
+            type: '19',
+            quality: '3'
         }
     ],
     [

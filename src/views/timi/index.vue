@@ -5,11 +5,11 @@
                 <p>
                     <a v-if="index1" @click="handleTransform(1, year - 1)" href="javascript:;" class="ignore-save">{{year - 1}}</a>
                     <span>[{{skinsLength}}]</span>
-                    {{year}}
+                    <span class="year" @click="save(index1)">{{year}}</span>
                     <span>[{{herosLength}}]</span>
                     <a v-if="index1 < list.length - 1" @click="handleTransform(-1, year + 1)" href="javascript:;" class="ignore-save">{{year + 1}}</a>
                 </p>
-                <div v-for="({ skins, title, heros, isKing }, index2) in months" :key="`${year}${index2}`">
+                <div v-for="({ skins, title, heros, isKing }, index2) in months" :key="`${year}${index2}`" :class="isKing ? 'king-div' : null">
                     <template v-if="showYears.includes(year)">
                         <div class="skin">
                             <template v-for="({ src, alt }, index3) in skins">
@@ -109,8 +109,7 @@ export default defineComponent({
         }
         const allYear = list.map(item => item.year)
         const showYears = isLargeScreen ? allYear : [allYear[start]]
-        const save = () => {
-            const index = Math.abs(translateX.value / 100)
+        const save = index => {
             const target = document.querySelectorAll('.contain > div')[index]
             target.style.maxHeight = 'none'
             html2canvas(target, {
@@ -158,8 +157,11 @@ export default defineComponent({
                 padding: 10px 0;
                 font-size: 18px;
                 text-align: center;
-                > span, > a {
+                > span:not(.year), > a {
                     font-size: 12px;
+                }
+                > .year {
+                    padding: 0 5px;
                 }
                 > a {
                     display: none;
@@ -231,9 +233,9 @@ export default defineComponent({
                             font-size: 0;
                             .king-icon {
                                 position: absolute;
-                                width: 40px;
-                                top: -7px;
-                                left: -5px;
+                                width: 35px;
+                                top: -5px;
+                                left: -2px;
                                 z-index: 1;
                             }
                         }
@@ -241,6 +243,16 @@ export default defineComponent({
                 }
                 & + div {
                     margin-top: 5px;
+                }
+                &.king-div::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    bottom: 3px;
+                    left: 50%;
+                    width: 1px;
+                    background-color: @color;
+                    transform: scaleX(0.5);
                 }
                 &:not(:last-child) {
                     position: relative;
@@ -265,7 +277,7 @@ export default defineComponent({
         > .contain {
             transition: 0.3s transform ease-in-out;
             > div {
-                padding: 44px 0 10px;
+                padding: 39px 0 10px;
                 min-width: 100%;
                 max-width: 100%;
                 max-height: calc(100vh - 64px);
@@ -274,6 +286,9 @@ export default defineComponent({
                     position: absolute;
                     top: 0;
                     width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     background-color: #fff;
                     box-shadow: 0 2px 10px rgb(255, 255, 255, 0.8);
                     z-index: 2;

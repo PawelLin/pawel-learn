@@ -49,7 +49,7 @@
                                 :class="heroSelectedList.includes(item) ? 'selected' : null"
                                 :key="`${index}${inde}`"
                             ></div>
-                            <img v-if="!index" @click="setHero('')" class="img clear" src="@/assets/clear.png" alt="">
+                            <img v-if="index === 6" @click="setHero('')" class="img clear" src="@/assets/clear.png" alt="">
                         </div>
                     </li>
                 </ul>
