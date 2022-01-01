@@ -211,12 +211,13 @@ export default defineComponent({
                     margin: 0 10px;
                     > .month {
                         position: relative;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                         margin-top: 5px;
                         width: @imgWidth;
                         height: @imgWidth;
-                        line-height: @imgWidth;
                         font-size: 14px;
-                        text-align: center;
                         &:not(.king)::after {
                             content: '';
                             position: absolute;

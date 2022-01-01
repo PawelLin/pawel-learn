@@ -162,9 +162,9 @@ export default defineComponent({
         })
         const years = Object.keys(list)
         const form = reactive({
-            startYear: '2021',
+            startYear: '2022',
             startMonth: '',
-            endYear: '2021',
+            endYear: '2022',
             endMonth: '',
             years: [],
             months: [],
@@ -228,7 +228,7 @@ export default defineComponent({
             })
             return result
         }
-        const result = ref(getResult(['2021']))
+        const result = ref(getResult(['2022']))
         const yearChange = (value, key) => {
             if (!value) {
                 form[key] = ''

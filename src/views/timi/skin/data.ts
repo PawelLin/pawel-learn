@@ -3495,6 +3495,14 @@ export const datas = [
             mobile: 'skin/127/127-mobileskin-5.jpg',
             type: '67',
             quality: '3'
+        },
+        {
+            name: '甄姬-女儿国国王',
+            icon: 'skin/127/127-smallskin-6.jpg',
+            url: 'skin/127/127-bigskin-6.jpg',
+            mobile: 'skin/127/127-mobileskin-6.jpg',
+            type: '89',
+            quality: '3'
         }
     ],
     [

@@ -1791,9 +1791,15 @@ export const history = [
         content: '马可波罗6元皮肤'
     },
     {
-        name: '镜-匿光追影者',
+        name: '镜-匿光追影者|甄姬-女儿国国王',
         start: '2022-1-1',
         end: '2022-2-28',
-        content: 'KPL限定皮肤'
+        content: 'KPL限定皮肤|甄姬西游记皮肤'
+    },
+    {
+        name: '花木兰-青春决赛季',
+        start: '2022-1-1',
+        end: '2022-1-7',
+        content: '花木兰-青春决赛季返场'
     }
 ]
