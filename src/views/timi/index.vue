@@ -111,7 +111,11 @@ export default defineComponent({
         const showYears = isLargeScreen ? allYear : [allYear[start]]
         const save = index => {
             const target = document.querySelectorAll('.contain > div')[index]
+            console.log(target)
             target.style.maxHeight = 'none'
+            target.querySelectorAll('.month').forEach(month => {
+                month.style.lineHeight = '27px'
+            })
             html2canvas(target, {
                 ignoreElements: element => {
                     return element.className === 'ignore-save'
@@ -128,6 +132,9 @@ export default defineComponent({
                 URL.revokeObjectURL(a.href) // 释放URL 对象
                 document.body.removeChild(a)
                 target.style.maxHeight = ''
+                target.querySelectorAll('.month').forEach(month => {
+                    month.style.lineHeight = ''
+                })
             })
         }
         return {
@@ -211,13 +218,12 @@ export default defineComponent({
                     margin: 0 10px;
                     > .month {
                         position: relative;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
                         margin-top: 5px;
                         width: @imgWidth;
                         height: @imgWidth;
+                        line-height: @imgWidth;
                         font-size: 14px;
+                        text-align: center;
                         &:not(.king)::after {
                             content: '';
                             position: absolute;
