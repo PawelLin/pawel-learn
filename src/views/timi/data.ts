@@ -538,6 +538,10 @@ export const skins: Data = {
 }
 
 export const heros: Data = {
+    '2022-1-6': {
+        alt: '暃',
+        src: 'skin/542/542-smallskin-1.jpg'
+    },
     '2021-11-20': {
         alt: '金蝉',
         src: 'skin/540/540-smallskin-1.jpg'
