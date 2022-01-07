@@ -88,6 +88,8 @@ export const types: Types = {
     88: 'skin/type/88.png',
     89: 'skin/type/89.png',
     90: 'skin/type/90.png',
+    91: 'skin/type/91.png',
+    92: 'skin/type/92.png',
 }
 
 export const positions = {
@@ -100,6 +102,18 @@ export const positions = {
 }
 
 export const datas = [
+    [
+        {
+            name: '暃-玉城之子',
+            icon: 'skin/542/542-smallskin-1.jpg',
+            url: 'skin/542/542-bigskin-1.jpg',
+            mobile: 'skin/542/542-mobileskin-1.jpg',
+            content: '自得其乐，孰是孰非',
+            type: '0',
+            position: '3',
+            quality: '0'
+        }
+    ],
     [
         {
             name: '金蝉-渡世行者',
@@ -1559,6 +1573,14 @@ export const datas = [
             mobile: 'skin/192/192-mobileskin-3.jpg',
             type: '72',
             quality: '3'
+        },
+        {
+            name: '黄忠-火炮绅士',
+            icon: 'skin/192/192-smallskin-4.jpg',
+            url: 'skin/192/192-bigskin-4.jpg',
+            mobile: 'skin/192/192-mobileskin-4.jpg',
+            type: '40',
+            quality: '3'
         }
     ],
     [
@@ -1771,6 +1793,14 @@ export const datas = [
             mobile: 'skin/183/183-mobileskin-5.jpg',
             type: '40',
             quality: '2'
+        },
+        {
+            name: '雅典娜-黎明之约',
+            icon: 'skin/183/183-smallskin-6.jpg',
+            url: 'skin/183/183-bigskin-6.jpg',
+            mobile: 'skin/183/183-mobileskin-6.jpg',
+            type: '92',
+            quality: '3'
         }
     ],
     [
@@ -3139,6 +3169,14 @@ export const datas = [
             mobile: 'skin/134/134-mobileskin-5.jpg',
             type: '40',
             quality: '2'
+        },
+        {
+            name: '达摩-沙漠行僧',
+            icon: 'skin/134/134-smallskin-6.jpg',
+            url: 'skin/134/134-bigskin-6.jpg',
+            mobile: 'skin/134/134-mobileskin-6.jpg',
+            type: '91',
+            quality: '2'
         }
     ],
     [
@@ -3695,6 +3733,14 @@ export const datas = [
             mobile: 'skin/121/121-mobileskin-5.jpg',
             type: '5',
             quality: '3'
+        },
+        {
+            name: '芈月-幻夜卜梦',
+            icon: 'skin/121/121-smallskin-6.jpg',
+            url: 'skin/121/121-bigskin-6.jpg',
+            mobile: 'skin/121/121-mobileskin-6.jpg',
+            type: '40',
+            quality: '2'
         }
     ],
     [
