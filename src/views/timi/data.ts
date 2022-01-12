@@ -4,8 +4,8 @@ interface Data {
 
 export const skins: Data = {
     '2022-1-6': {
-        alt: ['雅典娜-黎明之约', '芈月-幻夜卜梦', '达摩-沙漠行僧'],
-        src: ['skin/183/183-smallskin-6.jpg', 'skin/121/121-smallskin-6.jpg', 'skin/134/134-smallskin-6.jpg']
+        alt: ['雅典娜-黎明之约', '芈月-幻夜卜梦', '暃-碧珀绯影', '达摩-沙漠行僧'],
+        src: ['skin/183/183-smallskin-6.jpg', 'skin/121/121-smallskin-6.jpg', 'skin/542/542-smallskin-2.jpg', 'skin/134/134-smallskin-6.jpg']
     },
     '2022-1-1': {
         alt: '镜-匿光追影者',

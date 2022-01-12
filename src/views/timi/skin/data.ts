@@ -112,6 +112,14 @@ export const datas = [
             type: '0',
             position: '3',
             quality: '0'
+        },
+        {
+            name: '暃-碧珀绯影',
+            icon: 'skin/542/542-smallskin-2.jpg',
+            url: 'skin/542/542-bigskin-2.jpg',
+            mobile: 'skin/542/542-mobileskin-2.jpg',
+            type: '0',
+            quality: '1'
         }
     ],
     [
