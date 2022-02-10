@@ -3,6 +3,18 @@ interface Data {
 }
 
 export const skins: Data = {
+    '2022-2-8': {
+        alt: '貂蝉-圣诞恋歌',
+        src: 'skin/141/141-smallskin-3.jpg'
+    },
+    '2022-2-4': {
+        alt: ['刘禅-天才门将', '高渐离-金属狂潮', '孙膑-寅虎·展翼'],
+        src: ['skin/114/114-smallskin-4.jpg', 'skin/115/115-smallskin-2.jpg', 'skin/118/118-smallskin-7.jpg']
+    },
+    '2022-1-30': {
+        alt: '后羿-阿尔法小队',
+        src: 'skin/169/169-smallskin-3.jpg'
+    },
     '2022-1-6': {
         alt: ['雅典娜-黎明之约', '芈月-幻夜卜梦', '暃-碧珀绯影', '达摩-沙漠行僧'],
         src: ['skin/183/183-smallskin-6.jpg', 'skin/121/121-smallskin-6.jpg', 'skin/542/542-smallskin-2.jpg', 'skin/134/134-smallskin-6.jpg']

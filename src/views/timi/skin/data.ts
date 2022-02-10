@@ -90,6 +90,7 @@ export const types: Types = {
     90: 'skin/type/90.png',
     91: 'skin/type/91.png',
     92: 'skin/type/92.png',
+    93: 'skin/type/92.png',
 }
 
 export const positions = {
@@ -1053,6 +1054,14 @@ export const datas = [
             mobile: 'skin/502/502-mobileskin-5.jpg',
             type: '77',
             quality: '3'
+        },
+        {
+            name: '裴擒虎-寅虎·赤拳',
+            icon: 'skin/502/502-smallskin-6.jpg',
+            url: 'skin/502/502-bigskin-6.jpg',
+            mobile: 'skin/502/502-mobileskin-6.jpg',
+            type: '93',
+            quality: '4'
         }
     ],
     [
@@ -1080,6 +1089,14 @@ export const datas = [
             url: 'skin/176/176-bigskin-3.jpg',
             mobile: 'skin/176/176-mobileskin-3.jpg',
             type: '36',
+            quality: '3'
+        },
+        {
+            name: '杨玉环-寅虎·心曲',
+            icon: 'skin/176/176-smallskin-4.jpg',
+            url: 'skin/176/176-bigskin-4.jpg',
+            mobile: 'skin/176/176-mobileskin-4.jpg',
+            type: '93',
             quality: '3'
         }
     ],
@@ -1641,6 +1658,14 @@ export const datas = [
             mobile: 'skin/190/190-mobileskin-6.jpg',
             type: '81',
             quality: '4'
+        },
+        {
+            name: '诸葛亮-星域神启',
+            icon: 'skin/190/190-smallskin-7.jpg',
+            url: 'skin/190/190-bigskin-7.jpg',
+            mobile: 'skin/190/190-mobileskin-7.jpg',
+            type: '26',
+            quality: '4'
         }
     ],
     [
@@ -1677,6 +1702,14 @@ export const datas = [
             mobile: 'skin/180/180-mobileskin-4.jpg',
             type: '1',
             quality: '2'
+        },
+        {
+            name: '哪吒-雪上飞焰',
+            icon: 'skin/180/180-smallskin-5.jpg',
+            url: 'skin/180/180-bigskin-5.jpg',
+            mobile: 'skin/180/180-mobileskin-5.jpg',
+            type: '12',
+            quality: '3'
         }
     ],
     [
@@ -2653,6 +2686,14 @@ export const datas = [
             mobile: 'skin/150/150-mobileskin-6.jpg',
             type: '67',
             quality: '3'
+        },
+        {
+            name: '韩信-傲雪梅枪',
+            icon: 'skin/150/150-smallskin-7.jpg',
+            url: 'skin/150/150-bigskin-7.jpg',
+            mobile: 'skin/150/150-mobileskin-7.jpg',
+            type: '5',
+            quality: '3'
         }
     ],
     [
@@ -2688,6 +2729,14 @@ export const datas = [
             url: 'skin/149/149-bigskin-4.jpg',
             mobile: 'skin/149/149-mobileskin-4.jpg',
             type: '40',
+            quality: '2'
+        },
+        {
+            name: '刘邦-虎啸剑宗',
+            icon: 'skin/149/149-smallskin-5.jpg',
+            url: 'skin/149/149-bigskin-5.jpg',
+            mobile: 'skin/149/149-mobileskin-5.jpg',
+            type: '1',
             quality: '2'
         }
     ],
@@ -2828,6 +2877,14 @@ export const datas = [
             url: 'skin/144/144-bigskin-7.jpg',
             mobile: 'skin/144/144-mobileskin-7.jpg',
             type: '83',
+            quality: '2'
+        },
+        {
+            name: '程咬金-无双福将',
+            icon: 'skin/144/144-smallskin-8.jpg',
+            url: 'skin/144/144-bigskin-8.jpg',
+            mobile: 'skin/144/144-mobileskin-8.jpg',
+            type: '1',
             quality: '2'
         }
     ],
@@ -3873,6 +3930,14 @@ export const datas = [
             mobile: 'skin/118/118-mobileskin-6.jpg',
             type: '19',
             quality: '3'
+        },
+        {
+            name: '孙膑-寅虎·展翼',
+            icon: 'skin/118/118-smallskin-7.jpg',
+            url: 'skin/118/118-bigskin-7.jpg',
+            mobile: 'skin/118/118-mobileskin-7.jpg',
+            type: '93',
+            quality: '3'
         }
     ],
     [
@@ -4169,6 +4234,14 @@ export const datas = [
             mobile: 'skin/112/112-mobileskin-8.jpg',
             type: '5',
             quality: '3'
+        },
+        {
+            name: '鲁班七号-寅虎·瑞焰',
+            icon: 'skin/112/112-smallskin-9.jpg',
+            url: 'skin/112/112-bigskin-9.jpg',
+            mobile: 'skin/112/112-mobileskin-9.jpg',
+            type: '93',
+            quality: '4'
         }
     ],
     [
@@ -4581,6 +4654,14 @@ export const datas = [
             mobile: 'skin/105/105-mobileskin-3.jpg',
             type: '1',
             quality: '2'
+        },
+        {
+            name: '廉颇-寅虎·御盾',
+            icon: 'skin/105/105-smallskin-4.jpg',
+            url: 'skin/105/105-bigskin-4.jpg',
+            mobile: 'skin/105/105-mobileskin-4.jpg',
+            type: '93',
+            quality: '3'
         }
     ]
 ]
