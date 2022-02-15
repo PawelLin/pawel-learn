@@ -1,7 +1,11 @@
 const modules = import.meta.globEager('../assets/skin/**/*.*')
 export const getImageUrl = (dir:string):string => {
-    const path = `../assets/${dir}`
-    return modules[path].default
+    try {
+        const path = `../assets/${dir}`
+        return modules[path].default
+    } catch (err) {
+        console.warn(`[Not Found] ${dir}`)
+    }
 }
 
 export const dataURItoBlob = (dataURL:string):Blob => {

@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, defineAsyncComponent, ref, onUnmounted  } from 'vue'
+import { defineComponent, defineAsyncComponent, ref, onUnmounted, onMounted  } from 'vue'
 
 export default defineComponent({
     components: {
@@ -23,8 +23,10 @@ export default defineComponent({
                 is.value = window.innerHeight < window.innerWidth ? 'pcTable' : 'mobile'
             }
         }
-        windowListen()
-        window.addEventListener('resize', windowListen)
+        onMounted(() => {
+            windowListen()
+            window.addEventListener('resize', windowListen)
+        })
         onUnmounted(() => {
             window.removeEventListener('resize', windowListen)
         })

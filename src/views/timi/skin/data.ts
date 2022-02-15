@@ -41,6 +41,7 @@ export const types: Types = {
     38: 'skin/type/38.png',
     39: 'skin/type/39.png',
     40: 'skin/type/40.png',
+    42: 'skin/type/42.png',
     43: 'skin/type/43.png',
     44: 'skin/type/44.png',
     45: 'skin/type/45.png',
@@ -90,7 +91,9 @@ export const types: Types = {
     90: 'skin/type/90.png',
     91: 'skin/type/91.png',
     92: 'skin/type/92.png',
-    93: 'skin/type/92.png',
+    93: 'skin/type/93.png',
+    94: 'skin/type/94.png',
+    95: 'skin/type/95.png',
 }
 
 export const positions = {
@@ -501,6 +504,14 @@ export const datas = [
             mobile: 'skin/506/506-mobileskin-3.jpg',
             type: '65',
             quality: '3'
+        },
+        {
+            name: '云中君-时之祈愿',
+            icon: 'skin/506/506-smallskin-4.jpg',
+            url: 'skin/506/506-bigskin-4.jpg',
+            mobile: 'skin/506/506-mobileskin-4.jpg',
+            type: '95',
+            quality: '3'
         }
     ],
     [
@@ -529,6 +540,30 @@ export const datas = [
             mobile: 'skin/505/505-mobileskin-3.jpg',
             type: '71',
             quality: '3'
+        },
+        {
+            name: '瑶-遇见神鹿',
+            icon: 'skin/505/505-smallskin-3.jpg',
+            url: 'skin/505/505-bigskin-3.jpg',
+            mobile: 'skin/505/505-mobileskin-3.jpg',
+            type: '71',
+            quality: '3'
+        },
+        {
+            name: '瑶-时之祈愿',
+            icon: 'skin/505/505-smallskin-4.jpg',
+            url: 'skin/505/505-bigskin-4.jpg',
+            mobile: 'skin/505/505-mobileskin-4.jpg',
+            type: '94',
+            quality: '4'
+        },
+        {
+            name: '瑶-时之愿境',
+            icon: 'skin/505/505-smallskin-5.jpg',
+            url: 'skin/505/505-bigskin-5.jpg',
+            mobile: 'skin/505/505-mobileskin-5.jpg',
+            type: '42',
+            quality: '4'
         }
     ],
     [
