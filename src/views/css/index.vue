@@ -1,11 +1,11 @@
 <template>
     <section class="container">
-        <view-code
+        <ViewCode
             title="行数限制"
             text="我是一串很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长的字"
             code="display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;"
         />
-        <view-code
+        <ViewCode
             title="一行超过显示..."
             text="我是一串很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长的字"
             code="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"
@@ -37,18 +37,13 @@
             <div class="border border10">折角边框</div>
         </div>
     </div>
+    <Layout />
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script lang="ts" setup>
 import ViewCode from './viewCode.vue'
+import Layout from './layout.vue'
 
-export default defineComponent({
-    name: 'Css',
-    components: {
-        ViewCode
-    }
-})
 </script>
 
 <style lang="less" scoped>

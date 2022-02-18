@@ -24,6 +24,18 @@
                 <a href="http://zhongguose.com/" target="_blank">中国色</a>
             </li>
         </ul>
+        <ul class="list">
+            <p class="title">工具</p>
+            <li class="prettier">
+                <a href="https://prettier.io/docs/en/index.html" target="_blank">prettier</a>
+            </li>
+        </ul>
+        <ul class="list">
+            <p class="title">数据</p>
+            <li class="kpl">
+                <a href="https://datamore.qq.com/project/wzmatch/dist/index.html#/" target="_blank">王者荣耀赛事数据平台</a>
+            </li>
+        </ul>
     </section>
 </template>
 
@@ -53,6 +65,8 @@ export default defineComponent({
             height: 16px;
             vertical-align: middle;
             background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
         }
         li.vue::before {
             background-image: url(@/assets/source/vue.png);
@@ -65,6 +79,12 @@ export default defineComponent({
         }
         li.zhongguose::before {
             background-image: url(@/assets/source/texture.png),url(@/assets/source/zhongguose.png);
+        }
+        li.prettier::before {
+            background-image: url(@/assets/source/prettier.png);
+        }
+        li.kpl::before {
+            background-image: url(@/assets/source/kpl.png);
         }
         li:hover a {
             color: #000;
