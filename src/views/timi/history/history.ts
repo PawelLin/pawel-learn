@@ -1863,4 +1863,9 @@ export const history = [
         date: '2022-2-12',
         content: '瑶星传说皮肤'
     },
+    {
+        name: '孙策-末日机甲',
+        date: '2022-2-18',
+        content: ''
+    },
 ]

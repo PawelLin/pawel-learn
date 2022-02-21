@@ -43,6 +43,7 @@ import match from './component/match.vue'
 import vip from './component/vip.vue'
 import activity from './component/activity.vue'
 import growUp from './component/growUp.vue'
+import starLegend from './component/starLegend.vue'
 import six from './component/six.vue'
 import lovers from './component/lovers.vue'
 import series from './component/series.vue'
@@ -68,6 +69,7 @@ export default defineComponent({
         vip,
         activity,
         growUp,
+        starLegend,
         six,
         lovers,
         series,
@@ -97,6 +99,7 @@ export default defineComponent({
             { type: 'vip', name: '贵族', key: [] },
             { type: 'activity', name: '活动', key: [] },
             { type: 'growUp', name: '成长', key: [] },
+            { type: 'starLegend', name: '星传说', key: [] },
             { type: 'six', name: '六元', key: [] },
             { type: 'lovers', name: '恋人', key: [] },
             { type: 'series', name: '系列', key: [] },

@@ -18,6 +18,9 @@
                 <li>1</li>
                 <li>bottom button</li>
             </ul>
+            <ul class="layout flex4">
+                <li v-for="i in 18" :key="i">{{i}}</li>
+            </ul>
         </div>
     </div>
 </template>
@@ -90,6 +93,25 @@
         > li:last-child {
             margin-top: auto;
             border-top: 1px solid;
+        }
+    }
+    @flex4-li-length: 5;
+    @flex4-li-length1: @flex4-li-length + 1;
+    @flex4-li-margin: 1px;
+    .flex4 {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        border: 1px solid #f9c;
+        > li {
+            width: calc((100% - @flex4-li-margin * (@flex4-li-length - 1)) / @flex4-li-length);
+            &:not(:nth-child(@{flex4-li-length}n)) {
+                margin-right: @flex4-li-margin;
+            }
+            &:nth-child(n + @{flex4-li-length1}) {
+                margin-top: @flex4-li-margin;
+            }
+            border: 1px solid #fff;
         }
     }
 }

@@ -26,6 +26,7 @@ const props = defineProps({
 @distanceY: 10px;
 .cascade {
     display: flex;
+    color: @borderColor;
     & + .cascade {
         margin-top: @distanceY;
     }
@@ -35,17 +36,16 @@ const props = defineProps({
     .title {
         width: 100px;
         height: @height;
-        border: 1px solid @borderColor;
+        border: 1px solid;
         &.line {
             position: relative;
             &::after {
                 content: '';
                 position: absolute;
                 top: 50%;
-                right: calc(-@distanceX);
+                right: calc(-@distanceX - 1px);
                 width: @distanceX;
-                height: 1px;
-                background-color: @borderColor;
+                border-top: 1px solid;
             }
         }
     }
@@ -60,13 +60,13 @@ const props = defineProps({
                 bottom: calc(-@distanceY);
                 left: calc(-@distanceX / 2);
                 width: 1px;
-                background-color: @borderColor;
+                border-left: 1px solid;
             }
             &:first-child::before {
                 top: calc(@height / 2);
             }
             &:last-child::before {
-                bottom: calc(100% - @height / 2 - 1px);
+                bottom: calc(100% - @height / 2);
             }
             & + .cascade {
                 margin-top: @distanceY;
@@ -76,7 +76,7 @@ const props = defineProps({
                     top: 50%;
                 }
                 &:last-child::before {
-                    bottom: calc(50% - 1px);
+                    bottom: calc(50%);
                 }
             }
         }
@@ -87,10 +87,9 @@ const props = defineProps({
                     content: '';
                     position: absolute;
                     top: 50%;
-                    left: calc(-@distanceX / 2);
+                    left: calc(-@distanceX / 2 - 1px);
                     width: calc(@distanceX / 2);
-                    height: 1px;
-                    background-color: @borderColor;
+                    border-top: 1px solid;
                 }
             }
         }

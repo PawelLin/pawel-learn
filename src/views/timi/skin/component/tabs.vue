@@ -24,10 +24,12 @@ export default defineComponent({
     emits: ['modal-show'],
     setup(props, { emit }) {
         let number = 0
+        const tabsData = []
         Object.keys(tabs).forEach(key => {
             if (!['six', 'lovers', 'series'].includes(key)) {
                 tabs[key].forEach(item => {
                     number += item.data.length
+                    tabsData.push(...item.data)
                 })
             }
         })
@@ -35,6 +37,16 @@ export default defineComponent({
         const list = JSON.parse(JSON.stringify(tabs[props.type]))
         const data = Array.prototype.concat.apply([], datas).filter(item => !item.name.includes('-旧'))
         console.log(data.length)
+        if (number !== data.length) {
+            const dataNames = data.map(item => item.name)
+            dataNames.forEach(name => {
+                if (!tabsData.includes(name)) {
+                    console.log(name)
+                } else if (dataNames.indexOf(name) !== dataNames.lastIndexOf(name)) {
+                    console.log(name)
+                }
+            })
+        }
         list.forEach(items => {
             items.data.forEach((name, index) => {
                 items.data[index] = data.filter(item => item.name === name)[0]

@@ -2,6 +2,7 @@
     <div class="home">
         <!-- <h1>JavaScript Learning</h1> -->
         <Cascade :data="data" center />
+        <input type="text" inputmode="decimal">
     </div>
 </template>
 

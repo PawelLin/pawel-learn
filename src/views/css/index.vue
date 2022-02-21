@@ -38,11 +38,13 @@
         </div>
     </div>
     <Layout />
+    <Mask />
 </template>
 
 <script lang="ts" setup>
 import ViewCode from './viewCode.vue'
 import Layout from './layout.vue'
+import Mask from './mask.vue'
 
 </script>
 

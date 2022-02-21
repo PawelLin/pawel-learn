@@ -542,14 +542,6 @@ export const datas = [
             quality: '3'
         },
         {
-            name: '瑶-遇见神鹿',
-            icon: 'skin/505/505-smallskin-3.jpg',
-            url: 'skin/505/505-bigskin-3.jpg',
-            mobile: 'skin/505/505-mobileskin-3.jpg',
-            type: '71',
-            quality: '3'
-        },
-        {
             name: '瑶-时之祈愿',
             icon: 'skin/505/505-smallskin-4.jpg',
             url: 'skin/505/505-bigskin-4.jpg',
@@ -908,6 +900,14 @@ export const datas = [
             mobile: 'skin/510/510-mobileskin-3.jpg',
             type: '12',
             quality: '3'
+        },
+        {
+            name: '孙策-末日机甲',
+            icon: 'skin/510/510-smallskin-4.jpg',
+            url: 'skin/510/510-bigskin-4.jpg',
+            mobile: 'skin/510/510-mobileskin-4.jpg',
+            type: '15',
+            quality: '4'
         }
     ],
     [
