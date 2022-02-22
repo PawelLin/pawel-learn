@@ -1,14 +1,13 @@
 <template>
-    <section>
-        <div v-for="{ title, children, link } in data" class="cascade" :class="center ? 'center' : null">
-            <div class="left">
-                <p class="title" :class="children ? 'line' : null">{{title}}</p>
-            </div>
-            <div class="right" v-if="children">
-                <Cascade :data="children" :center="center" />
-            </div>
+    <div v-for="{ title, children, link } in data" class="cascade" :class="center ? 'center' : null">
+        <div class="left" :class="children ? 'line' : null">
+            {{title}}
+            <div class="left-border"></div>
         </div>
-    </section>
+        <div class="right" v-if="children">
+            <Cascade :data="children" :center="center" />
+        </div>
+    </div>
 </template>
 
 <script lang="ts" setup>
@@ -24,6 +23,7 @@ const props = defineProps({
 @height: 30px;
 @distanceX: 30px;
 @distanceY: 10px;
+@lineWidth: 1px;
 .cascade {
     display: flex;
     color: @borderColor;
@@ -33,20 +33,30 @@ const props = defineProps({
     &.center {
         align-items: center;
     }
-    .title {
+    .left {
+        position: relative;
         width: 100px;
         height: @height;
-        border: 1px solid;
+        // @todo 测试为啥用border会影响before，after的位置
         &.line {
             position: relative;
             &::after {
                 content: '';
                 position: absolute;
                 top: 50%;
-                right: calc(-@distanceX - 1px);
-                width: @distanceX;
-                border-top: 1px solid;
+                right: calc(-@distanceX / 2);
+                width: calc(@distanceX / 2);
+                transform: translateY(-50%);
+                border-top: @lineWidth solid;
             }
+        }
+        > .left-border {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            border: 1px solid;
         }
     }
     .right {
@@ -59,8 +69,7 @@ const props = defineProps({
                 top: 0;
                 bottom: calc(-@distanceY);
                 left: calc(-@distanceX / 2);
-                width: 1px;
-                border-left: 1px solid;
+                border-left: @lineWidth solid;
             }
             &:first-child::before {
                 top: calc(@height / 2);
@@ -76,21 +85,20 @@ const props = defineProps({
                     top: 50%;
                 }
                 &:last-child::before {
-                    bottom: calc(50%);
+                    bottom: 50%;
                 }
             }
         }
         .left {
-            .title {
-                position: relative;
-                &::before {
-                    content: '';
-                    position: absolute;
-                    top: 50%;
-                    left: calc(-@distanceX / 2 - 1px);
-                    width: calc(@distanceX / 2);
-                    border-top: 1px solid;
-                }
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: calc(-@distanceX / 2);
+                width: calc(@distanceX / 2);
+                transform: translateY(-50%);
+                border-top: @lineWidth solid;
             }
         }
     }

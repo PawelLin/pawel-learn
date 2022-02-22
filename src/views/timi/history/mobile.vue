@@ -139,6 +139,8 @@ export default defineComponent({
         }
         onMounted(() => {
             handleScroll()
+            const index = seasons.length - 1
+            handleSetScroll(index, seasons[index].title)
         })
         return {
             getImageUrl,
