@@ -10,6 +10,18 @@
             </li>
         </ul>
         <ul class="list">
+            <p class="title">React</p>
+            <li class="react">
+                <a href="https://reactjs.org/" target="_blank">React</a>
+            </li>
+            <li class="react-beta">
+                <a href="https://beta.reactjs.org/" target="_blank">React BETA</a>
+            </li>
+            <li class="react-beta">
+                <a href="https://reactjs.bootcss.com/" target="_blank">React BETA中文版</a>
+            </li>
+        </ul>
+        <ul class="list">
             <p class="title">图片</p>
             <li class="tinypng">
                 <a href="https://tinypng.com/" target="_blank">Tinypng</a>
@@ -70,6 +82,12 @@ export default defineComponent({
         }
         li.vue::before {
             background-image: url(@/assets/source/vue.png);
+        }
+        li.react::before {
+            background-image: url(@/assets/source/react.ico);
+        }
+        li.react-beta::before {
+            background-image: url(@/assets/source/react-beta.ico);
         }
         li.tinypng::before {
             background-image: url(@/assets/source/tinypng.ico);

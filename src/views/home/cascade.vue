@@ -2,7 +2,6 @@
     <div v-for="{ title, children, link } in data" class="cascade" :class="center ? 'center' : null">
         <div class="left" :class="children ? 'line' : null">
             {{title}}
-            <div class="left-border"></div>
         </div>
         <div class="right" v-if="children">
             <Cascade :data="children" :center="center" />
@@ -12,7 +11,7 @@
 
 <script lang="ts" setup>
 import Cascade from './cascade.vue'
-const props = defineProps({
+defineProps({
     data: Array,
     center: Boolean
 })
@@ -20,10 +19,18 @@ const props = defineProps({
 
 <style lang="less" scoped>
 @borderColor: #666;
-@height: 30px;
-@distanceX: 30px;
-@distanceY: 10px;
+@borderWidth: 1px;
 @lineWidth: 1px;
+@height: 30px;
+@distanceX: 15px;
+@distanceY: 10px;
+@topBottom: calc(50% - @lineWidth / 2);
+// 0.98 8 7 6 4 3
+// 0.97 9
+// 0.96 5
+// 0.95 2
+// 0.81 1
+@marginLeft: @distanceX * 2 + @lineWidth * if((@lineWidth = 1px), 0.81, if((@lineWidth = 2px), 0.95, if((@lineWidth = 5px), 0.96, if((@lineWidth = 9px), 0.97, 0.98))));
 .cascade {
     display: flex;
     color: @borderColor;
@@ -34,33 +41,25 @@ const props = defineProps({
         align-items: center;
     }
     .left {
-        position: relative;
         width: 100px;
         height: @height;
+        border: @borderWidth solid;
         // @todo 测试为啥用border会影响before，after的位置
         &.line {
             position: relative;
             &::after {
                 content: '';
                 position: absolute;
-                top: 50%;
-                right: calc(-@distanceX / 2);
-                width: calc(@distanceX / 2);
-                transform: translateY(-50%);
+                top: @topBottom;
+                right: calc(-@distanceX);
+                margin-right: calc(-@borderWidth);
+                width: calc(@distanceX);
                 border-top: @lineWidth solid;
             }
         }
-        > .left-border {
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            border: 1px solid;
-        }
     }
     .right {
-        margin-left: @distanceX;
+        margin-left: @marginLeft;
         .cascade {
             position: relative;
             &::before {
@@ -68,24 +67,30 @@ const props = defineProps({
                 position: absolute;
                 top: 0;
                 bottom: calc(-@distanceY);
-                left: calc(-@distanceX / 2);
-                border-left: @lineWidth solid;
+                left: calc(-@distanceX - @lineWidth);
+                border-right: @lineWidth solid;
             }
             &:first-child::before {
-                top: calc(@height / 2);
+                top: calc((@height - @lineWidth) / 2);
             }
-            &:last-child::before {
-                bottom: calc(100% - @height / 2);
+            &:last-child {
+                &::before {
+                    bottom: calc(100% - (@height + @lineWidth) / 2);
+                }
+                > .left::before {
+                    border-top-width: 0;
+                    border-bottom: @lineWidth solid;
+                }
             }
             & + .cascade {
                 margin-top: @distanceY;
             }
             &.center {
                 &:first-child::before {
-                    top: 50%;
+                    top: @topBottom;
                 }
                 &:last-child::before {
-                    bottom: 50%;
+                    bottom: @topBottom;
                 }
             }
         }
@@ -94,10 +99,9 @@ const props = defineProps({
             &::before {
                 content: '';
                 position: absolute;
-                top: 50%;
-                left: calc(-@distanceX / 2);
-                width: calc(@distanceX / 2);
-                transform: translateY(-50%);
+                top: @topBottom;
+                left: calc(-@distanceX - @borderWidth);
+                width: calc(@distanceX);
                 border-top: @lineWidth solid;
             }
         }
