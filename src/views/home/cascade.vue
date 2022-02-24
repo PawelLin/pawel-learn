@@ -4,17 +4,30 @@
             {{title}}
         </div>
         <div class="right" v-if="children">
-            <Cascade :data="children" :center="center" />
+            <Cascade :data="children" :center="center" :level="level + 1" />
         </div>
     </div>
 </template>
 
 <script lang="ts" setup>
+import { ref, provide, inject, computed } from 'vue'
 import Cascade from './cascade.vue'
-defineProps({
+const props = defineProps({
     data: Array,
-    center: Boolean
+    center: Boolean,
+    level: {
+        type: Number,
+        default: 1
+    }
 })
+let maxLevel = ref(1)
+const number = computed(() => maxLevel.value - props.level)
+if (props.level === 1) {
+    provide('maxLevel', maxLevel)
+} else {
+    maxLevel = inject('maxLevel')
+    maxLevel.value = Math.max(maxLevel.value, props.level)
+}
 </script>
 
 <style lang="less" scoped>
@@ -30,7 +43,7 @@ defineProps({
 // 0.96 5
 // 0.95 2
 // 0.81 1
-@marginLeft: @distanceX * 2 + @lineWidth * if((@lineWidth = 1px), 0.81, if((@lineWidth = 2px), 0.95, if((@lineWidth = 5px), 0.96, if((@lineWidth = 9px), 0.97, 0.98))));
+@leftWidth: @distanceX * 2 + @lineWidth * if((@lineWidth = 1px), 0.81, if((@lineWidth = 2px), 0.95, if((@lineWidth = 5px), 0.96, if((@lineWidth = 9px), 0.97, 0.98))));
 .cascade {
     display: flex;
     color: @borderColor;
@@ -41,8 +54,10 @@ defineProps({
         align-items: center;
     }
     .left {
-        width: 100px;
+        // width: 100px;
+        width: calc((100% - v-bind(number) * @leftWidth) / (v-bind(number) + 1));
         height: @height;
+        max-width: 100px;
         border: @borderWidth solid;
         // @todo 测试为啥用border会影响before，after的位置
         &.line {
@@ -59,7 +74,8 @@ defineProps({
         }
     }
     .right {
-        margin-left: @marginLeft;
+        flex: 1;
+        padding-left: @leftWidth;
         .cascade {
             position: relative;
             &::before {

@@ -8,6 +8,12 @@
             <li class="vue">
                 <a href="https://v3.cn.vuejs.org/" target="_blank">Vue3</a>
             </li>
+            <li class="vue">
+                <a href="https://vuejs.org/" target="_blank">Vue3 英文版</a>
+            </li>
+            <li class="vue">
+                <a href="https://vue-next-template-explorer.netlify.app/" target="_blank">Vue3 Template Explorer</a>
+            </li>
         </ul>
         <ul class="list">
             <p class="title">React</p>
