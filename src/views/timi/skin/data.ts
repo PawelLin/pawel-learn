@@ -1241,6 +1241,14 @@ export const datas = [
             mobile: 'skin/179/179-mobileskin-3.jpg',
             type: '40',
             quality: '2'
+        },
+        {
+            name: '女娲-补天',
+            icon: 'skin/179/179-smallskin-4.jpg',
+            url: 'skin/179/179-bigskin-4.jpg',
+            mobile: 'skin/179/179-mobileskin-4.jpg',
+            type: '5',
+            quality: '4'
         }
     ],
     [
