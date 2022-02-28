@@ -16,6 +16,10 @@
             <p class="title">环形饼图</p>
             <pie-chart class="content" />
         </div>
+        <div class="item">
+            <p class="title">级联树</p>
+            <cascade :data="cascadeData" align="center" class="content" />
+        </div>
     </section>
 </template>
 
@@ -25,6 +29,7 @@ import flightChess from './flightChess.vue'
 import clock from './clock.vue'
 import circularProgress from './circularProgress.vue'
 import pieChart from './pieChart.vue'
+import cascade from '../home/cascade.vue'
 
 export default defineComponent({
     name: 'Component',
@@ -32,7 +37,35 @@ export default defineComponent({
         flightChess,
         clock,
         circularProgress,
-        pieChart
+        pieChart,
+        cascade
+    },
+    data () {
+        return {
+            cascadeData:[{
+                title: '1',
+                leftChildren: [
+                    { title: '2', children: [
+                        { title: '3' },
+                        { title: '3' },
+                    ] },
+                    { title: '2', children: [
+                        { title: '3' },
+                        { title: '3' },
+                    ] },
+                ],
+                rightChildren: [
+                    { title: '2', children: [
+                        { title: '3' },
+                        { title: '3' },
+                    ] },
+                    { title: '2', children: [
+                        { title: '3' },
+                        { title: '3' },
+                    ] },
+                ]
+            }]
+        }
     }
 })
 </script>
