@@ -14,7 +14,7 @@ export default defineComponent({
         pcTable: defineAsyncComponent(() => import('./table.vue'))
     },
     setup() {
-        const is = ref('')
+        const is = ref('mobile')
         const windowListen = () => {
             const orientation = window.orientation
             if (orientation !== undefined) {

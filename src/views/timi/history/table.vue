@@ -1,35 +1,37 @@
 <template>
     <div class="space"></div>
     <div class="timi-table">
-        <table class="table" cellspacing="0" cellpadding="0" border="0">
-            <tr class="head">
-                <th class="date">年月</th>
-                <template v-for="num in NUMBER" :key="num">
-                    <th class="name"></th>
-                    <th class="time">上架日期</th>
-                    <th class="quality">品质</th>
+        <div class="data">
+            <table class="table" cellspacing="0" cellpadding="0" border="0">
+                <tr class="head">
+                    <th class="date">年月</th>
+                    <template v-for="num in NUMBER" :key="num">
+                        <th class="name"></th>
+                        <th class="time">上架日期</th>
+                        <th class="quality">品质</th>
+                    </template>
+                </tr>
+                <template v-for="list in result">
+                    <template v-for="({ data, colspan, year, month }) in list">
+                        <tr v-for="(items, index) in data" :key="index">
+                            <td v-if="!index" :rowspan="data.length" class="text-center">{{year}}年{{month + 1}}月</td>
+                            <template v-for="({ name, icon, date, limit, quality }) in items" :key="name">
+                                <td>
+                                    <img :src="getImageUrl(icon)">
+                                    {{name}}
+                                </td>
+                                <td class="text-center">{{date}}</td>
+                                <td class="text-center">
+                                    <span class="quality-span" :class="`quality-span-${qualityColorEnums[quality]}`">{{qualityEnums[quality]}}</span>
+                                    <!-- <span v-if="form.limit === '1' && limit" class="quality-span quality-span-blue">限定</span> -->
+                                </td>
+                            </template>
+                            <td v-if="data.length - 1 === index && colspan" :colspan="colspan"></td>
+                        </tr>
+                    </template>
                 </template>
-            </tr>
-            <template v-for="list in result">
-                <template v-for="({ data, colspan, year, month }) in list">
-                    <tr v-for="(items, index) in data" :key="index">
-                        <td v-if="!index" :rowspan="data.length" class="text-center">{{year}}年{{month + 1}}月</td>
-                        <template v-for="({ name, icon, date, limit, quality }) in items" :key="name">
-                            <td>
-                                <img :src="getImageUrl(icon)">
-                                {{name}}
-                            </td>
-                            <td class="text-center">{{date}}</td>
-                            <td class="text-center">
-                                <span class="quality-span" :class="`quality-span-${qualityColorEnums[quality]}`">{{qualityEnums[quality]}}</span>
-                                <!-- <span v-if="form.limit === '1' && limit" class="quality-span quality-span-blue">限定</span> -->
-                            </td>
-                        </template>
-                        <td v-if="data.length - 1 === index && colspan" :colspan="colspan"></td>
-                    </tr>
-                </template>
-            </template>
-        </table>
+            </table>
+        </div>
         <form class="form">
             <div>
                 <label>上架日期</label>
@@ -121,6 +123,18 @@
                 <label></label>
                 <button @click.prevent="handleSearch">查询</button>
             </div>
+            <div class="count">
+                <table class="count-table" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td>年月</td>
+                        <td v-for="(value, key) in qualityEnums" :class="`count-color-${key}`" :key="key">{{value}}</td>
+                    </tr>
+                    <tr v-for="item in resultCount" :key="item.date">
+                        <td>{{item.date}}</td>
+                        <td v-for="(value, key) in qualityEnums" :class="`count-color-${key}`" :key="key">{{item[key] || '-'}}</td>
+                    </tr>
+                </table>
+            </div>
         </form>
     </div>
 </template>
@@ -187,6 +201,8 @@ export default defineComponent({
         const NUMBER = computed(() => form.columns)
         const getResult = years => {
             const result = []
+            const resultCount = []
+            const resultCountIndex = []
             const yearLength = years.length
             const isYearDesc = form.yearSort === '-1'
             const isMonthDesc = form.monthSort === '-1'
@@ -225,6 +241,15 @@ export default defineComponent({
                             if (_items.length - 1 === index) {
                                 colspan = (NUMBER.value - data[_index].length) * 3
                             }
+                            const countKey = `${year}${monthIndex}`
+                            const countIndex = resultCountIndex.indexOf(countKey)
+                            if (countIndex > -1) {
+                                resultCount[countIndex][item.quality]++
+                            } else {
+                                const countData = Object.keys(qualityEnums).reduce((data, key) => ((data[key] = (key === item.quality ? 1 : 0)) && data) || data, {})
+                                resultCount.push({ date: `${year}年${monthIndex + 1}月`, ...countData  })
+                                resultCountIndex.push(countKey)
+                            }
                         })
                     }
                     result[yearIndex] = result[yearIndex] || []
@@ -236,9 +261,11 @@ export default defineComponent({
                     }
                 })
             })
-            return result
+            return { result, resultCount }
         }
-        const result = ref(getResult(['2022']))
+        const { result: resultData, resultCount: resultCountData } = getResult(['2022'])
+        const result = ref(resultData)
+        const resultCount = ref(resultCountData)
         const yearChange = (value, key) => {
             if (!value) {
                 form[key] = ''
@@ -246,12 +273,16 @@ export default defineComponent({
         }
         const handleSearch = () => {
             const years = Object.keys(list).filter(year => (!form.startYear || (form.startYear && year >= form.startYear)) && (!form.endYear || (form.endYear && year <= form.endYear)))
-            result.value = getResult(years)
+            const { result: resultData, resultCount: resultCountData } = getResult(years)
+            result.value = resultData
+            resultCount.value = resultCountData
             console.log(result.value)
+            console.log(resultCount.value)
         }
         watch(form, handleSearch)
         return {
             result,
+            resultCount,
             years,
             form,
             NUMBER,
@@ -276,89 +307,98 @@ export default defineComponent({
     background-color: #fff;
 }
 .timi-table {
-    margin: 0 0 20px 20px;
+    padding: 0 0 10px 20px;
     display: flex;
     align-items: flex-start;
+    height: calc(100vh - 74px);
 }
-.table {
-    // border-collapse: collapse;
-    font-size: 16px;
-    border-left: @border;
-    th, td {
-        padding: 4px;
-        border-right: @border;
-        border-bottom: @border;
-    }
-    .head {
-        position: sticky;
-        top: 74px;
-        background-color: #fff;
-        th {
-            border-top: @border;
+.data {
+    max-height: 100%;
+    overflow-y: scroll;
+    overflow-x: auto;
+    .table {
+        // border-collapse: collapse;
+        font-size: 16px;
+        border-left: @border;
+        th, td {
+            padding: 4px;
+            border-right: @border;
+            border-bottom: @border;
         }
-    }
-    .date {
-        min-width: 95px;
-    }
-    .name {
-        min-width: 185px;
-    }
-    .time {
-        min-width: 75px;
-    }
-    .quality {
-        min-width: 45px;
-    }
-    .quality-span {
-        padding: 2px;
-        display: inline-block;
-        min-width: 22px;
-        border: 1px solid;
-        border-radius: 3px;
-        font-size: 14px;
-        & + .quality-span {
-            margin-left: 5px;
+        .head {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            th {
+                border-top: @border;
+            }
         }
-        &-default {
-            color: #515a6e;
-            border-color: #e8eaec;
-            background-color: #f7f7f7;
+        .date {
+            min-width: 95px;
         }
-        &-green {
-            color: #52c41a;
-            border-color: #b7eb8f;
-            background-color: #f6ffed;
+        .name {
+            min-width: 185px;
         }
-        &-purple {
-            color: #722ed1;
-            border-color: #d3adf7;
-            background-color: #f9f0ff;
+        .time {
+            min-width: 75px;
         }
-        &-red {
-            color: #f5222d;
-            border-color: #ffa39e;
-            background-color: #fff1f0;
+        .quality {
+            min-width: 45px;
         }
-        &-blue {
-            color: #1890ff;
-            border-color: #91d5ff;
-            background-color: #e6f7ff;
+        .quality-span {
+            padding: 2px;
+            display: inline-block;
+            min-width: 22px;
+            border: 1px solid;
+            border-radius: 3px;
+            font-size: 14px;
+            & + .quality-span {
+                margin-left: 5px;
+            }
+            &-default {
+                color: #515a6e;
+                border-color: #e8eaec;
+                background-color: #f7f7f7;
+            }
+            &-green {
+                color: #52c41a;
+                border-color: #b7eb8f;
+                background-color: #f6ffed;
+            }
+            &-purple {
+                color: #722ed1;
+                border-color: #d3adf7;
+                background-color: #f9f0ff;
+            }
+            &-red {
+                color: #f5222d;
+                border-color: #ffa39e;
+                background-color: #fff1f0;
+            }
+            &-blue {
+                color: #1890ff;
+                border-color: #91d5ff;
+                background-color: #e6f7ff;
+            }
         }
-    }
-    .text-center {
-        text-align: center;
-    }
-    img {
-        width: 20px;
-        height: 20px;
-        vertical-align: middle;
+        .text-center {
+            text-align: center;
+        }
+        img {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+        }
     }
 }
 .form {
     position: sticky;
     top: 74px;
+    display: flex;
+    flex-direction: column;
     margin-left: 20px;
     padding: 10px;
+    max-height: 100%;
     border: @border;
     > div {
         display: flex;
@@ -382,6 +422,36 @@ export default defineComponent({
         }
         & + div {
             margin-top: 10px;
+        }
+    }
+    .count {
+        overflow-y: scroll;
+        overflow-x: auto;
+        .count-table {
+            width: 100%;
+            tr:first-child {
+                position: sticky;
+                top: 0;
+                background-color: #ffffff;
+            }
+            tr > td {
+                padding: 3px 0;
+                &:not(:first-child) {
+                    text-align: center;
+                }
+            }
+            .count-color-0, .count-color-1 {
+                background-color: #f7f7f7;
+            }
+            .count-color-2 {
+                background-color: #f6ffed;
+            }
+            .count-color-3 {
+                background-color: #f9f0ff;
+            }
+            .count-color-4 {
+                background-color: #fff1f0;
+            }
         }
     }
 }

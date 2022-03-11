@@ -18,7 +18,9 @@
         </div>
         <div class="item">
             <p class="title">级联树</p>
-            <cascade :data="cascadeData" align="center" class="content" />
+            <div class="content">
+                <cascade :data="cascadeData" align="center" />
+            </div>
         </div>
     </section>
 </template>
