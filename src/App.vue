@@ -1,8 +1,6 @@
 <template>
     <my-header />
-    <keep-alive>
-        <router-view />
-    </keep-alive>
+    <router-view />
     <!-- <background-music class="background-music" /> -->
 </template>
 

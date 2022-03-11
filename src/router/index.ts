@@ -12,9 +12,9 @@ const routes = [
         component: () => import('@/views/css/index.vue')
     },
     {
-        path: '/svg',
-        name: 'Svg',
-        component: () => import('@/views/svg/index.vue')
+        path: '/icon',
+        name: 'Icon',
+        component: () => import('@/views/icon/index.vue')
     },
     {
         path: '/component',

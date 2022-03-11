@@ -109,6 +109,15 @@
                 </select>
             </div>
             <div>
+                <label for="sort">列数</label>
+                <div class="multiple-checkbox">
+                    <template v-for="column in 4" :key="`column-${column}`">
+                        <input v-model="form.columns" :value="column" :id="`column-${column}`" type="radio" name="columns">
+                        <label :for="`column-${column}`">{{column}}</label>
+                    </template>
+                </div>
+            </div>
+            <div>
                 <label></label>
                 <button @click.prevent="handleSearch">查询</button>
             </div>
@@ -116,8 +125,8 @@
     </div>
 </template>
 
-<script>
-import { defineComponent, reactive, ref, watch } from 'vue'
+<script lang="ts">
+import { computed, defineComponent, reactive, ref, watch } from 'vue'
 import { history } from './history'
 import { datas } from '../skin/data'
 import { getImageUrl } from '@/libs/utils'
@@ -126,7 +135,6 @@ export default defineComponent({
     setup() {
         const qualityEnums = { 0: '英雄', 1: '伴生', 2: '勇者', 3: '史诗', 4: '传说' }
         const qualityColorEnums = { 0: 'default', 1: 'default', 2: 'green', 3: 'purple', 4: 'red' }
-        const NUMBER = 4
         const skinData = {}
         datas.forEach(list => {
             list.forEach(item => {
@@ -172,9 +180,11 @@ export default defineComponent({
             quality: [],
             limit: '0',
             yearSort: '-1',
-            monthSort: '-1',
-            daySort: '-1'
+            monthSort: '1',
+            daySort: '1',
+            columns: 4
         })
+        const NUMBER = computed(() => form.columns)
         const getResult = years => {
             const result = []
             const yearLength = years.length
@@ -209,11 +219,11 @@ export default defineComponent({
                         })
                         isDayDesc && _items.reverse()
                         _items.forEach((item, index) => {
-                            const _index = Math.floor(index / NUMBER)
+                            const _index = Math.floor(index / NUMBER.value)
                             data[_index] = data[_index] || []
                             data[_index].push(item)
                             if (_items.length - 1 === index) {
-                                colspan = (NUMBER - data[_index].length) * 3
+                                colspan = (NUMBER.value - data[_index].length) * 3
                             }
                         })
                     }

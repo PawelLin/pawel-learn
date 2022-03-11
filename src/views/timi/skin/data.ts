@@ -236,6 +236,14 @@ export const datas = [
             type: '0',
             position: '2',
             quality: '0'
+        },
+        {
+            name: '夏洛特-永昼',
+            icon: 'skin/536/536-smallskin-2.jpg',
+            url: 'skin/536/536-bigskin-2.jpg',
+            mobile: 'skin/536/536-mobileskin-2.jpg',
+            type: '12',
+            quality: '3'
         }
     ],
     [
@@ -1833,6 +1841,14 @@ export const datas = [
             mobile: 'skin/184/184-mobileskin-5.jpg',
             type: '65',
             quality: '3'
+        },
+        {
+            name: '蔡文姬-花朝如约',
+            icon: 'skin/184/184-smallskin-6.jpg',
+            url: 'skin/184/184-bigskin-6.jpg',
+            mobile: 'skin/184/184-mobileskin-6.jpg',
+            type: '15',
+            quality: '4'
         }
     ],
     [

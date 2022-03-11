@@ -12,6 +12,9 @@
                 <a href="https://vuejs.org/" target="_blank">Vue3 英文版</a>
             </li>
             <li class="vue">
+                <a href="https://sfc.vuejs.org/" target="_blank">Vue SFC Playground</a>
+            </li>
+            <li class="vue">
                 <a href="https://vue-next-template-explorer.netlify.app/" target="_blank">Vue3 Template Explorer</a>
             </li>
         </ul>

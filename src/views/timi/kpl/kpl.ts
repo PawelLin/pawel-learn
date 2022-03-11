@@ -3488,4 +3488,1124 @@ export const data = [{
     "pick_heros": "191|139|148|107|105",
     "team_id": "27",
     "team_name": "佛山GK"
+}, {
+    "ban_heros": "533|523|132|153",
+    "camp": "1",
+    "game_label": "122046",
+    "game_time": "2022-03-03 17:05:36",
+    "is_win": "1",
+    "kill_cnt": "14",
+    "pick_heros": "525|163|126|133|110",
+    "team_id": "27",
+    "team_name": "佛山GK"
+}, {
+    "ban_heros": "199|191|157|148",
+    "camp": "2",
+    "game_label": "122046",
+    "game_time": "2022-03-03 17:05:36",
+    "is_win": "0",
+    "kill_cnt": "7",
+    "pick_heros": "528|123|312|174|186",
+    "team_id": "44",
+    "team_name": "北京WB"
+}, {
+    "ban_heros": "525|523|524|509",
+    "camp": "1",
+    "game_label": "122046",
+    "game_time": "2022-03-03 17:35:50",
+    "is_win": "1",
+    "kill_cnt": "15",
+    "pick_heros": "533|312|518|132|194",
+    "team_id": "27",
+    "team_name": "佛山GK"
+}, {
+    "ban_heros": "199|191|187|156",
+    "camp": "2",
+    "game_label": "122046",
+    "game_time": "2022-03-03 17:35:50",
+    "is_win": "0",
+    "kill_cnt": "9",
+    "pick_heros": "126|197|146|173|118",
+    "team_id": "44",
+    "team_name": "北京WB"
+}, {
+    "ban_heros": "191|198|509|148",
+    "camp": "2",
+    "game_label": "122046",
+    "game_time": "2022-03-03 18:07:56",
+    "is_win": "1",
+    "kill_cnt": "11",
+    "pick_heros": "511|118|174|502|176",
+    "team_id": "27",
+    "team_name": "佛山GK"
+}, {
+    "ban_heros": "523|197|528|124",
+    "camp": "1",
+    "game_label": "122046",
+    "game_time": "2022-03-03 18:07:56",
+    "is_win": "0",
+    "kill_cnt": "3",
+    "pick_heros": "199|162|105|505|110",
+    "team_id": "44",
+    "team_name": "北京WB"
+}, {
+    "ban_heros": "191|525|187|197",
+    "camp": "2",
+    "game_label": "122047",
+    "game_time": "2022-03-03 19:35:37",
+    "is_win": "1",
+    "kill_cnt": "9",
+    "pick_heros": "123|157|528|171|133",
+    "team_id": "25",
+    "team_name": "重庆狼队"
+}, {
+    "ban_heros": "132|312|509|118",
+    "camp": "1",
+    "game_label": "122047",
+    "game_time": "2022-03-03 19:35:37",
+    "is_win": "0",
+    "kill_cnt": "2",
+    "pick_heros": "199|533|518|148|168",
+    "team_id": "91",
+    "team_name": "XYG"
+}, {
+    "ban_heros": "525|191|173|508",
+    "camp": "2",
+    "game_label": "122047",
+    "game_time": "2022-03-03 20:14:38",
+    "is_win": "0",
+    "kill_cnt": "5",
+    "pick_heros": "511|124|187|162|199",
+    "team_id": "25",
+    "team_name": "重庆狼队"
+}, {
+    "ban_heros": "533|118|146|132",
+    "camp": "1",
+    "game_label": "122047",
+    "game_time": "2022-03-03 20:14:38",
+    "is_win": "1",
+    "kill_cnt": "13",
+    "pick_heros": "123|312|528|133|149",
+    "team_id": "91",
+    "team_name": "XYG"
+}, {
+    "ban_heros": "191|157|524|146",
+    "camp": "1",
+    "game_label": "122047",
+    "game_time": "2022-03-03 20:47:05",
+    "is_win": "1",
+    "kill_cnt": "6",
+    "pick_heros": "186|518|533|110|177",
+    "team_id": "25",
+    "team_name": "重庆狼队"
+}, {
+    "ban_heros": "525|312|523|111",
+    "camp": "2",
+    "game_label": "122047",
+    "game_time": "2022-03-03 20:47:05",
+    "is_win": "0",
+    "kill_cnt": "2",
+    "pick_heros": "118|511|197|174|162",
+    "team_id": "91",
+    "team_name": "XYG"
+}, {
+    "ban_heros": "199|191|148|124",
+    "camp": "2",
+    "game_label": "122048",
+    "game_time": "2022-03-04 17:05:12",
+    "is_win": "0",
+    "kill_cnt": "2",
+    "pick_heros": "312|174|162|105|186",
+    "team_id": "26",
+    "team_name": "上海EDG.M"
+}, {
+    "ban_heros": "509|523|187|156",
+    "camp": "1",
+    "game_label": "122048",
+    "game_time": "2022-03-04 17:05:12",
+    "is_win": "1",
+    "kill_cnt": "12",
+    "pick_heros": "525|126|146|157|133",
+    "team_id": "88",
+    "team_name": "MTG"
+}, {
+    "ban_heros": "523|509|174|173",
+    "camp": "1",
+    "game_label": "122048",
+    "game_time": "2022-03-04 17:33:18",
+    "is_win": "1",
+    "kill_cnt": "11",
+    "pick_heros": "199|126|528|149|513",
+    "team_id": "26",
+    "team_name": "上海EDG.M"
+}, {
+    "ban_heros": "191|525|124|157",
+    "camp": "2",
+    "game_label": "122048",
+    "game_time": "2022-03-04 17:33:18",
+    "is_win": "0",
+    "kill_cnt": "4",
+    "pick_heros": "533|197|518|186|111",
+    "team_id": "88",
+    "team_name": "MTG"
+}, {
+    "ban_heros": "199|528|118|189",
+    "camp": "1",
+    "game_label": "122048",
+    "game_time": "2022-03-04 18:00:19",
+    "is_win": "1",
+    "kill_cnt": "16",
+    "pick_heros": "163|171|140|157|524",
+    "team_id": "26",
+    "team_name": "上海EDG.M"
+}, {
+    "ban_heros": "191|533|508|197",
+    "camp": "2",
+    "game_label": "122048",
+    "game_time": "2022-03-04 18:00:19",
+    "is_win": "0",
+    "kill_cnt": "10",
+    "pick_heros": "123|132|538|148|515",
+    "team_id": "88",
+    "team_name": "MTG"
+}, {
+    "ban_heros": "199|191|139|527",
+    "camp": "2",
+    "game_label": "122048",
+    "game_time": "2022-03-04 18:34:38",
+    "is_win": "1",
+    "kill_cnt": "10",
+    "pick_heros": "531|187|198|124|133",
+    "team_id": "26",
+    "team_name": "上海EDG.M"
+}, {
+    "ban_heros": "533|525|125|197",
+    "camp": "1",
+    "game_label": "122048",
+    "game_time": "2022-03-04 18:34:38",
+    "is_win": "0",
+    "kill_cnt": "2",
+    "pick_heros": "528|110|174|511|118",
+    "team_id": "88",
+    "team_name": "MTG"
+}, {
+    "ban_heros": "191|525|533|140",
+    "camp": "2",
+    "game_label": "122049",
+    "game_time": "2022-03-04 19:48:23",
+    "is_win": "1",
+    "kill_cnt": "10",
+    "pick_heros": "528|123|110|133|168",
+    "team_id": "13",
+    "team_name": "武汉eStarPro"
+}, {
+    "ban_heros": "162|312|186|118",
+    "camp": "1",
+    "game_label": "122049",
+    "game_time": "2022-03-04 19:48:23",
+    "is_win": "0",
+    "kill_cnt": "11",
+    "pick_heros": "199|197|187|511|502",
+    "team_id": "15",
+    "team_name": "广州TTG"
+}, {
+    "ban_heros": "191|312|173|133",
+    "camp": "2",
+    "game_label": "122049",
+    "game_time": "2022-03-04 20:30:27",
+    "is_win": "0",
+    "kill_cnt": "11",
+    "pick_heros": "525|126|112|107|523",
+    "team_id": "13",
+    "team_name": "武汉eStarPro"
+}, {
+    "ban_heros": "199|162|197|146",
+    "camp": "1",
+    "game_label": "122049",
+    "game_time": "2022-03-04 20:30:27",
+    "is_win": "1",
+    "kill_cnt": "11",
+    "pick_heros": "533|509|518|174|110",
+    "team_id": "15",
+    "team_name": "广州TTG"
+}, {
+    "ban_heros": "191|525|111|540",
+    "camp": "2",
+    "game_label": "122049",
+    "game_time": "2022-03-04 21:04:34",
+    "is_win": "1",
+    "kill_cnt": "11",
+    "pick_heros": "118|502|157|524|120",
+    "team_id": "13",
+    "team_name": "武汉eStarPro"
+}, {
+    "ban_heros": "199|533|511|105",
+    "camp": "1",
+    "game_label": "122049",
+    "game_time": "2022-03-04 21:04:34",
+    "is_win": "0",
+    "kill_cnt": "3",
+    "pick_heros": "186|123|528|190|196",
+    "team_id": "15",
+    "team_name": "广州TTG"
+}, {
+    "ban_heros": "523|509|312|157",
+    "camp": "1",
+    "game_label": "122050",
+    "game_time": "2022-03-05 15:03:39",
+    "is_win": "1",
+    "kill_cnt": "18",
+    "pick_heros": "525|174|123|528|197",
+    "team_id": "31",
+    "team_name": "苏州KSG"
+}, {
+    "ban_heros": "191|533|163|162",
+    "camp": "2",
+    "game_label": "122050",
+    "game_time": "2022-03-05 15:03:39",
+    "is_win": "0",
+    "kill_cnt": "10",
+    "pick_heros": "199|531|187|148|126",
+    "team_id": "60",
+    "team_name": "济南RW侠"
+}, {
+    "ban_heros": "523|528|111|508",
+    "camp": "1",
+    "game_label": "122050",
+    "game_time": "2022-03-05 15:37:29",
+    "is_win": "0",
+    "kill_cnt": "4",
+    "pick_heros": "124|118|511|531|132",
+    "team_id": "31",
+    "team_name": "苏州KSG"
+}, {
+    "ban_heros": "191|533|162|173",
+    "camp": "2",
+    "game_label": "122050",
+    "game_time": "2022-03-05 15:37:29",
+    "is_win": "1",
+    "kill_cnt": "10",
+    "pick_heros": "163|186|198|110|177",
+    "team_id": "60",
+    "team_name": "济南RW侠"
+}, {
+    "ban_heros": "525|509|523|157",
+    "camp": "1",
+    "game_label": "122050",
+    "game_time": "2022-03-05 16:18:54",
+    "is_win": "0",
+    "kill_cnt": "12",
+    "pick_heros": "199|140|187|163|108",
+    "team_id": "31",
+    "team_name": "苏州KSG"
+}, {
+    "ban_heros": "533|191|146|110",
+    "camp": "2",
+    "game_label": "122050",
+    "game_time": "2022-03-05 16:18:54",
+    "is_win": "1",
+    "kill_cnt": "15",
+    "pick_heros": "123|174|538|312|184",
+    "team_id": "60",
+    "team_name": "济南RW侠"
+}, {
+    "ban_heros": "525|191|113|505",
+    "camp": "2",
+    "game_label": "122050",
+    "game_time": "2022-03-05 17:02:51",
+    "is_win": "1",
+    "kill_cnt": "11",
+    "pick_heros": "523|538|133|509|139",
+    "team_id": "31",
+    "team_name": "苏州KSG"
+}, {
+    "ban_heros": "533|110|198|527",
+    "camp": "1",
+    "game_label": "122050",
+    "game_time": "2022-03-05 17:02:51",
+    "is_win": "0",
+    "kill_cnt": "8",
+    "pick_heros": "162|132|197|105|118",
+    "team_id": "60",
+    "team_name": "济南RW侠"
+}, {
+    "ban_heros": "525|191|124|509",
+    "camp": "2",
+    "game_label": "122050",
+    "game_time": "2022-03-05 17:31:22",
+    "is_win": "0",
+    "kill_cnt": "4",
+    "pick_heros": "198|186|111|312|529",
+    "team_id": "31",
+    "team_name": "苏州KSG"
+}, {
+    "ban_heros": "533|162|141|157",
+    "camp": "1",
+    "game_label": "122050",
+    "game_time": "2022-03-05 17:31:22",
+    "is_win": "1",
+    "kill_cnt": "10",
+    "pick_heros": "173|528|527|108|171",
+    "team_id": "60",
+    "team_name": "济南RW侠"
+}, {
+    "ban_heros": "525|191|312|531",
+    "camp": "2",
+    "game_label": "122051",
+    "game_time": "2022-03-05 18:28:47",
+    "is_win": "1",
+    "kill_cnt": "10",
+    "pick_heros": "123|111|197|528|184",
+    "team_id": "12",
+    "team_name": "成都AG超玩会"
+}, {
+    "ban_heros": "509|187|162|168",
+    "camp": "1",
+    "game_label": "122051",
+    "game_time": "2022-03-05 18:28:47",
+    "is_win": "0",
+    "kill_cnt": "3",
+    "pick_heros": "199|126|186|110|146",
+    "team_id": "45",
+    "team_name": "南京Hero久竞"
+}, {
+    "ban_heros": "523|123|132|189",
+    "camp": "1",
+    "game_label": "122051",
+    "game_time": "2022-03-05 18:53:33",
+    "is_win": "1",
+    "kill_cnt": "15",
+    "pick_heros": "191|139|124|107|128",
+    "team_id": "12",
+    "team_name": "成都AG超玩会"
+}, {
+    "ban_heros": "199|163|503|133",
+    "camp": "2",
+    "game_label": "122051",
+    "game_time": "2022-03-05 18:53:33",
+    "is_win": "0",
+    "kill_cnt": "16",
+    "pick_heros": "162|527|148|173|187",
+    "team_id": "45",
+    "team_name": "南京Hero久竞"
+}, {
+    "ban_heros": "191|123|509|197",
+    "camp": "1",
+    "game_label": "122051",
+    "game_time": "2022-03-05 19:28:36",
+    "is_win": "0",
+    "kill_cnt": "11",
+    "pick_heros": "525|133|146|126|312",
+    "team_id": "12",
+    "team_name": "成都AG超玩会"
+}, {
+    "ban_heros": "162|148|198|110",
+    "camp": "2",
+    "game_label": "122051",
+    "game_time": "2022-03-05 19:28:36",
+    "is_win": "1",
+    "kill_cnt": "17",
+    "pick_heros": "174|531|511|189|157",
+    "team_id": "45",
+    "team_name": "南京Hero久竞"
+}, {
+    "ban_heros": "525|123|133|191",
+    "camp": "2",
+    "game_label": "122051",
+    "game_time": "2022-03-05 20:03:57",
+    "is_win": "1",
+    "kill_cnt": "9",
+    "pick_heros": "527|162|132|118|110",
+    "team_id": "12",
+    "team_name": "成都AG超玩会"
+}, {
+    "ban_heros": "199|157|153|189",
+    "camp": "1",
+    "game_label": "122051",
+    "game_time": "2022-03-05 20:03:58",
+    "is_win": "0",
+    "kill_cnt": "10",
+    "pick_heros": "163|105|312|508|509",
+    "team_id": "45",
+    "team_name": "南京Hero久竞"
+}, {
+    "ban_heros": "523|509|153|184",
+    "camp": "1",
+    "game_label": "122052",
+    "game_time": "2022-03-05 21:08:33",
+    "is_win": "0",
+    "kill_cnt": "7",
+    "pick_heros": "199|528|187|123|197",
+    "team_id": "35",
+    "team_name": "杭州LGD大鹅"
+}, {
+    "ban_heros": "191|525|124|126",
+    "camp": "2",
+    "game_label": "122052",
+    "game_time": "2022-03-05 21:08:33",
+    "is_win": "1",
+    "kill_cnt": "11",
+    "pick_heros": "533|518|312|133|156",
+    "team_id": "52",
+    "team_name": "西安WE"
+}, {
+    "ban_heros": "528|199|153|187",
+    "camp": "1",
+    "game_label": "122052",
+    "game_time": "2022-03-05 21:34:01",
+    "is_win": "1",
+    "kill_cnt": "9",
+    "pick_heros": "531|527|110|133|184",
+    "team_id": "35",
+    "team_name": "杭州LGD大鹅"
+}, {
+    "ban_heros": "525|191|509|132",
+    "camp": "2",
+    "game_label": "122052",
+    "game_time": "2022-03-05 21:34:01",
+    "is_win": "0",
+    "kill_cnt": "1",
+    "pick_heros": "163|126|157|186|111",
+    "team_id": "52",
+    "team_name": "西安WE"
+}, {
+    "ban_heros": "199|153|509|187",
+    "camp": "1",
+    "game_label": "122052",
+    "game_time": "2022-03-05 21:56:17",
+    "is_win": "1",
+    "kill_cnt": "17",
+    "pick_heros": "525|146|511|173|523",
+    "team_id": "35",
+    "team_name": "杭州LGD大鹅"
+}, {
+    "ban_heros": "191|162|148|112",
+    "camp": "2",
+    "game_label": "122052",
+    "game_time": "2022-03-05 21:56:17",
+    "is_win": "0",
+    "kill_cnt": "6",
+    "pick_heros": "528|123|132|168|110",
+    "team_id": "52",
+    "team_name": "西安WE"
+}, {
+    "ban_heros": "523|525|187|153",
+    "camp": "1",
+    "game_label": "122052",
+    "game_time": "2022-03-05 22:24:49",
+    "is_win": "1",
+    "kill_cnt": "16",
+    "pick_heros": "509|163|157|132|135",
+    "team_id": "35",
+    "team_name": "杭州LGD大鹅"
+}, {
+    "ban_heros": "191|186|126|105",
+    "camp": "2",
+    "game_label": "122052",
+    "game_time": "2022-03-05 22:24:49",
+    "is_win": "0",
+    "kill_cnt": "6",
+    "pick_heros": "124|162|139|112|171",
+    "team_id": "52",
+    "team_name": "西安WE"
+}, {
+    "ban_heros": "509|523|153|189",
+    "camp": "1",
+    "game_label": "122053",
+    "game_time": "2022-03-06 15:06:14",
+    "is_win": "0",
+    "kill_cnt": "7",
+    "pick_heros": "525|163|126|174|513",
+    "team_id": "23",
+    "team_name": "厦门VG"
+}, {
+    "ban_heros": "199|191|157|133",
+    "camp": "2",
+    "game_label": "122053",
+    "game_time": "2022-03-06 15:06:14",
+    "is_win": "1",
+    "kill_cnt": "8",
+    "pick_heros": "528|123|312|118|524",
+    "team_id": "38",
+    "team_name": "上海RNG.M"
+}, {
+    "ban_heros": "199|525|111|540",
+    "camp": "2",
+    "game_label": "122053",
+    "game_time": "2022-03-06 15:40:11",
+    "is_win": "0",
+    "kill_cnt": "16",
+    "pick_heros": "531|123|157|132|149",
+    "team_id": "23",
+    "team_name": "厦门VG"
+}, {
+    "ban_heros": "533|191|153|118",
+    "camp": "1",
+    "game_label": "122053",
+    "game_time": "2022-03-06 15:40:11",
+    "is_win": "1",
+    "kill_cnt": "15",
+    "pick_heros": "186|140|163|133|124",
+    "team_id": "38",
+    "team_name": "上海RNG.M"
+}, {
+    "ban_heros": "199|525|187|174",
+    "camp": "2",
+    "game_label": "122053",
+    "game_time": "2022-03-06 16:16:45",
+    "is_win": "1",
+    "kill_cnt": "10",
+    "pick_heros": "527|528|312|171|524",
+    "team_id": "23",
+    "team_name": "厦门VG"
+}, {
+    "ban_heros": "191|509|186|118",
+    "camp": "1",
+    "game_label": "122053",
+    "game_time": "2022-03-06 16:16:45",
+    "is_win": "0",
+    "kill_cnt": "3",
+    "pick_heros": "533|518|197|508|184",
+    "team_id": "38",
+    "team_name": "上海RNG.M"
+}, {
+    "ban_heros": "199|525|511|509",
+    "camp": "2",
+    "game_label": "122053",
+    "game_time": "2022-03-06 16:39:31",
+    "is_win": "0",
+    "kill_cnt": "5",
+    "pick_heros": "186|111|140|124|146",
+    "team_id": "23",
+    "team_name": "厦门VG"
+}, {
+    "ban_heros": "191|533|197|523",
+    "camp": "1",
+    "game_label": "122053",
+    "game_time": "2022-03-06 16:39:31",
+    "is_win": "1",
+    "kill_cnt": "10",
+    "pick_heros": "531|174|110|527|171",
+    "team_id": "38",
+    "team_name": "上海RNG.M"
+}, {
+    "ban_heros": "509|146|197|124",
+    "camp": "1",
+    "game_label": "122054",
+    "game_time": "2022-03-06 17:35:55",
+    "is_win": "1",
+    "kill_cnt": "13",
+    "pick_heros": "533|518|312|174|171",
+    "team_id": "28",
+    "team_name": "深圳DYG"
+}, {
+    "ban_heros": "199|191|186|525",
+    "camp": "2",
+    "game_label": "122054",
+    "game_time": "2022-03-06 17:35:55",
+    "is_win": "0",
+    "kill_cnt": "3",
+    "pick_heros": "528|187|527|524|110",
+    "team_id": "51",
+    "team_name": "长沙TES.A"
+}, {
+    "ban_heros": "525|191|118|312",
+    "camp": "2",
+    "game_label": "122054",
+    "game_time": "2022-03-06 18:08:20",
+    "is_win": "1",
+    "kill_cnt": "13",
+    "pick_heros": "126|162|133|186|110",
+    "team_id": "28",
+    "team_name": "深圳DYG"
+}, {
+    "ban_heros": "528|523|509|197",
+    "camp": "1",
+    "game_label": "122054",
+    "game_time": "2022-03-06 18:08:20",
+    "is_win": "0",
+    "kill_cnt": "4",
+    "pick_heros": "199|531|123|124|168",
+    "team_id": "51",
+    "team_name": "长沙TES.A"
+}, {
+    "ban_heros": "191|533|312|112",
+    "camp": "2",
+    "game_label": "122054",
+    "game_time": "2022-03-06 18:41:50",
+    "is_win": "0",
+    "kill_cnt": "15",
+    "pick_heros": "140|509|132|197|153",
+    "team_id": "28",
+    "team_name": "深圳DYG"
+}, {
+    "ban_heros": "523|199|531|163",
+    "camp": "1",
+    "game_label": "122054",
+    "game_time": "2022-03-06 18:41:50",
+    "is_win": "1",
+    "kill_cnt": "16",
+    "pick_heros": "525|162|511|157|508",
+    "team_id": "51",
+    "team_name": "长沙TES.A"
+}, {
+    "ban_heros": "199|191|527|157",
+    "camp": "2",
+    "game_label": "122054",
+    "game_time": "2022-03-06 19:24:13",
+    "is_win": "1",
+    "kill_cnt": "6",
+    "pick_heros": "173|126|312|522|140",
+    "team_id": "51",
+    "team_name": "长沙TES.A"
+}, {
+    "ban_heros": "509|533|153|542",
+    "camp": "1",
+    "game_label": "122054",
+    "game_time": "2022-03-06 19:24:14",
+    "is_win": "0",
+    "kill_cnt": "3",
+    "pick_heros": "531|111|525|124|123",
+    "team_id": "28",
+    "team_name": "深圳DYG"
+}, {
+    "ban_heros": "509|533|197|133",
+    "camp": "1",
+    "game_label": "122054",
+    "game_time": "2022-03-06 19:51:49",
+    "is_win": "1",
+    "kill_cnt": "6",
+    "pick_heros": "527|528|523|168|173",
+    "team_id": "28",
+    "team_name": "深圳DYG"
+}, {
+    "ban_heros": "191|199|187|118",
+    "camp": "2",
+    "game_label": "122054",
+    "game_time": "2022-03-06 19:51:49",
+    "is_win": "0",
+    "kill_cnt": "2",
+    "pick_heros": "503|186|146|148|132",
+    "team_id": "51",
+    "team_name": "长沙TES.A"
+}, {
+    "ban_heros": "199|191|509|153",
+    "camp": "2",
+    "game_label": "122055",
+    "game_time": "2022-03-06 20:46:51",
+    "is_win": "1",
+    "kill_cnt": "11",
+    "pick_heros": "525|531|148|524|511",
+    "team_id": "15",
+    "team_name": "广州TTG"
+}, {
+    "ban_heros": "523|528|527|198",
+    "camp": "1",
+    "game_label": "122055",
+    "game_time": "2022-03-06 20:46:51",
+    "is_win": "0",
+    "kill_cnt": "3",
+    "pick_heros": "533|518|312|189|173",
+    "team_id": "25",
+    "team_name": "重庆狼队"
+}, {
+    "ban_heros": "191|525|174|133",
+    "camp": "2",
+    "game_label": "122055",
+    "game_time": "2022-03-06 21:14:28",
+    "is_win": "1",
+    "kill_cnt": "9",
+    "pick_heros": "199|126|540|118|529",
+    "team_id": "15",
+    "team_name": "广州TTG"
+}, {
+    "ban_heros": "523|533|187|509",
+    "camp": "1",
+    "game_label": "122055",
+    "game_time": "2022-03-06 21:14:28",
+    "is_win": "0",
+    "kill_cnt": "3",
+    "pick_heros": "528|157|123|149|508",
+    "team_id": "25",
+    "team_name": "重庆狼队"
+}, {
+    "ban_heros": "191|525|511|513",
+    "camp": "2",
+    "game_label": "122055",
+    "game_time": "2022-03-06 21:41:32",
+    "is_win": "0",
+    "kill_cnt": "9",
+    "pick_heros": "312|528|527|186|111",
+    "team_id": "15",
+    "team_name": "广州TTG"
+}, {
+    "ban_heros": "523|533|196|173",
+    "camp": "1",
+    "game_label": "122055",
+    "game_time": "2022-03-06 21:41:32",
+    "is_win": "1",
+    "kill_cnt": "11",
+    "pick_heros": "163|187|132|105|124",
+    "team_id": "25",
+    "team_name": "重庆狼队"
+}, {
+    "ban_heros": "199|525|133|527",
+    "camp": "1",
+    "game_label": "122055",
+    "game_time": "2022-03-06 22:11:18",
+    "is_win": "0",
+    "kill_cnt": "1",
+    "pick_heros": "163|124|174|171|139",
+    "team_id": "15",
+    "team_name": "广州TTG"
+}, {
+    "ban_heros": "533|191|140|123",
+    "camp": "2",
+    "game_label": "122055",
+    "game_time": "2022-03-06 22:11:18",
+    "is_win": "1",
+    "kill_cnt": "8",
+    "pick_heros": "531|186|110|126|111",
+    "team_id": "25",
+    "team_name": "重庆狼队"
+}, {
+    "ban_heros": "199|139|502|542",
+    "camp": "2",
+    "game_label": "122055",
+    "game_time": "2022-03-06 22:37:33",
+    "is_win": "0",
+    "kill_cnt": "10",
+    "pick_heros": "133|509|162|140|157",
+    "team_id": "15",
+    "team_name": "广州TTG"
+}, {
+    "ban_heros": "523|533|123|105",
+    "camp": "1",
+    "game_label": "122055",
+    "game_time": "2022-03-06 22:37:33",
+    "is_win": "1",
+    "kill_cnt": "14",
+    "pick_heros": "191|527|197|193|174",
+    "team_id": "25",
+    "team_name": "重庆狼队"
+}, {
+    "ban_heros": "533|191|148|162",
+    "camp": "2",
+    "game_label": "122056",
+    "game_time": "2022-03-09 17:05:13",
+    "is_win": "1",
+    "kill_cnt": "12",
+    "pick_heros": "123|531|110|187|173",
+    "team_id": "60",
+    "team_name": "济南RW侠"
+}, {
+    "ban_heros": "523|509|174|199",
+    "camp": "1",
+    "game_label": "122056",
+    "game_time": "2022-03-09 17:05:13",
+    "is_win": "0",
+    "kill_cnt": "13",
+    "pick_heros": "525|511|133|528|197",
+    "team_id": "88",
+    "team_name": "MTG"
+}, {
+    "ban_heros": "533|139|171|189",
+    "camp": "1",
+    "game_label": "122056",
+    "game_time": "2022-03-09 17:45:01",
+    "is_win": "0",
+    "kill_cnt": "5",
+    "pick_heros": "191|132|312|538|126",
+    "team_id": "60",
+    "team_name": "济南RW侠"
+}, {
+    "ban_heros": "525|199|511|105",
+    "camp": "2",
+    "game_label": "122056",
+    "game_time": "2022-03-09 17:45:01",
+    "is_win": "1",
+    "kill_cnt": "10",
+    "pick_heros": "162|148|527|111|186",
+    "team_id": "88",
+    "team_name": "MTG"
+}, {
+    "ban_heros": "191|533|110|523",
+    "camp": "2",
+    "game_label": "122056",
+    "game_time": "2022-03-09 18:20:33",
+    "is_win": "0",
+    "kill_cnt": "2",
+    "pick_heros": "163|171|174|124|120",
+    "team_id": "60",
+    "team_name": "济南RW侠"
+}, {
+    "ban_heros": "525|509|140|511",
+    "camp": "1",
+    "game_label": "122056",
+    "game_time": "2022-03-09 18:20:33",
+    "is_win": "1",
+    "kill_cnt": "11",
+    "pick_heros": "199|123|531|152|168",
+    "team_id": "88",
+    "team_name": "MTG"
+}, {
+    "ban_heros": "191|533|140|146",
+    "camp": "2",
+    "game_label": "122056",
+    "game_time": "2022-03-09 18:47:46",
+    "is_win": "0",
+    "kill_cnt": "0",
+    "pick_heros": "528|197|198|184|169",
+    "team_id": "60",
+    "team_name": "济南RW侠"
+}, {
+    "ban_heros": "525|199|168|118",
+    "camp": "1",
+    "game_label": "122056",
+    "game_time": "2022-03-09 18:47:46",
+    "is_win": "1",
+    "kill_cnt": "8",
+    "pick_heros": "312|509|174|139|538",
+    "team_id": "88",
+    "team_name": "MTG"
+}, {
+    "ban_heros": "199|509|187|524",
+    "camp": "1",
+    "game_label": "122057",
+    "game_time": "2022-03-09 20:01:50",
+    "is_win": "1",
+    "kill_cnt": "11",
+    "pick_heros": "533|312|518|186|173",
+    "team_id": "15",
+    "team_name": "广州TTG"
+}, {
+    "ban_heros": "191|525|118|168",
+    "camp": "2",
+    "game_label": "122057",
+    "game_time": "2022-03-09 20:01:50",
+    "is_win": "0",
+    "kill_cnt": "4",
+    "pick_heros": "528|124|198|174|171",
+    "team_id": "52",
+    "team_name": "西安WE"
+}, {
+    "ban_heros": "191|533|112|187",
+    "camp": "2",
+    "game_label": "122057",
+    "game_time": "2022-03-09 20:34:09",
+    "is_win": "1",
+    "kill_cnt": "13",
+    "pick_heros": "163|509|133|110|105",
+    "team_id": "15",
+    "team_name": "广州TTG"
+}, {
+    "ban_heros": "525|162|140|527",
+    "camp": "1",
+    "game_label": "122057",
+    "game_time": "2022-03-09 20:34:09",
+    "is_win": "0",
+    "kill_cnt": "10",
+    "pick_heros": "531|511|523|186|132",
+    "team_id": "52",
+    "team_name": "西安WE"
+}, {
+    "ban_heros": "199|191|187|153",
+    "camp": "2",
+    "game_label": "122057",
+    "game_time": "2022-03-09 21:10:54",
+    "is_win": "0",
+    "kill_cnt": "3",
+    "pick_heros": "527|531|124|118|112",
+    "team_id": "15",
+    "team_name": "广州TTG"
+}, {
+    "ban_heros": "525|523|168|184",
+    "camp": "1",
+    "game_label": "122057",
+    "game_time": "2022-03-09 21:10:54",
+    "is_win": "1",
+    "kill_cnt": "11",
+    "pick_heros": "533|518|197|156|524",
+    "team_id": "52",
+    "team_name": "西安WE"
+}, {
+    "ban_heros": "191|199|540|111",
+    "camp": "2",
+    "game_label": "122057",
+    "game_time": "2022-03-09 21:38:17",
+    "is_win": "0",
+    "kill_cnt": "14",
+    "pick_heros": "511|502|157|171|174",
+    "team_id": "15",
+    "team_name": "广州TTG"
+}, {
+    "ban_heros": "525|162|132|153",
+    "camp": "1",
+    "game_label": "122057",
+    "game_time": "2022-03-09 21:38:17",
+    "is_win": "1",
+    "kill_cnt": "13",
+    "pick_heros": "140|538|168|312|133",
+    "team_id": "52",
+    "team_name": "西安WE"
+}, {
+    "ban_heros": "509|312|189|186",
+    "camp": "1",
+    "game_label": "122058",
+    "game_time": "2022-03-10 17:04:47",
+    "is_win": "0",
+    "kill_cnt": "12",
+    "pick_heros": "191|163|126|174|197",
+    "team_id": "45",
+    "team_name": "南京Hero久竞"
+}, {
+    "ban_heros": "199|124|139|157",
+    "camp": "2",
+    "game_label": "122058",
+    "game_time": "2022-03-10 17:04:47",
+    "is_win": "1",
+    "kill_cnt": "15",
+    "pick_heros": "162|123|110|133|171",
+    "team_id": "51",
+    "team_name": "长沙TES.A"
+}, {
+    "ban_heros": "174|509|508|176",
+    "camp": "1",
+    "game_label": "122058",
+    "game_time": "2022-03-10 17:57:10",
+    "is_win": "1",
+    "kill_cnt": "9",
+    "pick_heros": "531|198|132|186|157",
+    "team_id": "45",
+    "team_name": "南京Hero久竞"
+}, {
+    "ban_heros": "199|525|187|125",
+    "camp": "2",
+    "game_label": "122058",
+    "game_time": "2022-03-10 17:57:10",
+    "is_win": "0",
+    "kill_cnt": "3",
+    "pick_heros": "511|528|118|524|197",
+    "team_id": "51",
+    "team_name": "长沙TES.A"
+}, {
+    "ban_heros": "531|199|157|140",
+    "camp": "2",
+    "game_label": "122058",
+    "game_time": "2022-03-10 18:24:06",
+    "is_win": "0",
+    "kill_cnt": "5",
+    "pick_heros": "173|123|312|542|168",
+    "team_id": "45",
+    "team_name": "南京Hero久竞"
+}, {
+    "ban_heros": "528|509|189|153",
+    "camp": "1",
+    "game_label": "122058",
+    "game_time": "2022-03-10 18:24:06",
+    "is_win": "1",
+    "kill_cnt": "10",
+    "pick_heros": "525|111|163|126|148",
+    "team_id": "51",
+    "team_name": "长沙TES.A"
+}, {
+    "ban_heros": "191|523|186|173",
+    "camp": "1",
+    "game_label": "122058",
+    "game_time": "2022-03-10 18:55:06",
+    "is_win": "0",
+    "kill_cnt": "3",
+    "pick_heros": "124|502|527|156|169",
+    "team_id": "45",
+    "team_name": "南京Hero久竞"
+}, {
+    "ban_heros": "199|525|189|111",
+    "camp": "2",
+    "game_label": "122058",
+    "game_time": "2022-03-10 18:55:06",
+    "is_win": "1",
+    "kill_cnt": "13",
+    "pick_heros": "312|140|146|187|174",
+    "team_id": "51",
+    "team_name": "长沙TES.A"
+}, {
+    "ban_heros": "509|523|187|189",
+    "camp": "1",
+    "game_label": "122059",
+    "game_time": "2022-03-10 19:39:00",
+    "is_win": "1",
+    "kill_cnt": "12",
+    "pick_heros": "525|528|126|174|124",
+    "team_id": "23",
+    "team_name": "厦门VG"
+}, {
+    "ban_heros": "199|191|148|133",
+    "camp": "2",
+    "game_label": "122059",
+    "game_time": "2022-03-10 19:39:00",
+    "is_win": "0",
+    "kill_cnt": "8",
+    "pick_heros": "533|518|173|186|312",
+    "team_id": "31",
+    "team_name": "苏州KSG"
+}, {
+    "ban_heros": "199|124|174|527",
+    "camp": "2",
+    "game_label": "122059",
+    "game_time": "2022-03-10 20:16:24",
+    "is_win": "0",
+    "kill_cnt": "8",
+    "pick_heros": "123|531|132|186|157",
+    "team_id": "23",
+    "team_name": "厦门VG"
+}, {
+    "ban_heros": "523|533|187|189",
+    "camp": "1",
+    "game_label": "122059",
+    "game_time": "2022-03-10 20:16:24",
+    "is_win": "1",
+    "kill_cnt": "12",
+    "pick_heros": "191|110|139|133|193",
+    "team_id": "31",
+    "team_name": "苏州KSG"
+}, {
+    "ban_heros": "525|157|509|174",
+    "camp": "1",
+    "game_label": "122059",
+    "game_time": "2022-03-10 20:42:10",
+    "is_win": "1",
+    "kill_cnt": "9",
+    "pick_heros": "312|518|533|133|171",
+    "team_id": "23",
+    "team_name": "厦门VG"
+}, {
+    "ban_heros": "191|199|187|118",
+    "camp": "2",
+    "game_label": "122059",
+    "game_time": "2022-03-10 20:42:10",
+    "is_win": "0",
+    "kill_cnt": "6",
+    "pick_heros": "124|528|511|524|194",
+    "team_id": "31",
+    "team_name": "苏州KSG"
+}, {
+    "ban_heros": "525|199|523|157",
+    "camp": "2",
+    "game_label": "122059",
+    "game_time": "2022-03-10 21:11:34",
+    "is_win": "1",
+    "kill_cnt": "18",
+    "pick_heros": "163|197|140|509|508",
+    "team_id": "23",
+    "team_name": "厦门VG"
+}, {
+    "ban_heros": "191|146|173|111",
+    "camp": "1",
+    "game_label": "122059",
+    "game_time": "2022-03-10 21:11:34",
+    "is_win": "0",
+    "kill_cnt": "14",
+    "pick_heros": "162|174|123|152|187",
+    "team_id": "31",
+    "team_name": "苏州KSG"
 }]

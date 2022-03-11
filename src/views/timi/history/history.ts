@@ -1874,4 +1874,14 @@ export const history = [
         end: '2022-4-25',
         content: '女娲限定皮肤'
     },
+    {
+        name: '蔡文姬-花朝如约',
+        date: '2022-3-3',
+        content: '荣耀中国节-花朝节'
+    },
+    {
+        name: '夏洛特-永昼',
+        date: '2022-3-11',
+        content: ''
+    },
 ]

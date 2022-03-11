@@ -1,15 +1,18 @@
 <template>
     <div class="home">
         <!-- <h1>JavaScript Learning</h1> -->
+        <!-- <InputNumber v-model="number"/> -->
         <Cascade :data="data" />
         <Cascade :data="data" align="center" />
         <Cascade :data="data" align="bottom" />
-        <!-- <input type="text" inputmode="decimal"> -->
     </div>
 </template>
 
 <script lang="ts" setup>
+import { ref } from 'vue'
 import Cascade from './cascade.vue'
+import InputNumber from '@/components/input/number.vue'
+const number = ref('1')
 const data = 
     [{
         title: '1-1',
