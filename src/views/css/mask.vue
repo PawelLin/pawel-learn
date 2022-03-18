@@ -29,8 +29,8 @@
         &.icon {
             height: 100px;
             background-color: #03A9F3;
-            -webkit-mask: url(../../assets/source/kpl.png) no-repeat;
-            -webkit-mask-size: 100% auto;
+            mask: url(../../assets/source/kpl.png) no-repeat;
+            mask-size: 100% auto;
         }
     }
 }

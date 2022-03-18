@@ -316,14 +316,18 @@ export default defineComponent({
     max-height: 100%;
     overflow-y: scroll;
     overflow-x: auto;
+    border-left: @border;
+    border-right: @border;
     .table {
         // border-collapse: collapse;
         font-size: 16px;
-        border-left: @border;
+        // border-left: @border;
         th, td {
             padding: 4px;
-            border-right: @border;
             border-bottom: @border;
+        }
+        tr > th:not(:last-child), tr > td:not(:last-child) {
+            border-right: @border;
         }
         .head {
             position: sticky;

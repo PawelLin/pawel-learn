@@ -1,6 +1,7 @@
 import path from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import autoprefixer from 'autoprefixer'
 
 const resolve = dir => {
     return path.join(__dirname, dir)
@@ -14,6 +15,11 @@ export default defineConfig({
     resolve: {
         alias: {
             '@': resolve('src')
+        }
+    },
+    css: {
+        postcss: {
+            plugins: [autoprefixer]
         }
     },
     plugins: [vue()]
