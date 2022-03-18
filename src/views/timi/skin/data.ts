@@ -4617,6 +4617,14 @@ export const datas = [
             mobile: 'skin/107/107-mobileskin-9.jpg',
             type: '86',
             quality: '4'
+        },
+        {
+            name: '赵云-百木心枪',
+            icon: 'skin/107/107-smallskin-10.jpg',
+            url: 'skin/107/107-bigskin-10.jpg',
+            mobile: 'skin/107/107-mobileskin-10.jpg',
+            type: '5',
+            quality: '3'
         }
     ],
     [
