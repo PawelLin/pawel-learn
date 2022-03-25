@@ -39,12 +39,14 @@
     </div>
     <Layout />
     <Mask />
+    <Fireworks />
 </template>
 
 <script lang="ts" setup>
 import ViewCode from './viewCode.vue'
 import Layout from './layout.vue'
 import Mask from './mask.vue'
+import Fireworks from './fireworks.vue'
 
 </script>
 

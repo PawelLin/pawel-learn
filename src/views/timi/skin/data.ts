@@ -1185,6 +1185,14 @@ export const datas = [
             mobile: 'skin/199/199-mobileskin-5.jpg',
             type: '81',
             quality: '4'
+        },
+        {
+            name: '公孙离-玉兔公主',
+            icon: 'skin/199/199-smallskin-6.jpg',
+            url: 'skin/199/199-bigskin-6.jpg',
+            mobile: 'skin/199/199-mobileskin-6.jpg',
+            type: '89',
+            quality: '3'
         }
     ],
     [
