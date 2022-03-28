@@ -7,6 +7,10 @@ export const skins: Data = {
         alt: ['鲁班七号-狮舞东方', '钟馗-神迹守卫'],
         src: ['skin/112/112-smallskin-6.jpg', 'skin/175/175-smallskin-3.jpg']
     },
+    '2022-2-19': {
+        alt: '黄忠-火炮绅士',
+        src: 'skin/192/192-smallskin-4.jpg'
+    },
     '2022-2-8': {
         alt: '貂蝉-圣诞恋歌',
         src: 'skin/141/141-smallskin-3.jpg'
