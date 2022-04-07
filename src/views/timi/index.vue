@@ -114,7 +114,7 @@ export default defineComponent({
             console.log(target)
             target.style.maxHeight = 'none'
             target.querySelectorAll('.month').forEach(month => {
-                month.style.lineHeight = '27px'
+                month.style.lineHeight = '29px'
             })
             html2canvas(target, {
                 ignoreElements: element => {

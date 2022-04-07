@@ -224,6 +224,14 @@ export const datas = [
             mobile: 'skin/528/528-mobileskin-2.jpg',
             type: '0',
             quality: '1'
+        },
+        {
+            name: '澜-赏金猎手',
+            icon: 'skin/528/528-smallskin-3.jpg',
+            url: 'skin/528/528-bigskin-3.jpg',
+            mobile: 'skin/528/528-mobileskin-3.jpg',
+            type: '12',
+            quality: '3'
         }
     ],
     [
