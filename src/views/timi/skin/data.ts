@@ -108,6 +108,26 @@ export const positions = {
 export const datas = [
     [
         {
+            name: '桑启-萤火之旅',
+            icon: 'skin/534/534-smallskin-1.jpg',
+            url: 'skin/534/534-bigskin-1.jpg',
+            mobile: 'skin/534/534-mobileskin-1.jpg',
+            content: '自得其乐，孰是孰非',
+            type: '0',
+            position: '6',
+            quality: '0'
+        },
+        {
+            name: '桑启-画中游',
+            icon: 'skin/534/534-smallskin-2.jpg',
+            url: 'skin/534/534-bigskin-2.jpg',
+            mobile: 'skin/534/534-mobileskin-2.jpg',
+            type: '0',
+            quality: '1'
+        }
+    ],
+    [
+        {
             name: '暃-玉城之子',
             icon: 'skin/542/542-smallskin-1.jpg',
             url: 'skin/542/542-bigskin-1.jpg',
@@ -184,6 +204,14 @@ export const datas = [
             mobile: 'skin/155/155-mobileskin-2.jpg',
             type: '1',
             quality: '2'
+        },
+        {
+            name: '艾琳-奇遇舞章',
+            icon: 'skin/155/155-smallskin-3.jpg',
+            url: 'skin/155/155-bigskin-3.jpg',
+            mobile: 'skin/155/155-mobileskin-3.jpg',
+            type: '12',
+            quality: '3'
         }
     ],
     [
@@ -1237,6 +1265,14 @@ export const datas = [
             mobile: 'skin/501/501-mobileskin-4.jpg',
             type: '70',
             quality: '2'
+        },
+        {
+            name: '明世隐-吟游魔法',
+            icon: 'skin/501/501-smallskin-5.jpg',
+            url: 'skin/501/501-bigskin-5.jpg',
+            mobile: 'skin/501/501-mobileskin-5.jpg',
+            type: '40',
+            quality: '3'
         }
     ],
     [
@@ -2657,6 +2693,14 @@ export const datas = [
             mobile: 'skin/153/153-mobileskin-5.jpg',
             type: '82',
             quality: '4'
+        },
+        {
+            name: '兰陵王-金庭之子',
+            icon: 'skin/153/153-smallskin-6.jpg',
+            url: 'skin/153/153-bigskin-6.jpg',
+            mobile: 'skin/153/153-mobileskin-6.jpg',
+            type: '91',
+            quality: '2'
         }
     ],
     [
@@ -3917,6 +3961,14 @@ export const datas = [
             mobile: 'skin/120/120-mobileskin-4.jpg',
             type: '12',
             quality: '3'
+        },
+        {
+            name: '白起-夜都怪侠',
+            icon: 'skin/120/120-smallskin-5.jpg',
+            url: 'skin/120/120-bigskin-5.jpg',
+            mobile: 'skin/120/120-mobileskin-5.jpg',
+            type: '40',
+            quality: '2'
         }
     ],
     [

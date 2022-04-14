@@ -3,6 +3,10 @@ interface Data {
 }
 
 export const skins: Data = {
+    '2022-4-14': {
+        alt: ['桑启-画中游', '白起-夜都怪侠'],
+        src: ['skin/534/534-smallskin-2.jpg', 'skin/120/120-smallskin-5.jpg']
+    },
     '2022-3-31': {
         alt: '杨玉环-霓裳曲',
         src: 'skin/176/176-smallskin-2.jpg'
@@ -562,6 +566,10 @@ export const skins: Data = {
 }
 
 export const heros: Data = {
+    '2022-4-14': {
+        alt: '桑启-萤火之旅',
+        src: 'skin/534/534-smallskin-1.jpg'
+    },
     '2022-1-6': {
         alt: '暃',
         src: 'skin/542/542-smallskin-1.jpg'
