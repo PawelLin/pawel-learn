@@ -39,6 +39,7 @@
     </div>
     <Layout />
     <Mask />
+    <SpecialEffects />
     <Fireworks />
 </template>
 
@@ -47,6 +48,7 @@ import ViewCode from './viewCode.vue'
 import Layout from './layout.vue'
 import Mask from './mask.vue'
 import Fireworks from './fireworks.vue'
+import SpecialEffects from './specialEffects.vue'
 
 </script>
 

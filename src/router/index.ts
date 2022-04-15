@@ -47,6 +47,11 @@ const routes = [
         component: () => import('@/views/timi/kpl/index.vue')
     },
     {
+        path: '/timi/team',
+        name: 'TimiTeam',
+        component: () => import('@/views/timi/kpl/team.vue')
+    },
+    {
         path: '/echarts',
         name: 'Echarts',
         component: () => import('@/views/echarts/index.vue')
