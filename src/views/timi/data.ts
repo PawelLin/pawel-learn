@@ -3,6 +3,10 @@ interface Data {
 }
 
 export const skins: Data = {
+    '2022-4-20': {
+        alt: '兰陵王-金庭之子',
+        src: 'skin/153/153-smallskin-6.jpg'
+    },
     '2022-4-14': {
         alt: ['桑启-画中游', '白起-夜都怪侠'],
         src: ['skin/534/534-smallskin-2.jpg', 'skin/120/120-smallskin-5.jpg']
