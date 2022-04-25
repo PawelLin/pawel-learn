@@ -50,6 +50,9 @@
             <li class="prettier">
                 <a href="https://prettier.io/docs/en/index.html" target="_blank">prettier</a>
             </li>
+            <li class="axios">
+                <a href="https://axios-http.com/" target="_blank">axios</a>
+            </li>
         </ul>
         <ul class="list">
             <p class="title">数据</p>
@@ -109,6 +112,9 @@ export default defineComponent({
         }
         li.prettier::before {
             background-image: url(@/assets/source/prettier.png);
+        }
+        li.axios::before {
+            background-image: url(@/assets/source/axios.ico);
         }
         li.kpl::before {
             background-image: url(@/assets/source/kpl.png);

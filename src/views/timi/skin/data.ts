@@ -112,7 +112,7 @@ export const datas = [
             icon: 'skin/534/534-smallskin-1.jpg',
             url: 'skin/534/534-bigskin-1.jpg',
             mobile: 'skin/534/534-mobileskin-1.jpg',
-            content: '自得其乐，孰是孰非',
+            content: '只要眼里有光，黑夜就永远不会降临。',
             type: '0',
             position: '6',
             quality: '0'
@@ -2937,6 +2937,14 @@ export const datas = [
             mobile: 'skin/146/146-mobileskin-6.jpg',
             type: '1',
             quality: '2'
+        },
+        {
+            name: '露娜-启示之音',
+            icon: 'skin/146/146-smallskin-7.jpg',
+            url: 'skin/146/146-bigskin-7.jpg',
+            mobile: 'skin/146/146-mobileskin-7.jpg',
+            type: '9',
+            quality: '4'
         }
     ],
     [
