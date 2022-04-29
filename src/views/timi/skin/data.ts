@@ -94,6 +94,7 @@ export const types: Types = {
     93: 'skin/type/93.png',
     94: 'skin/type/94.png',
     95: 'skin/type/95.png',
+    96: 'skin/type/96.png',
 }
 
 export const positions = {
@@ -3125,6 +3126,14 @@ export const datas = [
             mobile: 'skin/141/141-mobileskin-7.jpg',
             type: '88',
             quality: '4'
+        },
+        {
+            name: '貂蝉-唤灵魅影',
+            icon: 'skin/141/141-smallskin-8.jpg',
+            url: 'skin/141/141-bigskin-8.jpg',
+            mobile: 'skin/141/141-mobileskin-8.jpg',
+            type: '96',
+            quality: '3'
         }
     ],
     [
@@ -3777,6 +3786,14 @@ export const datas = [
             mobile: 'skin/126/126-mobileskin-5.jpg',
             type: '52',
             quality: '2'
+        },
+        {
+            name: '夏侯惇-匿光决锋者',
+            icon: 'skin/126/126-smallskin-6.jpg',
+            url: 'skin/126/126-bigskin-6.jpg',
+            mobile: 'skin/126/126-mobileskin-6.jpg',
+            type: '19',
+            quality: '3'
         }
     ],
     [
@@ -4240,6 +4257,14 @@ export const datas = [
             url: 'skin/114/114-bigskin-5.jpg',
             mobile: 'skin/114/114-mobileskin-5.jpg',
             type: '1',
+            quality: '2'
+        },
+        {
+            name: '刘禅-唤灵魔甲',
+            icon: 'skin/114/114-smallskin-6.jpg',
+            url: 'skin/114/114-bigskin-6.jpg',
+            mobile: 'skin/114/114-mobileskin-6.jpg',
+            type: '50',
             quality: '2'
         }
     ],
