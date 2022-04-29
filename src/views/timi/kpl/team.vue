@@ -1,5 +1,7 @@
 <script lang="ts" setup>
 import { data as originData } from './kpl'
+import { datas as heroData } from '../skin/data'
+import { getImageUrl as getImageUrlUtils } from '@/libs/utils'
 const getConcatData = (context: string) => {
     var contexts = context.split('|')
     for (var a:string[][] = []; a.push([]) < contexts.length;);
@@ -56,7 +58,6 @@ originData.forEach(({ team_id: id, team_name: name, pick_heros, ban_heros, is_wi
         theData.rate = theData.win / theData.plays
         const pickList = theData.data
         const pickData = getConcatData(pick_heros)
-        console.log(pickData)
         const banData = ban_heros.split('|')
         for (let i = 0; i < 5; i++) {
             const items = pickList[i] = pickList[i] || {}
@@ -78,9 +79,43 @@ originData.forEach(({ team_id: id, team_name: name, pick_heros, ban_heros, is_wi
 
     }
 })
-console.log(data)
-console.log(team)
+const listOne = data['91'].data[0]
+const result = []
+Object.keys(listOne).forEach(key => {
+    result.push(listOne[key])
+})
+result.sort((a, b) => b.pick - a.pick)
+const heros = {}
+heroData.forEach(hero => {
+    const item = hero[0]
+    const icon = item.icon.match(/\d+/)[0]
+    heros[icon] = item.name.split('-')[0]
+})
+const getImageUrl = number => {
+    const url = `skin/${number}/${number}-smallskin-1.jpg`
+    return getImageUrlUtils(url)
+}
+console.log(result)
 </script>
 <template>
-123
+    <table>
+        <tr>
+            <th>英雄</th>
+            <th>pick</th>
+            <th>胜率</th>
+        </tr>
+        <tr v-for="item in result" :key="item.key">
+            <td>
+                <img class="image" :src="getImageUrl(item.key)">
+            </td>
+            <td>{{item.pick}}</td>
+            <td>{{item.pick && Number(item.win / item.pick * 100).toFixed(2)}}%</td>
+        </tr>
+    </table>
 </template>
+
+<style lang="less" scoped>
+.image {
+    width: 40px;
+}
+</style>

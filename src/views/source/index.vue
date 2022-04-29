@@ -55,6 +55,15 @@
             </li>
         </ul>
         <ul class="list">
+            <p class="title">微前端</p>
+            <li class="single-spa">
+                <a href="https://zh-hans.single-spa.js.org/" target="_blank">single-spa</a>
+            </li>
+            <li class="qiankun">
+                <a href="https://qiankun.umijs.org/zh" target="_blank">qiankun</a>
+            </li>
+        </ul>
+        <ul class="list">
             <p class="title">数据</p>
             <li class="kpl">
                 <a href="https://datamore.qq.com/project/wzmatch/dist/index.html#/" target="_blank">王者荣耀赛事数据平台</a>
@@ -115,6 +124,12 @@ export default defineComponent({
         }
         li.axios::before {
             background-image: url(@/assets/source/axios.ico);
+        }
+        li.single-spa::before {
+            background-image: url(@/assets/source/single-spa.ico);
+        }
+        li.qiankun::before {
+            background-image: url(@/assets/source/qiankun.png);
         }
         li.kpl::before {
             background-image: url(@/assets/source/kpl.png);
