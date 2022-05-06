@@ -3,6 +3,10 @@ interface Data {
 }
 
 export const skins: Data = {
+    '2022-5-5': {
+        alt: '刘禅-唤灵魔甲',
+        src: 'skin/114/114-smallskin-6.jpg'
+    },
     '2022-4-20': {
         alt: '兰陵王-金庭之子',
         src: 'skin/153/153-smallskin-6.jpg'

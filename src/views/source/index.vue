@@ -53,6 +53,9 @@
             <li class="axios">
                 <a href="https://axios-http.com/" target="_blank">axios</a>
             </li>
+            <li class="astexplorer">
+                <a href="https://astexplorer.net/" target="_blank">AST Explorer</a>
+            </li>
         </ul>
         <ul class="list">
             <p class="title">微前端</p>
@@ -124,6 +127,9 @@ export default defineComponent({
         }
         li.axios::before {
             background-image: url(@/assets/source/axios.ico);
+        }
+        li.astexplorer::before {
+            background-image: url(@/assets/source/astexplorer.png);
         }
         li.single-spa::before {
             background-image: url(@/assets/source/single-spa.ico);
