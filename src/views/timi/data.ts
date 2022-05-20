@@ -3,6 +3,14 @@ interface Data {
 }
 
 export const skins: Data = {
+    '2022-5-17': {
+        alt: '明世隐-吟游魔法',
+        src: 'skin/501/501-smallskin-5.jpg'
+    },
+    '2022-5-10': {
+        alt: ['上官婉儿-修竹墨客', '孙策-海之征途'],
+        src: ['skin/513/513-smallskin-2.jpg', 'skin/510/510-smallskin-2.jpg']
+    },
     '2022-5-5': {
         alt: '刘禅-唤灵魔甲',
         src: 'skin/114/114-smallskin-6.jpg'

@@ -95,6 +95,8 @@ export const types: Types = {
     94: 'skin/type/94.png',
     95: 'skin/type/95.png',
     96: 'skin/type/96.png',
+    97: 'skin/type/97.png',
+    98: 'skin/type/98.png',
 }
 
 export const positions = {
@@ -953,6 +955,14 @@ export const datas = [
             mobile: 'skin/510/510-mobileskin-4.jpg',
             type: '15',
             quality: '4'
+        },
+        {
+            name: '孙策-挚爱之约',
+            icon: 'skin/510/510-smallskin-5.jpg',
+            url: 'skin/510/510-bigskin-5.jpg',
+            mobile: 'skin/510/510-mobileskin-5.jpg',
+            type: '98',
+            quality: '4'
         }
     ],
     [
@@ -1674,6 +1684,14 @@ export const datas = [
             mobile: 'skin/191/191-mobileskin-6.jpg',
             type: '5',
             quality: '3'
+        },
+        {
+            name: '大乔-挚爱花嫁',
+            icon: 'skin/191/191-smallskin-7.jpg',
+            url: 'skin/191/191-bigskin-7.jpg',
+            mobile: 'skin/191/191-mobileskin-7.jpg',
+            type: '97',
+            quality: '4'
         }
     ],
     [

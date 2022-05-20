@@ -37,6 +37,7 @@
             <div class="border border10">折角边框</div>
         </div>
     </div>
+    <Logo />
     <Layout />
     <Mask />
     <SpecialEffects />
@@ -49,6 +50,7 @@ import Layout from './layout.vue'
 import Mask from './mask.vue'
 import Fireworks from './fireworks.vue'
 import SpecialEffects from './specialEffects.vue'
+import Logo from './logo.vue'
 
 </script>
 

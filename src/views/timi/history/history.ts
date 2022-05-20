@@ -1952,4 +1952,9 @@ export const history = [
         end: '2022-7-8',
         content: 'KPL限定皮肤'
     },
+    {
+        name: '孙策-挚爱之约|大乔-挚爱花嫁',
+        date: '2022-5-20',
+        content: '孙策&大乔情侣皮肤'
+    },
 ]
