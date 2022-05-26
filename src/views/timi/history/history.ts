@@ -1953,6 +1953,12 @@ export const history = [
         content: 'KPL限定皮肤'
     },
     {
+        name: '米莱狄-契约魔法',
+        start: '2022-5-13',
+        end: '2022-5-19',
+        content: '米莱狄6元皮肤'
+    },
+    {
         name: '孙策-挚爱之约|大乔-挚爱花嫁',
         date: '2022-5-20',
         content: '孙策&大乔情侣皮肤'

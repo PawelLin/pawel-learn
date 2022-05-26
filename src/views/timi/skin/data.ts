@@ -1027,6 +1027,14 @@ export const datas = [
             mobile: 'skin/504/504-mobileskin-4.jpg',
             type: '40',
             quality: '3'
+        },
+        {
+            name: '米莱狄-契约魔法',
+            icon: 'skin/504/504-smallskin-5.jpg',
+            url: 'skin/504/504-bigskin-5.jpg',
+            mobile: 'skin/504/504-mobileskin-5.jpg',
+            type: '1',
+            quality: '2'
         }
     ],
     [
