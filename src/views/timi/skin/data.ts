@@ -487,6 +487,14 @@ export const datas = [
             mobile: 'skin/518/518-mobileskin-3.jpg',
             type: '72',
             quality: '3'
+        },
+        {
+            name: '马超-无双飞将',
+            icon: 'skin/518/518-smallskin-4.jpg',
+            url: 'skin/518/518-bigskin-4.jpg',
+            mobile: 'skin/518/518-mobileskin-4.jpg',
+            type: '38',
+            quality: '4'
         }
     ],
     [
