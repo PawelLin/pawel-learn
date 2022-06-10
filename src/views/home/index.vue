@@ -2,6 +2,7 @@
     <div class="home">
         <!-- <h1>JavaScript Learning</h1> -->
         <!-- <InputNumber v-model="number"/> -->
+        <Fund />
         <Cascade :data="object" />
         <Cascade :data="data" />
         <Cascade :data="data" align="center" />
@@ -13,6 +14,7 @@
 import { ref } from 'vue'
 import Cascade from './cascade.vue'
 import InputNumber from '@/components/input/number.vue'
+import Fund from './fund/index.vue'
 const number = ref('1')
 const object = [{
     title: 'Object',
