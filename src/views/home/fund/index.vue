@@ -6,17 +6,10 @@ const columns = [
     { title: '主题', key: 'theme' },
     { title: '名称', key: 'name' },
     { title: '代码', key: 'code' },
-    { title: '收益', key: 'profit', align: 'right', sort: 'profit' },
-    { title: '本金', key: 'capital', sort: 'capital' },
+    { title: '收益', key: 'profit', align: 'right', sort: 'profit', getClass: profit => profit === 0 ? 'default' : profit > 0 ? 'red' : 'green' },
+    { title: '本金', key: 'capital', align: 'right', sort: 'capital' },
 ]
 const originList = [
-    { theme: '新能车', name: '东方新能源', code: '123456', profit: -0.4, capital: 0.9, unit: 'w', id: '1' },
-    { theme: '新能车', name: '东方新能源', code: '123456', profit: 0.1, capital: 0.1, unit: 'w', id: '2' },
-    { theme: '新能车', name: '东方新能源', code: '123456', profit: -0.3, capital: 0.3, unit: 'w', id: '3' },
-    { theme: '新能车', name: '东方新能源', code: '123456', profit: 0.2, capital: 0.2, unit: 'w', id: '4' },
-    { theme: '新能车', name: '东方新能源', code: '123456', profit: -0.3, capital: 0.4, unit: 'w', id: '5' },
-    { theme: '新能车', name: '东方新能源', code: '123456', profit: 0.3, capital: 0.8, unit: 'w', id: '6' },
-    { theme: '新能车', name: '东方新能源', code: '123456', profit: -0.5, capital: 0.9, unit: 'w', id: '7' },
 ]
 const list = ref(JSON.parse(JSON.stringify(originList)))
 const sortColor = {
@@ -27,12 +20,14 @@ const sort = reactive({
     profit: 0,
     capital: 0
 })
+const sortByKey = ref('')
 function onSort(key) {
     if (key) {
+        sortByKey.value = key
         const data = JSON.parse(JSON.stringify(originList))
         let value = sort[key] + 1
         sort[key] = value = value === 2 ? -1 : value
-        list.value = list.value.sort((a, b) => {
+        list.value = data.sort((a, b) => {
             if (value === 0) return 0
             return  value === 1 ? a[key] - b[key] : b[key] - a[key]
         })
@@ -42,13 +37,13 @@ function onSort(key) {
 
 <template>
     <section class="fund">
-        <div v-for="({title, key, align, sort: sortKey}) in columns" class="fund-item theme" :class="key" :key="key">
+        <div v-for="({title, key, align, sort: sortKey, getClass}) in columns" class="fund-item theme" :class="key" :key="key">
             <ul class="fund-content" :class="[align]">
-                <li @click="onSort(sortKey)" class="fund-title">
+                <li @click="onSort(sortKey)" class="fund-title" :class="sortKey ? 'sort' : null">
                     <span class="fund-value">{{title}}</span>
-                    <span v-if="sortKey" class="fund-sort" :class="sortColor[sort[sortKey]]"></span>
+                    <span v-if="sortKey" class="fund-sort" :class="sortKey === sortByKey ? sortColor[sort[sortKey]] : null"></span>
                 </li>
-                <li v-for="item in list" class="fund-text" :key="`${key}-${item.id}`">
+                <li v-for="item in list" class="fund-text" :class="getClass ? getClass(item.profit) : null" :key="`${key}-${item.id}`">
                     <span class="fund-value">{{item[key]}}</span>
                 </li>
             </ul>
@@ -91,6 +86,9 @@ function onSort(key) {
 }
 .fund-title {
     text-align: center;
+    &.sort {
+        cursor: pointer;
+    }
 }
 .fund-text {
     overflow-x: auto;
@@ -120,15 +118,15 @@ function onSort(key) {
         margin-left: 1px;
         width: 0px;
         height: 0px;
-        border: 3.5px solid transparent;
+        border: 4px solid transparent;
 
     }
     &::before {
-        top: -0.5px;
+        top: -1px;
         border-bottom-color: var(--border-color);
     }
     &::after {
-        top: 8.5px;
+        top: 9px;
         border-top-color: var(--border-color);
     }
     &.asc::before {
