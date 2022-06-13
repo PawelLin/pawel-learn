@@ -175,7 +175,7 @@ export default defineComponent({
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
-    z-index: 1;
+    z-index: 2;
     &-filter {
         position: absolute;
         top: 0;

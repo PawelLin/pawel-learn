@@ -3472,6 +3472,14 @@ export const datas = [
             mobile: 'skin/133/133-mobileskin-7.jpg',
             type: '80',
             quality: '2'
+        },
+        {
+            name: '狄仁杰-星际治安官',
+            icon: 'skin/133/133-smallskin-8.jpg',
+            url: 'skin/133/133-bigskin-8.jpg',
+            mobile: 'skin/133/133-mobileskin-8.jpg',
+            type: '42',
+            quality: '4'
         }
     ],
     [
@@ -3571,6 +3579,16 @@ export const datas = [
         }
     ],
     [
+        {
+            name: '宫本武藏-剑圣-旧',
+            icon: 'skin/130/130-smallskin-1-old.jpg',
+            url: 'skin/130/130-bigskin-1.jpg',
+            mobile: 'skin/130/130-mobileskin-1.jpg',
+            content: '',
+            type: '0',
+            position: '3',
+            quality: '0'
+        },
         {
             name: '宫本武藏-剑圣',
             icon: 'skin/130/130-smallskin-1.jpg',
@@ -4247,6 +4265,14 @@ export const datas = [
             url: 'skin/115/115-bigskin-4.jpg',
             mobile: 'skin/115/115-mobileskin-4.jpg',
             type: '50',
+            quality: '3'
+        },
+        {
+            name: '高渐离-天秀·音浪',
+            icon: 'skin/115/115-smallskin-5.jpg',
+            url: 'skin/115/115-bigskin-5.jpg',
+            mobile: 'skin/115/115-mobileskin-5.jpg',
+            type: '12',
             quality: '3'
         }
     ],
