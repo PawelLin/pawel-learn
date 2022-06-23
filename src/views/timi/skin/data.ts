@@ -111,6 +111,18 @@ export const positions = {
 export const datas = [
     [
         {
+            name: '戈娅-沙海飞舟',
+            icon: 'skin/548/548-smallskin-1.jpg',
+            url: 'skin/548/548-bigskin-1.jpg',
+            mobile: 'skin/548/548-mobileskin-1.jpg',
+            content: '只要眼里有光，黑夜就永远不会降临。',
+            type: '0',
+            position: '5',
+            quality: '0'
+        },
+    ],
+    [
+        {
             name: '桑启-萤火之旅',
             icon: 'skin/534/534-smallskin-1.jpg',
             url: 'skin/534/534-bigskin-1.jpg',
@@ -819,6 +831,14 @@ export const datas = [
             mobile: 'skin/312/312-mobileskin-5.jpg',
             type: '12',
             quality: '3'
+        },
+        {
+            name: '沈梦溪-大漠名商',
+            icon: 'skin/312/312-smallskin-6.jpg',
+            url: 'skin/312/312-bigskin-6.jpg',
+            mobile: 'skin/312/312-mobileskin-6.jpg',
+            type: '91',
+            quality: '2'
         }
     ],
     [
@@ -1078,6 +1098,14 @@ export const datas = [
             url: 'skin/503/503-bigskin-4.jpg',
             mobile: 'skin/503/503-mobileskin-4.jpg',
             type: '50',
+            quality: '3'
+        },
+        {
+            name: '狂铁-电玩高手',
+            icon: 'skin/503/503-smallskin-5.jpg',
+            url: 'skin/503/503-bigskin-5.jpg',
+            mobile: 'skin/503/503-mobileskin-5.jpg',
+            type: '40',
             quality: '3'
         }
     ],
@@ -2788,6 +2816,14 @@ export const datas = [
             mobile: 'skin/152/152-mobileskin-6.jpg',
             type: '15',
             quality: '4'
+        },
+        {
+            name: '王昭君-午后时光',
+            icon: 'skin/152/152-smallskin-7.jpg',
+            url: 'skin/152/152-bigskin-7.jpg',
+            mobile: 'skin/152/152-mobileskin-7.jpg',
+            type: '40',
+            quality: '2'
         }
     ],
     [

@@ -3,6 +3,10 @@ interface Data {
 }
 
 export const skins: Data = {
+    '2022-6-22': {
+        alt: '关羽-天启骑士',
+        src: 'skin/140/140-smallskin-3.jpg'
+    },
     '2022-6-17': {
         alt: ['貂蝉-异域舞娘', '王昭君-精灵公主', '李信-灼热之刃', '李元芳-特种部队', '成吉思汗-维京掠夺者', '司马懿-魇语军师'],
         src: ['skin/141/141-smallskin-2.jpg', 'skin/152/152-smallskin-2.jpg', 'skin/507/507-smallskin-2.jpg', 'skin/173/173-smallskin-2.jpg', 'skin/177/177-smallskin-2.jpg', 'skin/137/137-smallskin-2.jpg']
@@ -602,6 +606,10 @@ export const skins: Data = {
 }
 
 export const heros: Data = {
+    '2022-6-23': {
+        alt: '戈娅-沙海飞舟',
+        src: 'skin/548/548-smallskin-1.jpg',
+    },
     '2022-4-14': {
         alt: '桑启-萤火之旅',
         src: 'skin/534/534-smallskin-1.jpg'
