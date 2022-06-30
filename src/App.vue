@@ -1,5 +1,6 @@
 <template>
     <my-header />
+    <!-- <div class="shadow"></div> -->
     <router-view />
     <!-- <background-music class="background-music" /> -->
 </template>
@@ -24,5 +25,21 @@ export default defineComponent({
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+}
+.shadow {
+    pointer-events: none;
+}
+.shadow::before{
+    content: '';
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 0 10px 1px #333;
+}
+.shadow::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(to bottom, #fff 50% , transparent);
 }
 </style>

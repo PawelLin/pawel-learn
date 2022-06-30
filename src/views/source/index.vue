@@ -44,6 +44,12 @@
             <li class="zhongguose">
                 <a href="http://zhongguose.com/" target="_blank">中国色</a>
             </li>
+            <li class="soft-ui">
+                <a href="https://neumorphism.io/" target="_blank">新拟态</a>
+            </li>
+            <li class="uiverse">
+                <a href="https://uiverse.io/" target="_blank">uiverse</a>
+            </li>
         </ul>
         <ul class="list">
             <p class="title">工具</p>
@@ -121,6 +127,12 @@ export default defineComponent({
         }
         li.zhongguose::before {
             background-image: url(@/assets/source/texture.png),url(@/assets/source/zhongguose.png);
+        }
+        li.soft-ui::before {
+            background-image: url(@/assets/source/soft-ui.ico);
+        }
+        li.uiverse::before {
+            background-image: url(@/assets/source/uiverse.ico);
         }
         li.prettier::before {
             background-image: url(@/assets/source/prettier.png);

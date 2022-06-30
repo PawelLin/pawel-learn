@@ -3,6 +3,14 @@ interface Data {
 }
 
 export const skins: Data = {
+    '2022-6-29': {
+        alt: ['墨子-进击墨子号', '虞姬-加勒比小姐', '杨戬-埃及法老'],
+        src: ['skin/108/108-smallskin-4.jpg', 'skin/174/174-smallskin-2.jpg', 'skin/178/178-smallskin-2.jpg']
+    },
+    '2022-6-23': {
+        alt: '王昭君-午后时光',
+        src: 'skin/152/152-smallskin-7.jpg'
+    },
     '2022-6-22': {
         alt: '关羽-天启骑士',
         src: 'skin/140/140-smallskin-3.jpg'

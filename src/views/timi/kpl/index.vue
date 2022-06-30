@@ -137,7 +137,7 @@ export default defineComponent({
         const heroSelectedList = computed(() => {
             return Object.values(heroSelected.value)
         })
-        const page = 15
+        const page = 20
         const setCount = count => {
             form.count = count
             setSelected(form.selected, true)
