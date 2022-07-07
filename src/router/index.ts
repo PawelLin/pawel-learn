@@ -60,6 +60,11 @@ const routes = [
         path: '/source',
         name: 'Source',
         component: () => import('@/views/source/index.vue')
+    },
+    {
+        path: '/soft-ui',
+        name: 'SoftUi',
+        component: () => import('@/views/softUi/index.vue')
     }
 ]
 

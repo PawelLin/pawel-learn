@@ -20,6 +20,7 @@ export default defineComponent({
                 { path: '/component', text: '组件', key: 'Component' },
                 { path: '/icon', text: '图标', key: 'Icon' },
                 { path: '/source', text: '资源', key: 'Source' },
+                { path: '/soft-ui', text: '新拟态', key: 'SoftUi' },
                 { path: '/regular', text: '正则', key: 'Regular' },
                 { path: '/timi', text: 'Timi', key: 'Timi' },
                 { path: '/timi/skin', text: 'TimiSkin', key: 'TimiSkin' },

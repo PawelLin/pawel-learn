@@ -2368,6 +2368,14 @@ export const datas = [
             mobile: 'skin/169/169-mobileskin-7.jpg',
             type: '40',
             quality: '2'
+        },
+        {
+            name: '后羿-无尽星芒',
+            icon: 'skin/169/169-smallskin-8.jpg',
+            url: 'skin/169/169-bigskin-8.jpg',
+            mobile: 'skin/169/169-mobileskin-8.jpg',
+            type: '5',
+            quality: '4'
         }
     ],
     [

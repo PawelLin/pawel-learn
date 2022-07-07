@@ -6,7 +6,7 @@
             </li>
         </ul>
         <table class="table" cellspacing="0" cellpadding="0" border="0">
-            <tr>
+            <tr class="thead">
                 <th @click="showHeroModal(index)" v-for="(item, index) in (form.count + 1)" :key="index">
                     {{heros[heroSelected[index]] || `英雄${index + 1}`}}
                     <i class="arrow" :class="modalHeroIndex === index ? 'show' : null"></i>
@@ -248,11 +248,14 @@ export default defineComponent({
     overflow: auto;
 }
 .count {
-    margin: 10px 0;
+    position: sticky;
+    top: 0;
+    padding: 10px 0;
     display: flex;
     font-size: 14px;
     color: #666;
     text-align: center;
+    background-color: #fff;
     li {
         flex: 1;
         cursor: pointer;
@@ -315,6 +318,11 @@ export default defineComponent({
     tr {
         padding-top: 5px;
     }
+}
+.thead {
+    position: sticky;
+    top: 34px;
+    background-color: #fff;
 }
 .image {
     width: 40px;

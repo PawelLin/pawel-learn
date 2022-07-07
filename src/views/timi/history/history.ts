@@ -2001,4 +2001,10 @@ export const history = [
         end: '2022-7-5',
         content: '墨子6元皮肤返场'
     },
+    {
+        name: '后羿-无尽星芒',
+        start: '2022-7-6',
+        end: '2022-9-6',
+        content: '后羿限定皮肤'
+    },
 ]
