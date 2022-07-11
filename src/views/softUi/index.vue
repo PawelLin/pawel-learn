@@ -25,7 +25,7 @@ const changeSelected = item => {
 @shadow-color-left: #ffffff;
 @shadow-color-right: #d3e0ec;
 @background-color-dark: #535a61;
-@background-color-card-dark: #2e343b;
+@background-color-card-dark: #545a61;
 @shadow-color-left-dark: rgba(255, 255, 255, 0.12);
 @shadow-color-right-dark: rgba(0, 0, 0, 0.36);
 .soft-ui {

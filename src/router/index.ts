@@ -65,7 +65,22 @@ const routes = [
         path: '/soft-ui',
         name: 'SoftUi',
         component: () => import('@/views/softUi/index.vue')
-    }
+    },
+    {
+        path: '/timi/career',
+        redirect: '/timi/career/home',
+        component: () => import('@/views/timi/career/index.vue'),
+        children: [
+            {
+                path: 'home',
+                component: () => import('@/views/timi/career/home.vue'),
+            },
+            {
+                path: 'login',
+                component: () => import('@/views/timi/career/login.vue'),
+            }
+        ]
+    },
 ]
 
 const router = createRouter({
