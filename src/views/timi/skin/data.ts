@@ -115,7 +115,7 @@ export const datas = [
             icon: 'skin/548/548-smallskin-1.jpg',
             url: 'skin/548/548-bigskin-1.jpg',
             mobile: 'skin/548/548-mobileskin-1.jpg',
-            content: '只要眼里有光，黑夜就永远不会降临。',
+            content: '沙海从未宁静，人心永不满足。',
             type: '0',
             position: '5',
             quality: '0'
@@ -3568,6 +3568,14 @@ export const datas = [
             mobile: 'skin/132/132-mobileskin-5.jpg',
             type: '1',
             quality: '2'
+        },
+        {
+            name: '马可波罗-深海之息',
+            icon: 'skin/132/132-smallskin-6.jpg',
+            url: 'skin/132/132-bigskin-6.jpg',
+            mobile: 'skin/132/132-mobileskin-6.jpg',
+            type: '5',
+            quality: '4'
         }
     ],
     [

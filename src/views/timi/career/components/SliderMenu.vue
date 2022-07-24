@@ -16,6 +16,7 @@ const value = computed({
         emit('update:modelValue', value)
     }
 })
+const footerColor = '#656565'
 
 function onBeforeEnter(el) {
     gsap.set(el, {
@@ -85,7 +86,7 @@ function onEnter (el, done) {
             @enter="onEnter"
         >
             <div class="out" key="out" v-show="value" :data-delay="8">
-                <svgIcon icon="svg-brave" :font-size="18" class="item-icon"></svgIcon>
+                <svgIcon icon="svg-brave" :font-size="18" :color="footerColor" class="item-icon"></svgIcon>
                 Sign Out
             </div>
         </TransitionGroup>
@@ -144,5 +145,6 @@ function onEnter (el, done) {
 .footer {
     margin: auto 0 50px 0;
     padding-left: 30px;
+    color: v-bind(footerColor);
 }
 </style>
