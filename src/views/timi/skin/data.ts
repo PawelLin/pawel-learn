@@ -179,6 +179,14 @@ export const datas = [
             mobile: 'skin/540/540-mobileskin-2.jpg',
             type: '0',
             quality: '1'
+        },
+        {
+            name: '金蝉-唐三藏',
+            icon: 'skin/540/540-smallskin-3.jpg',
+            url: 'skin/540/540-bigskin-3.jpg',
+            mobile: 'skin/540/540-mobileskin-3.jpg',
+            type: '89',
+            quality: '3'
         }
     ],
     [
@@ -335,6 +343,14 @@ export const datas = [
             mobile: 'skin/527/527-mobileskin-2.jpg',
             type: '0',
             quality: '1'
+        },
+        {
+            name: '蒙恬-蔚蓝守将',
+            icon: 'skin/527/527-smallskin-3.jpg',
+            url: 'skin/527/527-bigskin-3.jpg',
+            mobile: 'skin/527/527-mobileskin-3.jpg',
+            type: '50',
+            quality: '2'
         }
     ],
     [
@@ -407,6 +423,14 @@ export const datas = [
             mobile: 'skin/524/524-mobileskin-4.jpg',
             type: '12',
             quality: '3'
+        },
+        {
+            name: '蒙犽-胡桃狂想曲',
+            icon: 'skin/524/524-smallskin-5.jpg',
+            url: 'skin/524/524-bigskin-5.jpg',
+            mobile: 'skin/524/524-mobileskin-5.jpg',
+            type: '1',
+            quality: '2'
         }
     ],
     [

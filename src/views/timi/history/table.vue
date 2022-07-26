@@ -123,7 +123,7 @@
                 <label></label>
                 <button @click.prevent="handleSearch">查询</button>
             </div>
-            <div class="count">
+            <!-- <div class="count">
                 <table class="count-table" cellspacing="0" cellpadding="0" border="0">
                     <tr>
                         <td>年月</td>
@@ -134,13 +134,15 @@
                         <td v-for="(value, key) in qualityEnums" :class="`count-color-${key}`" :key="key">{{item[key] || '-'}}</td>
                     </tr>
                 </table>
-            </div>
+            </div> -->
+            <div id="result-chart"></div>
         </form>
     </div>
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, reactive, ref, watch } from 'vue'
+import { computed, defineComponent, onMounted, reactive, ref, watch } from 'vue'
+import { Chart } from '@antv/g2'
 import { history } from './history'
 import { datas } from '../skin/data'
 import { getImageUrl } from '@/libs/utils'
@@ -210,13 +212,15 @@ export default defineComponent({
             const _years = years.filter(year => !form.years.length || form.years.includes(year))
             isYearDesc && _years.reverse()
             _years.forEach((year, yearIndex) => {
-                list[year].forEach((items, month) => {
-                    const monthIndex = isMonthDesc ? list[year].length - 1 - month : month
+                const _list = [...list[year]]
+                isMonthDesc && _list.reverse()
+                _list.forEach((items, month) => {
+                    const monthIndex = isMonthDesc ? _list.length - 1 - month : month
                     let colspan = 0
                     const data = []
                     const { startMonth, endMonth } = form
                     let start = 0
-                    let end = list[year].length - 1
+                    let end = _list.length - 1
                     if (yearLength === 1) {
                         start = startMonth ? startMonth - 1 : start
                         end = endMonth ? endMonth - 1 : end
@@ -276,8 +280,97 @@ export default defineComponent({
             const { result: resultData, resultCount: resultCountData } = getResult(years)
             result.value = resultData
             resultCount.value = resultCountData
-            console.log(result.value)
-            console.log(resultCount.value)
+            // console.log(result.value)
+            // console.log(resultCount.value)
+            setResultChart()
+        }
+        let resultChart = null
+        onMounted(() => {
+            setResultChart()
+        })
+        const initResultChart = data => {
+            const colors = { '英雄': '#f7f7f7', '伴生': '#e8eaec', '勇者': '#b7eb8f', '史诗': '#d3adf7', '传说': '#ffa39e' }
+            const chart = resultChart = resultChart || new Chart({
+                container: 'result-chart',
+                autoFit: true,
+                height: 30 + 30 * data.length / 5
+            })
+            chart.data(data)
+            chart.axis('date', {
+                tickLine: null,
+                line: null,
+            })
+            chart.axis('value', {
+                label: null,
+                title: null,
+                grid: null,
+            })
+            chart.legend({
+                position: 'top',
+            });
+            chart.coordinate('rect').transpose();
+            chart.tooltip({
+                shared: true,
+                showMarkers: false,
+            });
+            chart.interaction('active-region');
+            chart
+                .interval()
+                .adjust('stack')
+                .position('date*value')
+                .color('type', type => colors[type])
+                .size(26)
+                .label('value*type', (val, t) => {
+                    if (val < 0.05) {
+                        return null;
+                    }
+                    return {
+                        position: 'middle',
+                        offset: 0,
+                        style: {
+                            fontSize: 12,
+                            fill: '#47494b',
+                            lineWidth: 0,
+                            stroke: null,
+                            shadowBlur: 2,
+                            shadowColor: 'rgba(255, 255, 255, .45)',
+                        },
+                    };
+                });
+            chart.render();
+        }
+        const setResultChart = () => {
+            const data = []
+            const keys = Object.keys(qualityEnums)
+            let list = [...resultCount.value].reverse()
+            if (form.years.length) {
+                const listIndex = []
+                const listYear = []
+                list.forEach(item => {
+                    const date = item.date.replace(/(\d{4}年).*/, '$1')
+                    const index = listIndex.indexOf(date)
+                    if (index > -1) {
+                        Object.keys(list[index]).forEach(key => {
+                            if (key !== 'date') {
+                                listYear[index][key] += item[key]
+                            }
+                        })
+                    } else {
+                        listYear.push({ ...item, date })
+                        listIndex.push(date)
+                    }
+                })
+                list = listYear
+            }
+            list.forEach(item => {
+                data.push(...keys.map(key => ({ date: item.date, type: qualityEnums[key], value: item[key] })))
+            })
+            if (resultChart) {
+                resultChart.changeSize(resultChart.width, 30 + 30 * data.length / 5)
+                resultChart.changeData(data)
+            } else {
+                initResultChart(data)
+            }
         }
         watch(form, handleSearch)
         return {
