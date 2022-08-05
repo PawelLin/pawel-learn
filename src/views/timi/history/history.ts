@@ -2031,4 +2031,9 @@ export const history = [
         end: '2022-8-8',
         content: '蒙恬活动皮肤'
     },
+    {
+        name: '孙尚香-音你闪耀',
+        date: '2022-8-5',
+        content: '孙尚香传说皮肤'
+    },
 ]
