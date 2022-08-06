@@ -4622,6 +4622,14 @@ export const datas = [
             mobile: 'skin/111/111-mobileskin-9.jpg',
             type: '5',
             quality: '4'
+        },
+        {
+            name: '孙尚香-音你闪耀',
+            icon: 'skin/111/111-smallskin-10.jpg',
+            url: 'skin/111/111-bigskin-10.jpg',
+            mobile: 'skin/111/111-mobileskin-10.jpg',
+            type: '15',
+            quality: '4'
         }
     ],
     [
