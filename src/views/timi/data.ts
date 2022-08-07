@@ -3,6 +3,10 @@ interface Data {
 }
 
 export const skins: Data = {
+    '2022-8-7': {
+        alt: '狂铁-电玩高手',
+        src: 'skin/503/503-smallskin-5.jpg'
+    },
     '2022-7-26': {
         alt: ['蒙恬-蔚蓝守将', '蒙犽-胡桃狂想曲'],
         src: ['skin/527/527-smallskin-3.jpg', 'skin/524/524-smallskin-5.jpg']
@@ -1001,6 +1005,10 @@ export const heros: Data = {
 }
 
 export const kings = {
+    '2022-8-7': {
+        alt: 'S28',
+        src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
+    },
     '2022-5-7': {
         alt: 'S27',
         src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
