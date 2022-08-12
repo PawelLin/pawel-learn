@@ -2604,6 +2604,14 @@ export const datas = [
             mobile: 'skin/162/162-mobileskin-2.jpg',
             type: '12',
             quality: '3'
+        },
+        {
+            name: '娜可露露-前尘镜',
+            icon: 'skin/162/162-smallskin-3.jpg',
+            url: 'skin/162/162-bigskin-3.jpg',
+            mobile: 'skin/162/162-mobileskin-3.jpg',
+            type: '5',
+            quality: '4'
         }
     ],
     [

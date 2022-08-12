@@ -3,9 +3,17 @@ interface Data {
 }
 
 export const skins: Data = {
+    '2022-8-10': {
+        alt: ['程咬金-无双福将', '沈梦溪-鲨炮海盗猫', '明世隐-虹云星官'],
+        src: ['skin/144/144-smallskin-8.jpg', 'skin/312/312-smallskin-3.jpg', 'skin/501/501-smallskin-3.jpg']
+    },
     '2022-8-7': {
         alt: '狂铁-电玩高手',
         src: 'skin/503/503-smallskin-5.jpg'
+    },
+    '2022-8-5': {
+        alt: '鬼谷子-幻乐之宴',
+        src: 'skin/189/189-smallskin-3.jpg'
     },
     '2022-7-26': {
         alt: ['蒙恬-蔚蓝守将', '蒙犽-胡桃狂想曲'],
