@@ -33,7 +33,7 @@ export default defineComponent({
                 })
             }
         })
-        console.log(number)
+        console.log(number - 3) // 排除linkage的娜可露露，不知火舞，橘右京
         const list = JSON.parse(JSON.stringify(tabs[props.type]))
         const data = Array.prototype.concat.apply([], datas).filter(item => !item.name.includes('-旧'))
         console.log(data.length)
