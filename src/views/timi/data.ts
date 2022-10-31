@@ -3,6 +3,30 @@ interface Data {
 }
 
 export const skins: Data = {
+    '2022-10-29': {
+        alt: '鬼谷子-五谷丰年',
+        src: 'skin/189/189-smallskin-5.jpg'
+    },
+    '2022-9-28': {
+        alt: '李元芳-云中旅人',
+        src: 'skin/173/173-smallskin-7.jpg'
+    },
+    '2022-9-25': {
+        alt: '戈娅-危途狂花',
+        src: 'skin/548/548-smallskin-1.jpg'
+    },
+    '2022-9-22': {
+        alt: '甄姬-落雪兰心',
+        src: 'skin/127/127-smallskin-7.jpg'
+    },
+    '2022-9-21': {
+        alt: ['女娲-尼罗河女神', '黄忠-芝加哥教父', '老夫子-潮流仙人'],
+        src: ['skin/179/179-smallskin-2.jpg', 'skin/192/192-smallskin-2.jpg', 'skin/139/139-smallskin-1.jpg']
+    },
+    '2022-8-15': {
+        alt: '宫本武藏-未来纪元',
+        src: 'skin/130/130-smallskin-3.jpg'
+    },
     '2022-8-10': {
         alt: ['程咬金-无双福将', '沈梦溪-鲨炮海盗猫', '明世隐-虹云星官'],
         src: ['skin/144/144-smallskin-8.jpg', 'skin/312/312-smallskin-3.jpg', 'skin/501/501-smallskin-3.jpg']
