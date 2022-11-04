@@ -99,6 +99,8 @@ export const types: Types = {
     98: 'skin/type/98.png',
     99: 'skin/type/99.png',
     100: 'skin/type/100.png',
+    101: 'skin/type/101.png',
+    102: 'skin/type/102.png',
 }
 
 export const positions = {
@@ -965,6 +967,14 @@ export const datas = [
             mobile: 'skin/509/509-mobileskin-4.jpg',
             type: '73',
             quality: '2'
+        },
+        {
+            name: '盾山-梦圆繁星',
+            icon: 'skin/509/509-smallskin-5.jpg',
+            url: 'skin/509/509-bigskin-5.jpg',
+            mobile: 'skin/509/509-mobileskin-5.jpg',
+            type: '102',
+            quality: '3'
         }
     ],
     [
@@ -1446,6 +1456,14 @@ export const datas = [
             mobile: 'skin/198/198-mobileskin-3.jpg',
             type: '15',
             quality: '4'
+        },
+        {
+            name: '梦奇-天降福星',
+            icon: 'skin/198/198-smallskin-4.jpg',
+            url: 'skin/198/198-bigskin-4.jpg',
+            mobile: 'skin/198/198-mobileskin-4.jpg',
+            type: '101',
+            quality: '3'
         }
     ],
     [

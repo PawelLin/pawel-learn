@@ -170,6 +170,7 @@ export const linkage = [
     { type: 'self', data: ['雅典娜-神奇女侠'] },
     { type: 'self', data: ['曜-李逍遥'] },
     { type: 'self', data: ['貂蝉-遇见胡旋'] },
+    { type: 'self', data: ['盾山-梦圆繁星'] },
     { type: 'self', data: ['张飞-乱世虎臣', '刘备-汉昭烈帝'] },
     { type: 'self', data: ['后羿-黄金射手座', '张良-黄金白羊座', '达摩-黄金狮子座'] },
     { type: 'self', data: ['不知火舞-明媚烈焰', '娜可露露-鹰之守护', '橘右京-神梦一刀', '宫本武藏-霸王丸'] },
@@ -196,6 +197,7 @@ export const vip = [
         '鲁班七号-星空梦想', '孙尚香-杀手不太冷', '小乔-天鹅之梦', '诸葛亮-星域神启', '关羽-赤影疾锋'
     ] },
     { type: '', data: ['虞姬-启明星使'] },
+    { type: '', data: ['梦奇-天降福星'] },
 ]
 
 export const activity = [
