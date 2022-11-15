@@ -2148,4 +2148,9 @@ export const history = [
         date: '2022-11-10',
         content: '星会员专属皮肤'
     },
+    {
+        name: '阿古朵-顽趣',
+        date: '2022-11-12',
+        content: '阿古朵史诗皮肤'
+    },
 ]

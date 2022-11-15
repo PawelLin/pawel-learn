@@ -1037,6 +1037,10 @@ export const heros: Data = {
 }
 
 export const kings = {
+    '2022-11-14': {
+        alt: 'S29',
+        src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
+    },
     '2022-8-7': {
         alt: 'S28',
         src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'

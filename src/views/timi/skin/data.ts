@@ -347,6 +347,14 @@ export const datas = [
             mobile: 'skin/533/533-mobileskin-2.jpg',
             type: '0',
             quality: '1'
+        },
+        {
+            name: '阿古朵-顽趣',
+            icon: 'skin/533/533-smallskin-3.jpg',
+            url: 'skin/533/533-bigskin-3.jpg',
+            mobile: 'skin/533/533-mobileskin-3.jpg',
+            type: '12',
+            quality: '3'
         }
     ],
     [
