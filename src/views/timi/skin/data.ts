@@ -101,6 +101,7 @@ export const types: Types = {
     100: 'skin/type/100.png',
     101: 'skin/type/101.png',
     102: 'skin/type/102.png',
+    103: 'skin/type/103.png',
 }
 
 export const positions = {
@@ -3683,6 +3684,14 @@ export const datas = [
             url: 'skin/133/133-bigskin-8.jpg',
             mobile: 'skin/133/133-mobileskin-8.jpg',
             type: '42',
+            quality: '4'
+        },
+        {
+            name: '狄仁杰-神器·狴犴令',
+            icon: 'skin/133/133-smallskin-9.jpg',
+            url: 'skin/133/133-bigskin-9.jpg',
+            mobile: 'skin/133/133-mobileskin-9.jpg',
+            type: '103',
             quality: '4'
         }
     ],
