@@ -9,7 +9,7 @@ const resolve = dir => {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    base: '/learn',
+    base: '/pawel-learn/',
     server: {
         open: true
     },
