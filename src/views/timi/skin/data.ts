@@ -116,6 +116,18 @@ export const positions = {
 export const datas = [
     [
         {
+            name: '赵怀真-自在之心',
+            icon: 'skin/544/544-smallskin-1.jpg',
+            url: 'skin/544/544-bigskin-1.jpg',
+            mobile: 'skin/544/544-mobileskin-1.jpg',
+            content: '流光一瞬，碧海桑田。',
+            type: '0',
+            position: '2',
+            quality: '0'
+        },
+    ],
+    [
+        {
             name: '海月-永夜之心',
             icon: 'skin/521/521-smallskin-1.jpg',
             url: 'skin/521/521-bigskin-1.jpg',
@@ -1091,6 +1103,14 @@ export const datas = [
             url: 'skin/125/125-bigskin-3.jpg',
             mobile: 'skin/125/125-mobileskin-3.jpg',
             type: '40',
+            quality: '3'
+        },
+        {
+            name: '元歌-无心',
+            icon: 'skin/125/125-smallskin-4.jpg',
+            url: 'skin/125/125-bigskin-4.jpg',
+            mobile: 'skin/125/125-mobileskin-4.jpg',
+            type: '65',
             quality: '3'
         }
     ],
