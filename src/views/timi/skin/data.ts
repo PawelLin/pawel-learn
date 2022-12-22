@@ -102,6 +102,7 @@ export const types: Types = {
     101: 'skin/type/101.png',
     102: 'skin/type/102.png',
     103: 'skin/type/103.png',
+    104: 'skin/type/104.png',
 }
 
 export const positions = {
@@ -3825,6 +3826,14 @@ export const datas = [
             mobile: 'skin/131/131-mobileskin-6.jpg',
             type: '26',
             quality: '4'
+        },
+        {
+            name: '李白-诗剑行',
+            icon: 'skin/131/131-smallskin-7.jpg',
+            url: 'skin/131/131-bigskin-7.jpg',
+            mobile: 'skin/131/131-mobileskin-7.jpg',
+            type: '104',
+            quality: '4'
         }
     ],
     [
@@ -4991,6 +5000,14 @@ export const datas = [
             mobile: 'skin/108/108-mobileskin-5.jpg',
             type: '40',
             quality: '2'
+        },
+        {
+            name: '墨子-降魔',
+            icon: 'skin/108/108-smallskin-6.jpg',
+            url: 'skin/108/108-bigskin-6.jpg',
+            mobile: 'skin/108/108-mobileskin-6.jpg',
+            type: '5',
+            quality: '3'
         }
     ],
     [
