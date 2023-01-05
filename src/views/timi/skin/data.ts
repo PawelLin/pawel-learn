@@ -103,6 +103,9 @@ export const types: Types = {
     102: 'skin/type/102.png',
     103: 'skin/type/103.png',
     104: 'skin/type/104.png',
+    105: 'skin/type/105.png',
+    106: 'skin/type/106.png',
+    107: 'skin/type/107.png',
 }
 
 export const positions = {
@@ -115,6 +118,18 @@ export const positions = {
 }
 
 export const datas = [
+    [
+        {
+            name: '莱西奥-火鹰船长',
+            icon: 'skin/545/545-smallskin-1.jpg',
+            url: 'skin/545/545-bigskin-1.jpg',
+            mobile: 'skin/545/545-mobileskin-1.jpg',
+            content: '流光一瞬，碧海桑田。',
+            type: '0',
+            position: '5',
+            quality: '0'
+        },
+    ],
     [
         {
             name: '赵怀真-自在之心',
@@ -137,6 +152,14 @@ export const datas = [
             type: '0',
             position: '4',
             quality: '0'
+        },
+        {
+            name: '海月-幻泉雾影',
+            icon: 'skin/521/521-smallskin-2.jpg',
+            url: 'skin/521/521-bigskin-2.jpg',
+            mobile: 'skin/521/521-mobileskin-2.jpg',
+            type: '1',
+            quality: '2'
         },
     ],
     [
@@ -177,6 +200,14 @@ export const datas = [
             mobile: 'skin/534/534-mobileskin-2.jpg',
             type: '0',
             quality: '1'
+        },
+        {
+            name: '桑启-海盐诗旅',
+            icon: 'skin/534/534-smallskin-3.jpg',
+            url: 'skin/534/534-bigskin-3.jpg',
+            mobile: 'skin/534/534-mobileskin-3.jpg',
+            type: '106',
+            quality: '2'
         }
     ],
     [
@@ -197,6 +228,14 @@ export const datas = [
             mobile: 'skin/542/542-mobileskin-2.jpg',
             type: '0',
             quality: '1'
+        },
+        {
+            name: '暃-星界游侠',
+            icon: 'skin/542/542-smallskin-3.jpg',
+            url: 'skin/542/542-bigskin-3.jpg',
+            mobile: 'skin/542/542-mobileskin-3.jpg',
+            type: '40',
+            quality: '3'
         }
     ],
     [
@@ -793,6 +832,14 @@ export const datas = [
             mobile: 'skin/515/515-mobileskin-4.jpg',
             type: '65',
             quality: '3'
+        },
+        {
+            name: '嫦娥-暖冬·兔眠',
+            icon: 'skin/515/515-smallskin-5.jpg',
+            url: 'skin/515/515-bigskin-5.jpg',
+            mobile: 'skin/515/515-mobileskin-5.jpg',
+            type: '40',
+            quality: '2'
         }
     ],
     [
@@ -1501,6 +1548,14 @@ export const datas = [
             url: 'skin/198/198-bigskin-4.jpg',
             mobile: 'skin/198/198-mobileskin-4.jpg',
             type: '101',
+            quality: '3'
+        },
+        {
+            name: '梦奇-顽趣',
+            icon: 'skin/198/198-smallskin-5.jpg',
+            url: 'skin/198/198-bigskin-5.jpg',
+            mobile: 'skin/198/198-mobileskin-5.jpg',
+            type: '105',
             quality: '3'
         }
     ],
@@ -4216,6 +4271,14 @@ export const datas = [
             mobile: 'skin/123/123-mobileskin-7.jpg',
             type: '81',
             quality: '3'
+        },
+        {
+            name: '吕布-怒海麟威',
+            icon: 'skin/123/123-smallskin-8.jpg',
+            url: 'skin/123/123-bigskin-8.jpg',
+            mobile: 'skin/123/123-mobileskin-8.jpg',
+            type: '107',
+            quality: '4'
         }
     ],
     [
