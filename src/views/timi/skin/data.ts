@@ -1733,6 +1733,14 @@ export const datas = [
             mobile: 'skin/193/193-mobileskin-5.jpg',
             type: '15',
             quality: '4'
+        },
+        {
+            name: '铠-银白咏叹调',
+            icon: 'skin/193/193-smallskin-6.jpg',
+            url: 'skin/193/193-bigskin-6.jpg',
+            mobile: 'skin/193/193-mobileskin-6.jpg',
+            type: '26',
+            quality: '4'
         }
     ],
     [
