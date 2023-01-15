@@ -1,13 +1,14 @@
 export const data = [
     {
-        name: '吉吉亲属队',
+        name: 'ONE PIECE',
         list: [
-            { name: '小丑局小丑', level: '王者', position: '发育路', hero: '铠,吕布,嬴政' },
-            { name: '发酒疯咋滴', level: '王者', position: '中路', hero: '甄姬,张良,小乔' },
-            { name: '果盘小牛牛', level: '王者', position: '打野', hero: '夏洛特,嬴政,姜子牙' },
-            { name: '魔法少女天霸', level: '钻石', position: '发育路', hero: '貂蝉,夏侯惇,李元芳' },
-            { name: '这GPS信号弱', level: '钻石', position: '中路', hero: '吕布,铠,伽罗' },
-            { name: '酒鬼爱毛豆', level: '王者', position: '中路', hero: '甄姬,嬴政,庄周' },
+            { name: '·L·', level: '王者', position: '辅助', hero: '武则天,项羽,甄姬' },
+            { name: '·Z·', level: '王者', position: '打野', hero: '孙悟空,阿轲,艾琳' },
+            { name: 'CA艾斯', level: '王者', position: '辅助', hero: '廉颇,艾琳,虞姬' },
+            { name: '北陌', level: '王者', position: '发育路', hero: '鲁班七号,姜子牙,小乔' },
+            { name: '不淡不咸', level: '王者', position: '中路', hero: '钟无艳,鲁班七号,赵云' },
+            { name: '樱桃吃啦丸子', level: '铂金', position: '中路', hero: '安琪拉,妲己,王昭君' },
+            { name: '东', level: '王者', position: '打野', hero: '鲁班七号,后羿,虞姬' },
         ]
     },
     {

@@ -3,9 +3,21 @@ interface Data {
 }
 
 export const skins: Data = {
+    '2023-1-1': {
+        alt: ['大乔-守护之力', '云中君-荷鲁斯之眼', '嫦娥-露花倒影', '李白-范海辛', '沈梦溪-棒球奇才', '程咬金-爱与正义', '百里玄策-威尼斯狂欢', '猪八戒-年年有余', '蔡文姬-舞动绿茵'],
+        src: ['skin/191/191-smallskin-3.jpg', 'skin/506/506-smallskin-2.jpg', 'skin/515/515-smallskin-2.jpg', 'skin/131/131-smallskin-2.jpg', 'skin/312/312-smallskin-2.jpg', 'skin/144/144-smallskin-2.jpg', 'skin/195/195-smallskin-2.jpg', 'skin/511/511-smallskin-2.jpg', 'skin/184/184-smallskin-4.jpg']
+    },
+    '2022-12-8': {
+        alt: '阿轲-节奏热浪',
+        src: 'skin/116/116-smallskin-5.jpg'
+    },
     '2022-12-2': {
         alt: '元歌-无心',
         src: 'skin/125/125-smallskin-4.jpg'
+    },
+    '2022-11-14': {
+        alt: '钟无艳-超时空战士',
+        src: 'skin/117/117-smallskin-5.jpg'
     },
     '2022-10-29': {
         alt: '鬼谷子-五谷丰年',
