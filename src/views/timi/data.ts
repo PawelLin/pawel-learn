@@ -3,6 +3,22 @@ interface Data {
 }
 
 export const skins: Data = {
+    '2023-1-12': {
+        alt: ['姜子牙-时尚教父', '张良-一千零一夜', '钟无艳-生化警戒'],
+        src: ['skin/148/148-smallskin-2.jpg', 'skin/156/156-smallskin-3.jpg', 'skin/117/117-smallskin-2.jpg']
+    },
+    '2023-1-9': {
+        alt: ['海月-幻泉雾影'],
+        src: ['skin/521/521-smallskin-2.jpg']
+    },
+    '2023-1-4': {
+        alt: ['桑启-海盐诗旅'],
+        src: ['skin/534/534-smallskin-3.jpg']
+    },
+    '2023-1-3': {
+        alt: ['嫦娥-暖冬·兔眠', '梦奇-顽趣'],
+        src: ['skin/515/515-smallskin-5.jpg', 'skin/198/198-smallskin-5.jpg']
+    },
     '2023-1-1': {
         alt: ['大乔-守护之力', '云中君-荷鲁斯之眼', '嫦娥-露花倒影', '李白-范海辛', '沈梦溪-棒球奇才', '程咬金-爱与正义', '百里玄策-威尼斯狂欢', '猪八戒-年年有余', '蔡文姬-舞动绿茵'],
         src: ['skin/191/191-smallskin-3.jpg', 'skin/506/506-smallskin-2.jpg', 'skin/515/515-smallskin-2.jpg', 'skin/131/131-smallskin-2.jpg', 'skin/312/312-smallskin-2.jpg', 'skin/144/144-smallskin-2.jpg', 'skin/195/195-smallskin-2.jpg', 'skin/511/511-smallskin-2.jpg', 'skin/184/184-smallskin-4.jpg']
