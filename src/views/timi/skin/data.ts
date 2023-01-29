@@ -652,6 +652,14 @@ export const datas = [
             mobile: 'skin/522/522-mobileskin-4.jpg',
             type: '84',
             quality: '4'
+        },
+        {
+            name: '曜-山海·苍雷引',
+            icon: 'skin/522/522-smallskin-5.jpg',
+            url: 'skin/522/522-bigskin-5.jpg',
+            mobile: 'skin/522/522-mobileskin-5.jpg',
+            type: '109',
+            quality: '4'
         }
     ],
     [
@@ -732,6 +740,14 @@ export const datas = [
             mobile: 'skin/505/505-mobileskin-5.jpg',
             type: '42',
             quality: '4'
+        },
+        {
+            name: '瑶-山海·碧波行',
+            icon: 'skin/505/505-smallskin-6.jpg',
+            url: 'skin/505/505-bigskin-6.jpg',
+            mobile: 'skin/505/505-mobileskin-6.jpg',
+            type: '109',
+            quality: '3'
         }
     ],
     [
@@ -796,6 +812,14 @@ export const datas = [
             mobile: 'skin/511/511-mobileskin-4.jpg',
             type: '89',
             quality: '3'
+        },
+        {
+            name: '猪八戒-潮玩探月行',
+            icon: 'skin/511/511-smallskin-5.jpg',
+            url: 'skin/511/511-bigskin-5.jpg',
+            mobile: 'skin/511/511-mobileskin-5.jpg',
+            type: '1',
+            quality: '2'
         }
     ],
     [
@@ -911,6 +935,14 @@ export const datas = [
             url: 'skin/507/507-bigskin-3.jpg',
             mobile: 'skin/507/507-mobileskin-3.jpg',
             type: '75',
+            quality: '4'
+        },
+        {
+            name: '李信-山海·炽霜斩',
+            icon: 'skin/507/507-smallskin-4.jpg',
+            url: 'skin/507/507-bigskin-4.jpg',
+            mobile: 'skin/507/507-mobileskin-4.jpg',
+            type: '109',
             quality: '4'
         }
     ],
@@ -2633,6 +2665,14 @@ export const datas = [
             mobile: 'skin/168/168-mobileskin-5.jpg',
             type: '81',
             quality: '3'
+        },
+        {
+            name: '牛魔-牛运亨通',
+            icon: 'skin/168/168-smallskin-6.jpg',
+            url: 'skin/168/168-bigskin-6.jpg',
+            mobile: 'skin/168/168-mobileskin-6.jpg',
+            type: '1',
+            quality: '2'
         }
     ],
     [
@@ -2709,6 +2749,14 @@ export const datas = [
             mobile: 'skin/167/167-mobileskin-9.jpg',
             type: '89',
             quality: '3'
+        },
+        {
+            name: '孙悟空-齐天大圣1',
+            icon: 'skin/167/167-smallskin-10.jpg',
+            url: 'skin/167/167-bigskin-10.jpg',
+            mobile: 'skin/167/167-mobileskin-10.jpg',
+            type: '5',
+            quality: '4'
         }
     ],
     [
@@ -3457,6 +3505,14 @@ export const datas = [
             mobile: 'skin/141/141-mobileskin-8.jpg',
             type: '96',
             quality: '3'
+        },
+        {
+            name: '貂蝉-幻阙歌',
+            icon: 'skin/141/141-smallskin-9.jpg',
+            url: 'skin/141/141-bigskin-9.jpg',
+            mobile: 'skin/141/141-mobileskin-9.jpg',
+            type: '26',
+            quality: '4'
         }
     ],
     [
@@ -3596,6 +3652,14 @@ export const datas = [
             url: 'skin/136/136-bigskin-4.jpg',
             mobile: 'skin/136/136-mobileskin-4.jpg',
             type: '26',
+            quality: '4'
+        },
+        {
+            name: '武则天-神器·明辉仪',
+            icon: 'skin/136/136-smallskin-5.jpg',
+            url: 'skin/136/136-bigskin-5.jpg',
+            mobile: 'skin/136/136-mobileskin-5.jpg',
+            type: '108',
             quality: '4'
         }
     ],
@@ -3837,6 +3901,14 @@ export const datas = [
             mobile: 'skin/132/132-mobileskin-6.jpg',
             type: '5',
             quality: '4'
+        },
+        {
+            name: '马可波罗-山海·玄木吟',
+            icon: 'skin/132/132-smallskin-7.jpg',
+            url: 'skin/132/132-bigskin-7.jpg',
+            mobile: 'skin/132/132-mobileskin-7.jpg',
+            type: '109',
+            quality: '3'
         }
     ],
     [
@@ -5246,6 +5318,14 @@ export const datas = [
             url: 'skin/106/106-bigskin-8.jpg',
             mobile: 'skin/106/106-mobileskin-8.jpg',
             type: '15',
+            quality: '4'
+        },
+        {
+            name: '小乔-山海·琳琅生',
+            icon: 'skin/106/106-smallskin-9.jpg',
+            url: 'skin/106/106-bigskin-9.jpg',
+            mobile: 'skin/106/106-mobileskin-9.jpg',
+            type: '109',
             quality: '4'
         }
     ],

@@ -3,6 +3,14 @@ interface Data {
 }
 
 export const skins: Data = {
+    '2023-1-22': {
+        alt: ['芈月-红桃皇后'],
+        src: ['skin/121/121-smallskin-2.jpg']
+    },
+    '2023-1-21': {
+        alt: ['小乔-山海·琳琅生', '猪八戒-潮玩探月行'],
+        src: ['skin/106/106-smallskin-9.jpg', 'skin/511/511-smallskin-5.jpg']
+    },
     '2023-1-12': {
         alt: ['姜子牙-时尚教父', '张良-一千零一夜', '钟无艳-生化警戒'],
         src: ['skin/148/148-smallskin-2.jpg', 'skin/156/156-smallskin-3.jpg', 'skin/117/117-smallskin-2.jpg']
