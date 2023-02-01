@@ -776,6 +776,14 @@ export const datas = [
             mobile: 'skin/529/529-mobileskin-3.jpg',
             type: '1',
             quality: '2'
+        },
+        {
+            name: '盘古-冰雪之怒',
+            icon: 'skin/529/529-smallskin-4.jpg',
+            url: 'skin/529/529-bigskin-4.jpg',
+            mobile: 'skin/529/529-mobileskin-4.jpg',
+            type: '5',
+            quality: '3'
         }
     ],
     [
