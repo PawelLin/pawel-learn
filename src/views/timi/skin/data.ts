@@ -1048,6 +1048,14 @@ export const datas = [
             mobile: 'skin/508/508-mobileskin-5.jpg',
             type: '19',
             quality: '3'
+        },
+        {
+            name: '伽罗-炽翼辉光',
+            icon: 'skin/508/508-smallskin-6.jpg',
+            url: 'skin/508/508-bigskin-6.jpg',
+            mobile: 'skin/508/508-mobileskin-6.jpg',
+            type: '5',
+            quality: '4'
         }
     ],
     [

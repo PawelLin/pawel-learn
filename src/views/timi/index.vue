@@ -4,29 +4,33 @@
             <div v-for="({ year, months, skinsLength, herosLength }, index1) in list" :key="year">
                 <p>
                     <a v-if="index1" @click="handleTransform(1, year - 1)" href="javascript:;" class="ignore-save">{{year - 1}}</a>
-                    <span>[{{skinsLength}}]</span>
+                    <span v-if="!onlyKing">[{{skinsLength}}]</span>
                     <span class="year" @click="save(index1)">{{year}}</span>
-                    <span>[{{herosLength}}]</span>
+                    <span v-if="!onlyKing">[{{herosLength}}]</span>
                     <a v-if="index1 < list.length - 1" @click="handleTransform(-1, year + 1)" href="javascript:;" class="ignore-save">{{year + 1}}</a>
                 </p>
                 <div v-for="({ skins, title, heros, isKing }, index2) in months" :key="`${year}${index2}`" :class="isKing ? 'king-div' : null">
                     <template v-if="showYears.includes(year)">
                         <div class="skin">
-                            <template v-for="({ src, alt }, index3) in skins">
-                                <!-- <div v-for="(img, index4) in src" class="image" :style="{ backgroundImage: `url(${getImageUrl(img)})` }" :title="alt[index4]" :key="`${year}${index2}${index3}${index4}`"></div> -->
-                                <img v-for="(img, index4) in src" class="image" :src="getImageUrl(img)" :title="alt[index4]" :key="`${year}${index2}${index3}${index4}`">
+                            <template v-if="!onlyKing">
+                                <template v-for="({ src, alt }, index3) in skins">
+                                    <!-- <div v-for="(img, index4) in src" class="image" :style="{ backgroundImage: `url(${getImageUrl(img)})` }" :title="alt[index4]" :key="`${year}${index2}${index3}${index4}`"></div> -->
+                                    <img v-for="(img, index4) in src" class="image" :src="getImageUrl(img)" :title="alt[index4]" :key="`${year}${index2}${index3}${index4}`">
+                                </template>
                             </template>
                         </div>
                         <div class="timeline">
                             <div class="month" :class="isKing && 'king'" :title="isKing">
                                 {{title}}
-                                <img v-if="isKing" class="king-icon" src="@/assets/rank/rank16.png" alt="">
+                                <img v-if="isKing" @click="changeOnlyKing" class="king-icon" src="@/assets/rank/rank16.png" alt="">
                             </div>
                         </div>
                         <div class="hero">
-                            <template v-for="({ src, alt }, index3) in heros">
-                                <!-- <div v-for="(img, index4) in src" class="image" :style="{ backgroundImage: `url(${getImageUrl(img)})` }" :title="alt[index4]" :key="`${year}${index2}${index3}${index4}`"></div> -->
-                                <img v-for="(img, index4) in src" class="image" :src="getImageUrl(img)" :title="alt[index4]" :key="`${year}${index2}${index3}${index4}`">
+                            <template v-if="!onlyKing">
+                                <template v-for="({ src, alt }, index3) in heros">
+                                    <!-- <div v-for="(img, index4) in src" class="image" :style="{ backgroundImage: `url(${getImageUrl(img)})` }" :title="alt[index4]" :key="`${year}${index2}${index3}${index4}`"></div> -->
+                                    <img v-for="(img, index4) in src" class="image" :src="getImageUrl(img)" :title="alt[index4]" :key="`${year}${index2}${index3}${index4}`">
+                                </template>
                             </template>
                         </div>
                     </template>
@@ -137,13 +141,17 @@ export default defineComponent({
                 })
             })
         }
+        const onlyKing = ref(false)
+        const changeOnlyKing = () => onlyKing.value = !onlyKing.value
         return {
             list,
             translateX,
             handleTransform,
             getImageUrl,
             showYears,
-            save
+            save,
+            onlyKing,
+            changeOnlyKing
         }
     },
 })
