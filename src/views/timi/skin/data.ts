@@ -106,6 +106,9 @@ export const types: Types = {
     105: 'skin/type/105.png',
     106: 'skin/type/106.png',
     107: 'skin/type/107.png',
+    108: 'skin/type/108.png',
+    109: 'skin/type/109.png',
+    110: 'skin/type/110.png',
 }
 
 export const positions = {
@@ -2421,6 +2424,14 @@ export const datas = [
             mobile: 'skin/174/174-mobileskin-6.jpg',
             type: '79',
             quality: '4'
+        },
+        {
+            name: '虞姬-无限倾心',
+            icon: 'skin/174/174-smallskin-7.jpg',
+            url: 'skin/174/174-bigskin-7.jpg',
+            mobile: 'skin/174/174-mobileskin-7.jpg',
+            type: '110',
+            quality: '4'
         }
     ],
     [
@@ -3737,6 +3748,14 @@ export const datas = [
             mobile: 'skin/135/135-mobileskin-7.jpg',
             type: '1',
             quality: '2'
+        },
+        {
+            name: '项羽-无限倾心',
+            icon: 'skin/135/135-smallskin-8.jpg',
+            url: 'skin/135/135-bigskin-8.jpg',
+            mobile: 'skin/135/135-mobileskin-8.jpg',
+            type: '110',
+            quality: '4'
         }
     ],
     [

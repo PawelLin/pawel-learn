@@ -4,8 +4,8 @@ interface Data {
 
 export const skins: Data = {
     '2023-2-1': {
-        alt: ['露娜-哥特玫瑰', '韩信-街头霸王'],
-        src: ['skin/146/146-smallskin-2.jpg', 'skin/150/150-smallskin-2.jpg']
+        alt: ['露娜-哥特玫瑰', '韩信-街头霸王', '孙膑-天使之翼'],
+        src: ['skin/146/146-smallskin-2.jpg', 'skin/150/150-smallskin-2.jpg', 'skin/118/118-smallskin-3.jpg']
     },
     '2023-1-22': {
         alt: ['芈月-红桃皇后'],
