@@ -4490,6 +4490,14 @@ export const datas = [
             mobile: 'skin/120/120-mobileskin-5.jpg',
             type: '40',
             quality: '2'
+        },
+        {
+            name: '白起-乐园追猎者',
+            icon: 'skin/120/120-smallskin-6.jpg',
+            url: 'skin/120/120-bigskin-6.jpg',
+            mobile: 'skin/120/120-mobileskin-6.jpg',
+            type: '1',
+            quality: '2'
         }
     ],
     [
