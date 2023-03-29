@@ -383,6 +383,14 @@ export const datas = [
             mobile: 'skin/536/536-mobileskin-2.jpg',
             type: '12',
             quality: '3'
+        },
+        {
+            name: '夏洛特-浮生妄',
+            icon: 'skin/536/536-smallskin-3.jpg',
+            url: 'skin/536/536-bigskin-3.jpg',
+            mobile: 'skin/536/536-mobileskin-3.jpg',
+            type: '5',
+            quality: '4'
         }
     ],
     [
@@ -474,6 +482,14 @@ export const datas = [
             url: 'skin/531/531-bigskin-4.jpg',
             mobile: 'skin/531/531-mobileskin-4.jpg',
             type: '19',
+            quality: '3'
+        },
+        {
+            name: '镜-玫瑰异探',
+            icon: 'skin/531/531-smallskin-5.jpg',
+            url: 'skin/531/531-bigskin-5.jpg',
+            mobile: 'skin/531/531-mobileskin-5.jpg',
+            type: '12',
             quality: '3'
         }
     ],
@@ -1888,6 +1904,14 @@ export const datas = [
             mobile: 'skin/182/182-mobileskin-6.jpg',
             type: '50',
             quality: '2'
+        },
+        {
+            name: '干将莫邪-画中仙',
+            icon: 'skin/182/182-smallskin-7.jpg',
+            url: 'skin/182/182-bigskin-7.jpg',
+            mobile: 'skin/182/182-mobileskin-7.jpg',
+            type: '5',
+            quality: '4'
         }
     ],
     [
@@ -3031,6 +3055,22 @@ export const datas = [
             url: 'skin/154/154-bigskin-8.jpg',
             mobile: 'skin/154/154-mobileskin-8.jpg',
             type: '82',
+            quality: '4'
+        },
+        {
+            name: '花木兰-九霄神辉',
+            icon: 'skin/154/154-smallskin-9.jpg',
+            url: 'skin/154/154-bigskin-9.jpg',
+            mobile: 'skin/154/154-mobileskin-9.jpg',
+            type: '26',
+            quality: '4'
+        },
+        {
+            name: '花木兰-燃星之曲',
+            icon: 'skin/154/154-smallskin-10.jpg',
+            url: 'skin/154/154-bigskin-10.jpg',
+            mobile: 'skin/154/154-mobileskin-10.jpg',
+            type: '5',
             quality: '4'
         }
     ],
