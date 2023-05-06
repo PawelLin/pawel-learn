@@ -109,6 +109,9 @@ export const types: Types = {
     108: 'skin/type/108.png',
     109: 'skin/type/109.png',
     110: 'skin/type/110.png',
+    111: 'skin/type/111.png',
+    112: 'skin/type/112.png',
+    113: 'skin/type/113.png',
 }
 
 export const positions = {
@@ -123,6 +126,18 @@ export const positions = {
 export const datas = [
     [
         {
+            name: '姬小满-武道奇才',
+            icon: 'skin/564/564-smallskin-1.jpg',
+            url: 'skin/564/564-bigskin-1.jpg',
+            mobile: 'skin/564/564-mobileskin-1.jpg',
+            content: '流光一瞬，碧海桑田。',
+            type: '0',
+            position: '2',
+            quality: '0'
+        },
+    ],
+    [
+        {
             name: '莱西奥-火鹰船长',
             icon: 'skin/545/545-smallskin-1.jpg',
             url: 'skin/545/545-bigskin-1.jpg',
@@ -131,6 +146,14 @@ export const datas = [
             type: '0',
             position: '5',
             quality: '0'
+        },
+        {
+            name: '莱西奥-西部游侠',
+            icon: 'skin/545/545-smallskin-2.jpg',
+            url: 'skin/545/545-bigskin-2.jpg',
+            mobile: 'skin/545/545-mobileskin-2.jpg',
+            type: '1',
+            quality: '2'
         },
     ],
     [
@@ -143,6 +166,14 @@ export const datas = [
             type: '0',
             position: '2',
             quality: '0'
+        },
+        {
+            name: '赵怀真-太极少年',
+            icon: 'skin/544/544-smallskin-2.jpg',
+            url: 'skin/544/544-bigskin-2.jpg',
+            mobile: 'skin/544/544-mobileskin-2.jpg',
+            type: '1',
+            quality: '2'
         },
     ],
     [
@@ -1412,6 +1443,14 @@ export const datas = [
             mobile: 'skin/502/502-mobileskin-6.jpg',
             type: '93',
             quality: '4'
+        },
+        {
+            name: '裴擒虎-擒涛扼浪',
+            icon: 'skin/502/502-smallskin-7.jpg',
+            url: 'skin/502/502-bigskin-7.jpg',
+            mobile: 'skin/502/502-mobileskin-7.jpg',
+            type: '111',
+            quality: '2'
         }
     ],
     [
@@ -1447,6 +1486,14 @@ export const datas = [
             url: 'skin/176/176-bigskin-4.jpg',
             mobile: 'skin/176/176-mobileskin-4.jpg',
             type: '93',
+            quality: '3'
+        },
+        {
+            name: '杨玉环-银翎春语',
+            icon: 'skin/176/176-smallskin-5.jpg',
+            url: 'skin/176/176-bigskin-5.jpg',
+            mobile: 'skin/176/176-mobileskin-5.jpg',
+            type: '12',
             quality: '3'
         }
     ],
@@ -1500,6 +1547,14 @@ export const datas = [
             mobile: 'skin/199/199-mobileskin-6.jpg',
             type: '89',
             quality: '3'
+        },
+        {
+            name: '公孙离-记忆之芯',
+            icon: 'skin/199/199-smallskin-7.jpg',
+            url: 'skin/199/199-bigskin-7.jpg',
+            mobile: 'skin/199/199-mobileskin-7.jpg',
+            type: '15',
+            quality: '4'
         }
     ],
     [
@@ -2184,6 +2239,14 @@ export const datas = [
             mobile: 'skin/186/186-mobileskin-4.jpg',
             type: '9',
             quality: '2'
+        },
+        {
+            name: '太乙真人-劲辣红锅',
+            icon: 'skin/186/186-smallskin-5.jpg',
+            url: 'skin/186/186-bigskin-5.jpg',
+            mobile: 'skin/186/186-mobileskin-5.jpg',
+            type: '50',
+            quality: '2'
         }
     ],
     [
@@ -2332,6 +2395,14 @@ export const datas = [
             mobile: 'skin/178/178-mobileskin-5.jpg',
             type: '12',
             quality: '3'
+        },
+        {
+            name: '杨戬-潮玩骑兵',
+            icon: 'skin/178/178-smallskin-6.jpg',
+            url: 'skin/178/178-bigskin-6.jpg',
+            mobile: 'skin/178/178-mobileskin-6.jpg',
+            type: '40',
+            quality: '2'
         }
     ],
     [
@@ -2552,6 +2623,14 @@ export const datas = [
             mobile: 'skin/171/171-mobileskin-4.jpg',
             type: '72',
             quality: '3'
+        },
+        {
+            name: '张飞-百相守梦',
+            icon: 'skin/171/171-smallskin-5.jpg',
+            url: 'skin/171/171-bigskin-5.jpg',
+            mobile: 'skin/171/171-mobileskin-5.jpg',
+            type: '112',
+            quality: '4'
         }
     ],
     [
@@ -2604,6 +2683,14 @@ export const datas = [
             mobile: 'skin/170/170-mobileskin-6.jpg',
             type: '1',
             quality: '2'
+        },
+        {
+            name: '刘备-百相守梦',
+            icon: 'skin/170/170-smallskin-7.jpg',
+            url: 'skin/170/170-bigskin-7.jpg',
+            mobile: 'skin/170/170-mobileskin-7.jpg',
+            type: '112',
+            quality: '3'
         }
     ],
     [
@@ -3632,6 +3719,14 @@ export const datas = [
             mobile: 'skin/140/140-mobileskin-6.jpg',
             type: '26',
             quality: '4'
+        },
+        {
+            name: '关羽-百相守梦',
+            icon: 'skin/140/140-smallskin-7.jpg',
+            url: 'skin/140/140-bigskin-7.jpg',
+            mobile: 'skin/140/140-mobileskin-7.jpg',
+            type: '112',
+            quality: '3'
         }
     ],
     [
@@ -4574,6 +4669,14 @@ export const datas = [
             mobile: 'skin/119/119-mobileskin-4.jpg',
             type: '57',
             quality: '2'
+        },
+        {
+            name: '扁鹊-奇幻香踪',
+            icon: 'skin/119/119-smallskin-5.jpg',
+            url: 'skin/119/119-bigskin-5.jpg',
+            mobile: 'skin/119/119-mobileskin-5.jpg',
+            type: '40',
+            quality: '3'
         }
     ],
     [
@@ -5182,6 +5285,14 @@ export const datas = [
             mobile: 'skin/109/109-mobileskin-9.jpg',
             type: '5',
             quality: '3'
+        },
+        {
+            name: '妲己-青丘·九尾',
+            icon: 'skin/109/109-smallskin-10.jpg',
+            url: 'skin/109/109-bigskin-10.jpg',
+            mobile: 'skin/109/109-mobileskin-10.jpg',
+            type: '113',
+            quality: '4'
         }
     ],
     [

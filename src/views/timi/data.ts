@@ -3,6 +3,30 @@ interface Data {
 }
 
 export const skins: Data = {
+    '2023-5-1': {
+        alt: ['太乙真人-劲辣红锅'],
+        src: ['skin/186/186-smallskin-5.jpg']
+    },
+    '2023-4-28': {
+        alt: ['嬴政-优雅恋人'],
+        src: ['skin/110/110-smallskin-4.jpg']
+    },
+    '2023-4-19': {
+        alt: ['裴擒虎-擒涛扼浪'],
+        src: ['skin/502/502-smallskin-7.jpg']
+    },
+    '2023-4-15': {
+        alt: ['杨戬-潮玩骑兵'],
+        src: ['skin/178/178-smallskin-6.jpg']
+    },
+    '2023-4-9': {
+        alt: ['钟无艳-王者之锤'],
+        src: ['skin/117/117-smallskin-3.jpg']
+    },
+    '2023-3-31': {
+        alt: ['牛魔-西部大镖客', '赵怀真-太极少年'],
+        src: ['skin/168/168-smallskin-2.jpg', 'skin/544/544-smallskin-2.jpg']
+    },
     '2023-3-4': {
         alt: ['铠-龙域领主'],
         src: ['skin/193/193-smallskin-2.jpg']
@@ -710,6 +734,14 @@ export const skins: Data = {
 }
 
 export const heros: Data = {
+    '2023-4-15': {
+        alt: '姬小满-武道奇才',
+        src: 'skin/564/564-smallskin-1.jpg',
+    },
+    '2023-1-3': {
+        alt: '莱西奥-火鹰船长',
+        src: 'skin/545/545-smallskin-1.jpg',
+    },
     '2022-12-1': {
         alt: '赵怀真-自在之心',
         src: 'skin/544/544-smallskin-1.jpg',

@@ -60,7 +60,7 @@
 
 <script lang="ts">
 import { defineComponent, ref, reactive, computed } from 'vue'
-import { data } from './kpl'
+import { data } from './kpl-2023春季赛'
 import { datas as heroData, positions } from '../skin/data'
 import { getImageUrl as getImageUrlUtils } from '@/libs/utils'
 
