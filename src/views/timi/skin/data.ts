@@ -112,6 +112,8 @@ export const types: Types = {
     111: 'skin/type/111.png',
     112: 'skin/type/112.png',
     113: 'skin/type/113.png',
+    114: 'skin/type/114.png',
+    115: 'skin/type/115.png',
 }
 
 export const positions = {
@@ -1054,6 +1056,14 @@ export const datas = [
             mobile: 'skin/312/312-mobileskin-6.jpg',
             type: '91',
             quality: '2'
+        },
+        {
+            name: '沈梦溪-匿光破解者',
+            icon: 'skin/312/312-smallskin-7.jpg',
+            url: 'skin/312/312-bigskin-7.jpg',
+            mobile: 'skin/312/312-mobileskin-7.jpg',
+            type: '19',
+            quality: '3'
         }
     ],
     [
@@ -2939,6 +2949,14 @@ export const datas = [
             mobile: 'skin/166/166-mobileskin-5.jpg',
             type: '40',
             quality: '2'
+        },
+        {
+            name: '亚瑟-追逃游戏',
+            icon: 'skin/166/166-smallskin-6.jpg',
+            url: 'skin/166/166-bigskin-6.jpg',
+            mobile: 'skin/166/166-mobileskin-6.jpg',
+            type: '114',
+            quality: '4'
         }
     ],
     [
@@ -3591,6 +3609,14 @@ export const datas = [
             mobile: 'skin/142/142-mobileskin-6.jpg',
             type: '12',
             quality: '3'
+        },
+        {
+            name: '安琪拉-追逃游戏',
+            icon: 'skin/142/142-smallskin-7.jpg',
+            url: 'skin/142/142-bigskin-7.jpg',
+            mobile: 'skin/142/142-mobileskin-7.jpg',
+            type: '115',
+            quality: '4'
         }
     ],
     [
