@@ -396,6 +396,14 @@ export const datas = [
             mobile: 'skin/528/528-mobileskin-3.jpg',
             type: '12',
             quality: '3'
+        },
+        {
+            name: '澜-电玩·雷克斯',
+            icon: 'skin/528/528-smallskin-4.jpg',
+            url: 'skin/528/528-bigskin-4.jpg',
+            mobile: 'skin/528/528-mobileskin-4.jpg',
+            type: '15',
+            quality: '4'
         }
     ],
     [
@@ -2309,6 +2317,14 @@ export const datas = [
             mobile: 'skin/184/184-mobileskin-6.jpg',
             type: '15',
             quality: '4'
+        },
+        {
+            name: '蔡文姬-电玩·兔顽号',
+            icon: 'skin/184/184-smallskin-7.jpg',
+            url: 'skin/184/184-bigskin-7.jpg',
+            mobile: 'skin/184/184-mobileskin-7.jpg',
+            type: '12',
+            quality: '3'
         }
     ],
     [
@@ -4955,6 +4971,14 @@ export const datas = [
             mobile: 'skin/114/114-mobileskin-6.jpg',
             type: '50',
             quality: '2'
+        },
+        {
+            name: '刘禅-电玩·爆裂旋风',
+            icon: 'skin/114/114-smallskin-7.jpg',
+            url: 'skin/114/114-bigskin-7.jpg',
+            mobile: 'skin/114/114-mobileskin-7.jpg',
+            type: '12',
+            quality: '3'
         }
     ],
     [

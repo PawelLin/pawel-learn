@@ -5,7 +5,7 @@
 </template>
 <script lang="ts" setup>
 import { computed } from 'vue'
-type ICONS = 'svg-brave' | 'svg-archive-logo' | 'svg-archive-build-success'
+type ICONS = 'svg-brave' | 'svg-archive-logo' | 'svg-archive-build-success' | 'svg-froad-logo'
 const props = defineProps<{
     icon: ICONS
     color?: string
@@ -33,5 +33,8 @@ const color = computed(() => props.color || 'black')
 }
 .svg-archive-build-success {
     mask-image: url(./svg/archive/build-success.svg);
+}
+.svg-froad-logo {
+    mask-image: url(./svg/froad-logo.svg);
 }
 </style>
