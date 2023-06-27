@@ -114,6 +114,7 @@ export const types: Types = {
     113: 'skin/type/113.png',
     114: 'skin/type/114.png',
     115: 'skin/type/115.png',
+    116: 'skin/type/116.png',
 }
 
 export const positions = {
@@ -128,6 +129,18 @@ export const positions = {
 export const datas = [
     [
         {
+            name: '亚连-追忆之刃',
+            icon: 'skin/514/514-smallskin-1.jpg',
+            url: 'skin/514/514-bigskin-1.jpg',
+            mobile: 'skin/514/514-mobileskin-1.jpg',
+            content: '流光一瞬，碧海桑田。',
+            type: '0',
+            position: '2',
+            quality: '0'
+        },
+    ],
+    [
+        {
             name: '姬小满-武道奇才',
             icon: 'skin/564/564-smallskin-1.jpg',
             url: 'skin/564/564-bigskin-1.jpg',
@@ -136,6 +149,14 @@ export const datas = [
             type: '0',
             position: '2',
             quality: '0'
+        },
+        {
+            name: '姬小满-零食大作战',
+            icon: 'skin/564/564-smallskin-2.jpg',
+            url: 'skin/564/564-bigskin-2.jpg',
+            mobile: 'skin/564/564-mobileskin-2.jpg',
+            type: '1',
+            quality: '2'
         },
     ],
     [
@@ -216,6 +237,14 @@ export const datas = [
             mobile: 'skin/548/548-mobileskin-2.jpg',
             type: '1',
             quality: '2'
+        },
+        {
+            name: '戈娅-驭风魔法',
+            icon: 'skin/548/548-smallskin-3.jpg',
+            url: 'skin/548/548-bigskin-3.jpg',
+            mobile: 'skin/548/548-mobileskin-3.jpg',
+            type: '40',
+            quality: '3'
         },
     ],
     [
@@ -604,6 +633,14 @@ export const datas = [
             mobile: 'skin/525/525-mobileskin-3.jpg',
             type: '50',
             quality: '2'
+        },
+        {
+            name: '鲁班大师-探海日志',
+            icon: 'skin/525/525-smallskin-5.jpg',
+            url: 'skin/525/525-bigskin-5.jpg',
+            mobile: 'skin/525/525-mobileskin-5.jpg',
+            type: '116',
+            quality: '2'
         }
     ],
     [
@@ -640,6 +677,14 @@ export const datas = [
             mobile: 'skin/523/523-mobileskin-4.jpg',
             type: '51',
             quality: '4'
+        },
+        {
+            name: '西施-玲珑珍味',
+            icon: 'skin/523/523-smallskin-5.jpg',
+            url: 'skin/523/523-bigskin-5.jpg',
+            mobile: 'skin/523/523-mobileskin-5.jpg',
+            type: '40',
+            quality: '2'
         }
     ],
     [
@@ -2177,6 +2222,14 @@ export const datas = [
             mobile: 'skin/190/190-mobileskin-7.jpg',
             type: '26',
             quality: '4'
+        },
+        {
+            name: '诸葛亮-鹤羽星尊',
+            icon: 'skin/190/190-smallskin-8.jpg',
+            url: 'skin/190/190-bigskin-8.jpg',
+            mobile: 'skin/190/190-mobileskin-8.jpg',
+            type: '5',
+            quality: '4'
         }
     ],
     [
@@ -3373,6 +3426,14 @@ export const datas = [
             mobile: 'skin/150/150-mobileskin-7.jpg',
             type: '5',
             quality: '3'
+        },
+        {
+            name: '韩信-弑枪猎影',
+            icon: 'skin/150/150-smallskin-8.jpg',
+            url: 'skin/150/150-bigskin-8.jpg',
+            mobile: 'skin/150/150-mobileskin-8.jpg',
+            type: '26',
+            quality: '4'
         }
     ],
     [

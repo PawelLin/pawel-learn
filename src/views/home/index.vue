@@ -2,8 +2,8 @@
     <div class="home">
         <!-- <h1>JavaScript Learning</h1> -->
         <!-- <InputNumber v-model="number"/> -->
-        <Fund />
-        <Cascade :data="object" />
+        <!-- <Fund /> -->
+        <!-- <Cascade :data="object" /> -->
         <Cascade :data="data" />
         <Cascade :data="data" align="center" />
         <Cascade :data="data" align="bottom" />
@@ -53,5 +53,6 @@ const data =
 <style lang="less" scoped>
 .home {
     padding: 20px;
+    text-align: center;
 }
 </style>

@@ -3,6 +3,14 @@ interface Data {
 }
 
 export const skins: Data = {
+    '2023-6-27': {
+        alt: ['西施-玲珑珍味'],
+        src: ['skin/523/523-smallskin-5.jpg']
+    },
+    '2023-6-25': {
+        alt: ['鲁班七号-福禄兄弟'],
+        src: ['skin/112/112-smallskin-3.jpg']
+    },
     '2023-5-26': {
         alt: ['明世隐-占星师'],
         src: ['skin/501/501-smallskin-2.jpg']
@@ -533,7 +541,7 @@ export const skins: Data = {
     },
     '2020-1-24': {
         alt: ['韩信-飞衡', '鲁班七号-黑桃队长', '赵云-皇家上将'],
-        src: ['skin/150/150-smallskin-6.jpg','skin/112/112-smallskin-4.jpg', 'skin/107/107-smallskin-4.jpg']
+        src: ['skin/150/150-smallskin-6.jpg', 'skin/112/112-smallskin-4.jpg', 'skin/107/107-smallskin-4.jpg']
     },
     '2020-1-23': {
         alt: ['王昭君-偶像歌手', '孙尚香-末日机甲'],
