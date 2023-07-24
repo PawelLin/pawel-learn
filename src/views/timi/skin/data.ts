@@ -1365,6 +1365,14 @@ export const datas = [
             mobile: 'skin/504/504-mobileskin-5.jpg',
             type: '1',
             quality: '2'
+        },
+        {
+            name: '米莱狄-完美假期',
+            icon: 'skin/504/504-smallskin-6.jpg',
+            url: 'skin/504/504-bigskin-6.jpg',
+            mobile: 'skin/504/504-mobileskin-6.jpg',
+            type: '12',
+            quality: '3'
         }
     ],
     [
@@ -2058,6 +2066,14 @@ export const datas = [
             mobile: 'skin/187/187-mobileskin-3.jpg',
             type: '19',
             quality: '3'
+        },
+        {
+            name: '东皇太一-灼幽烈阳',
+            icon: 'skin/187/187-smallskin-4.jpg',
+            url: 'skin/187/187-bigskin-4.jpg',
+            mobile: 'skin/187/187-mobileskin-4.jpg',
+            type: '107',
+            quality: '4'
         }
     ],
     [
