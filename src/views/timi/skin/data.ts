@@ -2682,6 +2682,14 @@ export const datas = [
             mobile: 'skin/173/173-mobileskin-7.jpg',
             type: '99',
             quality: '2'
+        },
+        {
+            name: '李元芳-妄想特派',
+            icon: 'skin/173/173-smallskin-8.jpg',
+            url: 'skin/173/173-bigskin-8.jpg',
+            mobile: 'skin/173/173-mobileskin-8.jpg',
+            type: '50',
+            quality: '2'
         }
     ],
     [
@@ -4198,6 +4206,14 @@ export const datas = [
             mobile: 'skin/132/132-mobileskin-7.jpg',
             type: '109',
             quality: '3'
+        },
+        {
+            name: '马可波罗-妄想实况',
+            icon: 'skin/132/132-smallskin-8.jpg',
+            url: 'skin/132/132-bigskin-8.jpg',
+            mobile: 'skin/132/132-mobileskin-8.jpg',
+            type: '5',
+            quality: '4'
         }
     ],
     [

@@ -3,7 +3,7 @@
         <!-- <h1>JavaScript Learning</h1> -->
         <!-- <InputNumber v-model="number"/> -->
         <!-- <Fund /> -->
-        <!-- <Cascade :data="object" /> -->
+        <!-- <Cascade :data="object" /> -->abc
         <Cascade :data="data" />
         <Cascade :data="data" align="center" />
         <Cascade :data="data" align="bottom" />
