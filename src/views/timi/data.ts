@@ -3,6 +3,18 @@ interface Data {
 }
 
 export const skins: Data = {
+    '2023-8-14': {
+        alt: ['哪吒-热血海滩'],
+        src: ['skin/180/180-smallskin-6.webp']
+    },
+    '2023-8-5': {
+        alt: ['李元芳-妄想特派'],
+        src: ['skin/173/173-smallskin-8.jpg']
+    },
+    '2023-7-29': {
+        alt: ['花木兰-剑舞者'],
+        src: ['skin/154/154-smallskin-2.jpg']
+    },
     '2023-7-1': {
         alt: ['鲁班大师-探海日志', '姬小满-零食大作战'],
         src: ['skin/525/525-smallskin-5.jpg', 'skin/564/564-smallskin-2.jpg']
@@ -14,6 +26,10 @@ export const skins: Data = {
     '2023-6-25': {
         alt: ['鲁班七号-福禄兄弟'],
         src: ['skin/112/112-smallskin-3.jpg']
+    },
+    '2023-6-17': {
+        alt: ['刘禅-电玩·爆裂旋风'],
+        src: ['skin/114/114-smallskin-7.jpg']
     },
     '2023-5-26': {
         alt: ['明世隐-占星师'],

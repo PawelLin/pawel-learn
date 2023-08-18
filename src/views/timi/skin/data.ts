@@ -115,6 +115,9 @@ export const types: Types = {
     114: 'skin/type/114.png',
     115: 'skin/type/115.png',
     116: 'skin/type/116.png',
+    117: 'skin/type/117.webp',
+    118: 'skin/type/118.webp',
+    119: 'skin/type/119.webp',
 }
 
 export const positions = {
@@ -198,6 +201,14 @@ export const datas = [
             type: '1',
             quality: '2'
         },
+        {
+            name: '赵怀真-鹤归松栖',
+            icon: 'skin/544/544-smallskin-3.webp',
+            url: 'skin/544/544-bigskin-3.jpg',
+            mobile: 'skin/544/544-mobileskin-3.jpg',
+            type: '118',
+            quality: '3'
+        },
     ],
     [
         {
@@ -217,6 +228,14 @@ export const datas = [
             mobile: 'skin/521/521-mobileskin-2.jpg',
             type: '1',
             quality: '2'
+        },
+        {
+            name: '海月-浮梦罗烟',
+            icon: 'skin/521/521-smallskin-3.webp',
+            url: 'skin/521/521-bigskin-3.jpg',
+            mobile: 'skin/521/521-mobileskin-3.jpg',
+            type: '12',
+            quality: '3'
         },
     ],
     [
@@ -349,6 +368,14 @@ export const datas = [
             mobile: 'skin/538/538-mobileskin-2.jpg',
             type: '0',
             quality: '1'
+        },
+        {
+            name: '云缨-鹤归松栖',
+            icon: 'skin/538/538-smallskin-3.webp',
+            url: 'skin/538/538-bigskin-3.jpg',
+            mobile: 'skin/538/538-mobileskin-3.jpg',
+            type: '119',
+            quality: '4'
         }
     ],
     [
@@ -559,6 +586,14 @@ export const datas = [
             icon: 'skin/531/531-smallskin-5.jpg',
             url: 'skin/531/531-bigskin-5.jpg',
             mobile: 'skin/531/531-mobileskin-5.jpg',
+            type: '12',
+            quality: '3'
+        },
+        {
+            name: '镜-真我赫兹',
+            icon: 'skin/531/531-smallskin-6.webp',
+            url: 'skin/531/531-bigskin-6.jpg',
+            mobile: 'skin/531/531-mobileskin-6.jpg',
             type: '12',
             quality: '3'
         }
@@ -853,6 +888,14 @@ export const datas = [
             mobile: 'skin/505/505-mobileskin-6.jpg',
             type: '109',
             quality: '3'
+        },
+        {
+            name: '瑶-真我赫兹',
+            icon: 'skin/505/505-smallskin-7.webp',
+            url: 'skin/505/505-bigskin-7.jpg',
+            mobile: 'skin/505/505-mobileskin-7.jpg',
+            type: '117',
+            quality: '4'
         }
     ],
     [
@@ -1021,6 +1064,14 @@ export const datas = [
             mobile: 'skin/513/513-mobileskin-5.jpg',
             type: '103',
             quality: '3'
+        },
+        {
+            name: '上官婉儿-妄想奇谈',
+            icon: 'skin/513/513-smallskin-6.webp',
+            url: 'skin/513/513-bigskin-6.jpg',
+            mobile: 'skin/513/513-mobileskin-6.jpg',
+            type: '5',
+            quality: '4'
         }
     ],
     [
@@ -1882,6 +1933,14 @@ export const datas = [
             mobile: 'skin/196/196-mobileskin-5.jpg',
             type: '15',
             quality: '4'
+        },
+        {
+            name: '百里守约-真我赫兹',
+            icon: 'skin/196/196-smallskin-6.webp',
+            url: 'skin/196/196-bigskin-6.jpg',
+            mobile: 'skin/196/196-mobileskin-6.jpg',
+            type: '12',
+            quality: '3'
         }
     ],
     [
@@ -2290,6 +2349,14 @@ export const datas = [
             mobile: 'skin/180/180-mobileskin-5.jpg',
             type: '12',
             quality: '3'
+        },
+        {
+            name: '哪吒-热血海滩',
+            icon: 'skin/180/180-smallskin-6.webp',
+            url: 'skin/180/180-bigskin-6.jpg',
+            mobile: 'skin/180/180-mobileskin-6.jpg',
+            type: '50',
+            quality: '2'
         }
     ],
     [
