@@ -118,6 +118,7 @@ export const types: Types = {
     117: 'skin/type/117.webp',
     118: 'skin/type/118.webp',
     119: 'skin/type/119.webp',
+    120: 'skin/type/120.png',
 }
 
 export const positions = {
@@ -180,6 +181,14 @@ export const datas = [
             mobile: 'skin/545/545-mobileskin-2.jpg',
             type: '1',
             quality: '2'
+        },
+        {
+            name: '莱西奥-末日机甲',
+            icon: 'skin/545/545-smallskin-3.jpg',
+            url: 'skin/545/545-bigskin-3.jpg',
+            mobile: 'skin/545/545-mobileskin-3.jpg',
+            type: '12',
+            quality: '3'
         },
     ],
     [
@@ -404,6 +413,14 @@ export const datas = [
             mobile: 'skin/155/155-mobileskin-3.jpg',
             type: '12',
             quality: '3'
+        },
+        {
+            name: '艾琳-流音漫舞',
+            icon: 'skin/155/155-smallskin-4.jpg',
+            url: 'skin/155/155-bigskin-4.jpg',
+            mobile: 'skin/155/155-mobileskin-4.jpg',
+            type: '40',
+            quality: '2'
         }
     ],
     [
@@ -424,6 +441,14 @@ export const datas = [
             mobile: 'skin/537/537-mobileskin-2.jpg',
             type: '0',
             quality: '1'
+        },
+        {
+            name: '司空震-地狱燃心',
+            icon: 'skin/537/537-smallskin-3.jpg',
+            url: 'skin/537/537-bigskin-3.jpg',
+            mobile: 'skin/537/537-mobileskin-3.jpg',
+            type: '40',
+            quality: '3'
         }
     ],
     [
@@ -3252,6 +3277,22 @@ export const datas = [
             url: 'skin/156/156-bigskin-6.jpg',
             mobile: 'skin/156/156-mobileskin-6.jpg',
             type: '50',
+            quality: '2'
+        },
+        {
+            name: '张良-千筹问战',
+            icon: 'skin/156/156-smallskin-7.jpg',
+            url: 'skin/156/156-bigskin-7.jpg',
+            mobile: 'skin/156/156-mobileskin-7.jpg',
+            type: '12',
+            quality: '3'
+        },
+        {
+            name: '张良-古海寻踪',
+            icon: 'skin/156/156-smallskin-8.jpg',
+            url: 'skin/156/156-bigskin-8.jpg',
+            mobile: 'skin/156/156-mobileskin-8.jpg',
+            type: '120',
             quality: '2'
         }
     ],

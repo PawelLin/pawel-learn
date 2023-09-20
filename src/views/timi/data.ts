@@ -3,6 +3,18 @@ interface Data {
 }
 
 export const skins: Data = {
+    '2023-9-20': {
+        alt: ['艾琳-流音漫舞'],
+        src: ['skin/155/155-smallskin-4.jpg']
+    },
+    '2023-9-5': {
+        alt: ['诸葛亮-黄金分割率'],
+        src: ['skin/190/190-smallskin-3.jpg']
+    },
+    '2023-9-3': {
+        alt: ['戈娅-驭风魔法'],
+        src: ['skin/548/548-smallskin-3.jpg']
+    },
     '2023-8-14': {
         alt: ['哪吒-热血海滩'],
         src: ['skin/180/180-smallskin-6.webp']
@@ -34,6 +46,10 @@ export const skins: Data = {
     '2023-5-26': {
         alt: ['明世隐-占星师'],
         src: ['skin/501/501-smallskin-2.jpg']
+    },
+    '2023-5-14': {
+        alt: ['扁鹊-奇幻香踪'],
+        src: ['skin/119/119-smallskin-5.jpg']
     },
     '2023-5-7': {
         alt: ['莱西奥-西部游侠'],
@@ -770,6 +786,10 @@ export const skins: Data = {
 }
 
 export const heros: Data = {
+    '2023-6-27': {
+        alt: '亚连-追忆之刃',
+        src: 'skin/514/514-smallskin-1.jpg',
+    },
     '2023-4-15': {
         alt: '姬小满-武道奇才',
         src: 'skin/564/564-smallskin-1.jpg',
@@ -781,6 +801,10 @@ export const heros: Data = {
     '2022-12-1': {
         alt: '赵怀真-自在之心',
         src: 'skin/544/544-smallskin-1.jpg',
+    },
+    '2022-9-22': {
+        alt: '海月-永夜之心',
+        src: 'skin/521/521-smallskin-1.jpg',
     },
     '2022-6-23': {
         alt: '戈娅-沙海飞舟',
@@ -1161,6 +1185,10 @@ export const heros: Data = {
 }
 
 export const kings = {
+    '2023-9-3': {
+        alt: 'S32',
+        src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
+    },
     '2023-5-6': {
         alt: 'S31',
         src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
