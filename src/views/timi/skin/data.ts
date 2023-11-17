@@ -115,10 +115,11 @@ export const types: Types = {
     114: 'skin/type/114.png',
     115: 'skin/type/115.png',
     116: 'skin/type/116.png',
-    117: 'skin/type/117.webp',
-    118: 'skin/type/118.webp',
-    119: 'skin/type/119.webp',
+    117: 'skin/type/117.png',
+    118: 'skin/type/118.png',
+    119: 'skin/type/119.png',
     120: 'skin/type/120.png',
+    121: 'skin/type/121.png',
 }
 
 export const positions = {
@@ -133,6 +134,18 @@ export const positions = {
 export const datas = [
     [
         {
+            name: '朵莉亚-人鱼之歌',
+            icon: 'skin/159/159-smallskin-1.jpg',
+            url: 'skin/159/159-bigskin-1.jpg',
+            mobile: 'skin/159/159-mobileskin-1.jpg',
+            content: '流光一瞬，碧海桑田。',
+            type: '0',
+            position: '6',
+            quality: '0'
+        },
+    ],
+    [
+        {
             name: '亚连-追忆之刃',
             icon: 'skin/514/514-smallskin-1.jpg',
             url: 'skin/514/514-bigskin-1.jpg',
@@ -141,6 +154,14 @@ export const datas = [
             type: '0',
             position: '2',
             quality: '0'
+        },
+        {
+            name: '亚连-破局者',
+            icon: 'skin/514/514-smallskin-2.jpg',
+            url: 'skin/514/514-bigskin-2.jpg',
+            mobile: 'skin/514/514-mobileskin-2.jpg',
+            type: '1',
+            quality: '2'
         },
     ],
     [
@@ -212,7 +233,7 @@ export const datas = [
         },
         {
             name: '赵怀真-鹤归松栖',
-            icon: 'skin/544/544-smallskin-3.webp',
+            icon: 'skin/544/544-smallskin-3.jpg',
             url: 'skin/544/544-bigskin-3.jpg',
             mobile: 'skin/544/544-mobileskin-3.jpg',
             type: '118',
@@ -240,11 +261,19 @@ export const datas = [
         },
         {
             name: '海月-浮梦罗烟',
-            icon: 'skin/521/521-smallskin-3.webp',
+            icon: 'skin/521/521-smallskin-3.jpg',
             url: 'skin/521/521-bigskin-3.jpg',
             mobile: 'skin/521/521-mobileskin-3.jpg',
             type: '12',
             quality: '3'
+        },
+        {
+            name: '海月-王牌新星',
+            icon: 'skin/521/521-smallskin-4.jpg',
+            url: 'skin/521/521-bigskin-4.jpg',
+            mobile: 'skin/521/521-mobileskin-4.jpg',
+            type: '1',
+            quality: '2'
         },
     ],
     [
@@ -380,7 +409,7 @@ export const datas = [
         },
         {
             name: '云缨-鹤归松栖',
-            icon: 'skin/538/538-smallskin-3.webp',
+            icon: 'skin/538/538-smallskin-3.jpg',
             url: 'skin/538/538-bigskin-3.jpg',
             mobile: 'skin/538/538-mobileskin-3.jpg',
             type: '119',
@@ -541,6 +570,14 @@ export const datas = [
             mobile: 'skin/533/533-mobileskin-3.jpg',
             type: '12',
             quality: '3'
+        },
+        {
+            name: '阿古朵-江河有灵',
+            icon: 'skin/533/533-smallskin-4.jpg',
+            url: 'skin/533/533-bigskin-4.jpg',
+            mobile: 'skin/533/533-mobileskin-4.jpg',
+            type: '121',
+            quality: '3'
         }
     ],
     [
@@ -616,7 +653,7 @@ export const datas = [
         },
         {
             name: '镜-真我赫兹',
-            icon: 'skin/531/531-smallskin-6.webp',
+            icon: 'skin/531/531-smallskin-6.jpg',
             url: 'skin/531/531-bigskin-6.jpg',
             mobile: 'skin/531/531-mobileskin-6.jpg',
             type: '12',
@@ -745,6 +782,14 @@ export const datas = [
             mobile: 'skin/523/523-mobileskin-5.jpg',
             type: '40',
             quality: '2'
+        },
+        {
+            name: '西施-至美·乘鲤谣',
+            icon: 'skin/523/523-smallskin-6.jpg',
+            url: 'skin/523/523-bigskin-6.jpg',
+            mobile: 'skin/523/523-mobileskin-6.jpg',
+            type: '5',
+            quality: '3'
         }
     ],
     [
@@ -916,7 +961,7 @@ export const datas = [
         },
         {
             name: '瑶-真我赫兹',
-            icon: 'skin/505/505-smallskin-7.webp',
+            icon: 'skin/505/505-smallskin-7.jpg',
             url: 'skin/505/505-bigskin-7.jpg',
             mobile: 'skin/505/505-mobileskin-7.jpg',
             type: '117',
@@ -1092,7 +1137,7 @@ export const datas = [
         },
         {
             name: '上官婉儿-妄想奇谈',
-            icon: 'skin/513/513-smallskin-6.webp',
+            icon: 'skin/513/513-smallskin-6.jpg',
             url: 'skin/513/513-bigskin-6.jpg',
             mobile: 'skin/513/513-mobileskin-6.jpg',
             type: '5',
@@ -1961,7 +2006,7 @@ export const datas = [
         },
         {
             name: '百里守约-真我赫兹',
-            icon: 'skin/196/196-smallskin-6.webp',
+            icon: 'skin/196/196-smallskin-6.jpg',
             url: 'skin/196/196-bigskin-6.jpg',
             mobile: 'skin/196/196-mobileskin-6.jpg',
             type: '12',
@@ -2226,6 +2271,14 @@ export const datas = [
             mobile: 'skin/191/191-mobileskin-7.jpg',
             type: '97',
             quality: '4'
+        },
+        {
+            name: '大乔-时之奇旅',
+            icon: 'skin/191/191-smallskin-8.jpg',
+            url: 'skin/191/191-bigskin-8.jpg',
+            mobile: 'skin/191/191-mobileskin-8.jpg',
+            type: '5',
+            quality: '4'
         }
     ],
     [
@@ -2377,7 +2430,7 @@ export const datas = [
         },
         {
             name: '哪吒-热血海滩',
-            icon: 'skin/180/180-smallskin-6.webp',
+            icon: 'skin/180/180-smallskin-6.jpg',
             url: 'skin/180/180-bigskin-6.jpg',
             mobile: 'skin/180/180-mobileskin-6.jpg',
             type: '50',
@@ -3430,6 +3483,14 @@ export const datas = [
             mobile: 'skin/153/153-mobileskin-6.jpg',
             type: '91',
             quality: '2'
+        },
+        {
+            name: '兰陵王-影龙天霄',
+            icon: 'skin/153/153-smallskin-7.jpg',
+            url: 'skin/153/153-bigskin-7.jpg',
+            mobile: 'skin/153/153-mobileskin-7.jpg',
+            type: '5',
+            quality: '4'
         }
     ],
     [
@@ -3638,6 +3699,14 @@ export const datas = [
             mobile: 'skin/148/148-mobileskin-3.jpg',
             type: '1',
             quality: '2'
+        },
+        {
+            name: '姜子牙-闲日渔趣',
+            icon: 'skin/148/148-smallskin-4.jpg',
+            url: 'skin/148/148-bigskin-4.jpg',
+            mobile: 'skin/148/148-mobileskin-4.jpg',
+            type: '12',
+            quality: '3'
         }
     ],
     [
@@ -4444,6 +4513,14 @@ export const datas = [
             mobile: 'skin/130/130-mobileskin-6.jpg',
             type: '64',
             quality: '3'
+        },
+        {
+            name: '宫本武藏-惊梅引',
+            icon: 'skin/130/130-smallskin-7.jpg',
+            url: 'skin/130/130-bigskin-7.jpg',
+            mobile: 'skin/130/130-mobileskin-7.jpg',
+            type: '5',
+            quality: '4'
         }
     ],
     [
@@ -4548,6 +4625,14 @@ export const datas = [
             mobile: 'skin/128/128-mobileskin-6.jpg',
             type: '19',
             quality: '3'
+        },
+        {
+            name: '曹操-决胜大满贯',
+            icon: 'skin/128/128-smallskin-7.jpg',
+            url: 'skin/128/128-bigskin-7.jpg',
+            mobile: 'skin/128/128-mobileskin-7.jpg',
+            type: '1',
+            quality: '2'
         }
     ],
     [
@@ -4608,6 +4693,14 @@ export const datas = [
             mobile: 'skin/127/127-mobileskin-7.jpg',
             type: '40',
             quality: '2'
+        },
+        {
+            name: '甄姬-至美·化雀舞',
+            icon: 'skin/127/127-smallskin-8.jpg',
+            url: 'skin/127/127-bigskin-8.jpg',
+            mobile: 'skin/127/127-mobileskin-8.jpg',
+            type: '5',
+            quality: '4'
         }
     ],
     [
@@ -4771,6 +4864,14 @@ export const datas = [
             url: 'skin/123/123-bigskin-8.jpg',
             mobile: 'skin/123/123-mobileskin-8.jpg',
             type: '107',
+            quality: '4'
+        },
+        {
+            name: '吕布-遇见神鼓',
+            icon: 'skin/123/123-smallskin-9.jpg',
+            url: 'skin/123/123-bigskin-9.jpg',
+            mobile: 'skin/123/123-mobileskin-9.jpg',
+            type: '88',
             quality: '4'
         }
     ],
@@ -5024,7 +5125,15 @@ export const datas = [
             mobile: 'skin/117/117-mobileskin-5.jpg',
             type: '40',
             quality: '3'
-        }
+        },
+        {
+            name: '钟无艳-聚星闪耀',
+            icon: 'skin/117/117-smallskin-6.jpg',
+            url: 'skin/117/117-bigskin-6.jpg',
+            mobile: 'skin/117/117-mobileskin-6.jpg',
+            type: '1',
+            quality: '2'
+        },
     ],
     [
         {
@@ -5323,6 +5432,14 @@ export const datas = [
             url: 'skin/112/112-bigskin-9.jpg',
             mobile: 'skin/112/112-mobileskin-9.jpg',
             type: '93',
+            quality: '4'
+        },
+        {
+            name: '鲁班七号-时之奇旅',
+            icon: 'skin/112/112-smallskin-10.jpg',
+            url: 'skin/112/112-bigskin-10.jpg',
+            mobile: 'skin/112/112-mobileskin-10.jpg',
+            type: '5',
             quality: '4'
         }
     ],
