@@ -120,6 +120,7 @@ export const types: Types = {
     119: 'skin/type/119.png',
     120: 'skin/type/120.png',
     121: 'skin/type/121.png',
+    122: 'skin/type/122.png',
 }
 
 export const positions = {
@@ -132,6 +133,18 @@ export const positions = {
 }
 
 export const datas = [
+    [
+        {
+            name: '海诺-命运之引',
+            icon: 'skin/563/563-smallskin-1.jpg',
+            url: 'skin/563/563-bigskin-1.jpg',
+            mobile: 'skin/563/563-mobileskin-1.jpg',
+            content: '流光一瞬，碧海桑田。',
+            type: '0',
+            position: '4',
+            quality: '0'
+        },
+    ],
     [
         {
             name: '朵莉亚-人鱼之歌',
@@ -3767,6 +3780,14 @@ export const datas = [
             mobile: 'skin/146/146-mobileskin-7.jpg',
             type: '9',
             quality: '4'
+        },
+        {
+            name: '露娜-霜月吟',
+            icon: 'skin/146/146-smallskin-8.jpg',
+            url: 'skin/146/146-bigskin-8.jpg',
+            mobile: 'skin/146/146-mobileskin-8.jpg',
+            type: '122',
+            quality: '4'
         }
     ],
     [
@@ -5081,6 +5102,14 @@ export const datas = [
             mobile: 'skin/118/118-mobileskin-7.jpg',
             type: '93',
             quality: '3'
+        },
+        {
+            name: '孙膑-小动物乐园',
+            icon: 'skin/118/118-smallskin-8.jpg',
+            url: 'skin/118/118-bigskin-8.jpg',
+            mobile: 'skin/118/118-mobileskin-8.jpg',
+            type: '15',
+            quality: '4'
         }
     ],
     [

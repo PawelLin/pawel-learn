@@ -259,15 +259,18 @@ export default defineComponent({
                 & + div {
                     margin-top: 5px;
                 }
-                &.king-div::before {
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    bottom: 3px;
-                    left: 50%;
-                    width: 1px;
-                    background-color: @color;
-                    transform: scaleX(0.5);
+                &.king-div {
+                    position: relative;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        bottom: 3px;
+                        left: 50%;
+                        width: 1px;
+                        background-color: @color;
+                        transform: scaleX(0.5);
+                    }
                 }
                 &:not(:last-child) {
                     position: relative;

@@ -810,6 +810,10 @@ export const skins: Data = {
 }
 
 export const heros: Data = {
+    '2023-11-30': {
+        alt: '海诺-命运之引',
+        src: 'skin/563/563-smallskin-1.jpg',
+    },
     '2023-11-3': {
         alt: '朵莉亚-人鱼之歌',
         src: 'skin/159/159-smallskin-1.jpg',
@@ -1213,6 +1217,10 @@ export const heros: Data = {
 }
 
 export const kings = {
+    '2023-12-3': {
+        alt: 'S33',
+        src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
+    },
     '2023-9-3': {
         alt: 'S32',
         src: '//game.gtimg.cn/images/yxzj/web201605/page/rank16.png'
