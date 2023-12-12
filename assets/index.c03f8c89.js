@@ -1,0 +1,1 @@
+import{g as e,o as r,e as a,f as o}from"./vendor.2a22cd8b.js";const s={},t={class:"timi-career"};s.render=function(s,c){const d=e("router-view");return r(),a("div",t,[o(d)])},s.__scopeId="data-v-6c815b2a";export default s;

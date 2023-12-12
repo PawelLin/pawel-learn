@@ -1,0 +1,1 @@
+import{g as o,o as e,h as r,w as t,i as a}from"./vendor.2a22cd8b.js";const n={},s=a("home");n.render=function(a,n){const d=o("router-link");return e(),r(d,{to:"home"},{default:t((()=>[s])),_:1})};export default n;

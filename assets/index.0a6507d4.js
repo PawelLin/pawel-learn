@@ -1,0 +1,1 @@
+import{_ as o}from"./svgIcon.3a6f1c88.js";import{d as s,e as a,f as c,F as r,o as v}from"./vendor.2a22cd8b.js";var e=s({setup:s=>(s,e)=>(v(),a(r,null,[c(o,{icon:"svg-brave"}),c(o,{icon:"svg-archive-logo"}),c(o,{icon:"svg-archive-build-success"}),c(o,{icon:"svg-froad-logo"})],64))});export default e;
